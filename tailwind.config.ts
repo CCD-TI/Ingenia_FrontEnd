@@ -13,6 +13,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        // PALETA OFICIAL CCD
+        yellowIngenia: "#F9B233", // RGB(249, 178, 51)
+        cyanIngenia: "#3185F7", // RGB(49, 133, 247)
+      },
     },
   },
   plugins: [],
