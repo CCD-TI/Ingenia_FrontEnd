@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import { FaCheck } from "react-icons/fa6";
 
@@ -49,9 +49,20 @@ export default function Beneficio() {
   //     bg: "bg-blue-800/30",
   //   },
   // ];
+  const [selected, setSelected] = React.useState("Mensual");
 
+  const getBackgroundColor = () => {
+    switch (selected) {
+      case "Mensual":
+        return "#ffcccc"; // Fondo rojo claro
+      case "Anual":
+        return "#ccffcc"; // Fondo verde claro
+      default:
+        return "#ffffff"; // Fondo blanco por defecto
+    }
+  };
   return (
-    <div className="bg-blue-600">
+    <div className={`${getBackgroundColor}`}>
       <div className="max-w-[100rem] mx-auto flex flex-col justify-center items-center gap-10 py-24">
         <div className="flex items-center gap-2">
           <div className="w-36 h-1.5 bg-white"></div>
@@ -64,7 +75,7 @@ export default function Beneficio() {
         </div>
         <Tabs aria-label="Options"
         variant="light"
-       
+        selectedKey={selected} onSelectionChange={(key) => setSelected(key.toString())}
         classNames={{
            tab: "  !px-6 !py-5 text-2xl font-bold  !bg-transparent  ",
            tabContent:"! !text-violet-600   ",
@@ -73,7 +84,7 @@ export default function Beneficio() {
            
         }}
         >
-          <Tab key="photos" title="Mensual" >
+          <Tab key="Mensual" title="Mensual" >
             <Card className=" !border-none !shadow-none !bg-transparent     ">
               <CardBody>
                 <div className="flex justify-center items-center gap-8">
@@ -141,7 +152,7 @@ export default function Beneficio() {
                           </h1>
                         </div>
 
-                        <button className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl">
+                        <button className="w-full p-3 px-6 border-2 text-2xl mt-10 border-white rounded-2xl">
                           {" "}
                           Adquirir Plan
                         </button>
@@ -186,7 +197,7 @@ export default function Beneficio() {
               </CardBody>
             </Card>
           </Tab>
-          <Tab key="music" title="Anual">
+          <Tab key="Anual" title="Anual">
             <Card className=" !border-none !shadow-none !bg-transparent">
               <CardBody>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
