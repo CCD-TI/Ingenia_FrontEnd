@@ -55,7 +55,7 @@ export default function Inicio() {
 
         {/* Segunda columna Img */}
         <div className="lg:w-auto ml-auto w-full h-fit">
-          <Image
+          {/* <Image
             src={img.portadas.principal}
             className=""
             alt="landing-inicio"
@@ -65,7 +65,7 @@ export default function Inicio() {
             style={{
               objectFit: "cover",
             }}
-          />
+          /> */}
         </div>
       </div>
     </div>

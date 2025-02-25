@@ -5,14 +5,14 @@ import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 // import { useSession } from "next-auth/react";
-import { IoIosArrowForward, IoMdCloseCircle,  } from "react-icons/io";
+import { IoIosArrowForward, IoMdCloseCircle } from "react-icons/io";
 // import CountdownTimerTopBar from "./countdowntimertopbar";
 import { FaRegStar } from "react-icons/fa6";
 // import { Modal } from "@mui/material";
 // import PacksSectionModalCasiV2 from "./packsectionmodal-CASI-V2";
 import { MdArrowBackIosNew, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidRightArrow } from "react-icons/bi";
-import Vega from  "@/components/Contador"
+import Vega from "@/components/Contador";
 
 // import DropdownComponent from "../dropdown/dropdown";
 // import NewModalLogeoComponent from "./modal/newmodallogeo";
@@ -28,7 +28,7 @@ import Vega from  "@/components/Contador"
 // import ModalPromo from "./ModalPromo";
 const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL || "";
 const img = {
-  logo:{
+  logo: {
     ingenia: `${storageUrl}/Home/image-removebg-preview.png`,
   },
 };
@@ -43,7 +43,7 @@ interface Especializacion {
 
 const Navbar = () => {
   const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL;
-//   const contador: string = environment.contador;
+  //   const contador: string = environment.contador;
   const images = {
     // logo: `${storageUrl}/Multimedia/Imagen/Ingenia-college/logos/logo_INCO.png`,
     gestion: `${storageUrl}/Multimedia/Imagen/Ccd/Iconos/icon-gestion-normal.svg`,
@@ -108,15 +108,13 @@ const Navbar = () => {
   //   setTreeSubMenuOpen(!treeSubMenuOpen); // Alternar el segundo submenú interno
   // };
 
-//   const { data: session } = useSession();
-
-
+  //   const { data: session } = useSession();
 
   const [especializaciones, setEspecializaciones] = useState<{
     [key: number]: Especializacion[];
   }>({});
   const [selectedSchool, setSelectedSchool] = useState<number | null>(null);
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState(true);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string | null>(null);
@@ -174,7 +172,6 @@ const Navbar = () => {
   };
 
   // Este efecto solo se ejecuta una vez cuando el componente se monta
-
 
   // const toggleMenu = () => {
   //   setMenuOpen((menuOpen) => {
@@ -264,51 +261,52 @@ const Navbar = () => {
       {showTopBar && (
         <div
           className={
-            "group w-full bg-cyanIngenia text-white flex items-center justify-center px-6 py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            "group w-full bg-gradient-to-r from-violet-600 via-blue-500 to-purple-600 text-white flex items-center justify-center px-6 py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
           }
         >
           <div
-            className="flex flex-col md:flex-row md:items-center md:justify-center 
+            className="  flex flex-col md:flex-row md:items-center md:justify-center 
           md:space-x-4 text-sm md:text-base font-bold"
           >
-          
-          <div className=" text-white ">
-  <div className="container mx-auto flex justify-between items-center">
-    <p className="text-xs md:text-sm font-bold">
-      ¡Aprovecha nuestra <span className="text-white"> <strong>PROMOCIÓN </strong>de verano! </span>
-      <span className="text-white text-3xl font-extrabold drop-shadow-lg">80</span> 
-      <span className="flex flex-col items-center ml-1">
-          <span className="text-white text-lg">%</span>
-          <span className="text-white text-sm">Dcto</span>
-        </span>
-    </p>
-    <div className="scale-75">
+            <div className=" text-white ">
+              <div className="flex gap-3">
+                <p className="text-xs md:text-sm font-bold flex items-center">
+                  ¡Aprovecha nuestra {" "}
+                  <span className="text-white">
+                    {" "}
+                    <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
+                  </span>
+                  <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
+                    80
+                    <div>
+                      <h1 className="text-xs leading-[1] ">
+                        %
+                      </h1>
+                      <p className="text-xs leading-[1]">Dscto</p>
+                    </div>
+                  </div>
 
-   <Vega targetDate="02/28/2025 23:59:59"/>
-    </div>
-    <button className="border border-white text-white font-bold px-3 py-1 rounded-md hover:bg-white hover:text-blue-700 transition-all">
-      ¡Compra Ahora!
-    </button>
-    <button className="text-white text-xl hover:text-gray-300 transition-all ml-4">
-      
-    </button>
-  </div>
-</div>
-
+                </p>
+                <div className="">
+                  <Vega targetDate="02/28/2025 23:59:59" />
+                </div>
+                <button className="border border-white text-white font-bold px-4 py-1 rounded-xl hover:bg-white hover:text-blue-700 transition-all">
+                  ¡Compra Ahora!
+                </button>
+                <button className="text-white text-xl hover:text-gray-300 transition-all ml-4"></button>
+              </div>
+            </div>
 
             <div className="flex flex-row items-center justify-between space-x-4">
-             
               <div className="mb-0 mr-2">
                 {/* <CountdownTimerTopBar targetDate={contador} /> */}
               </div>
 
-             
               <div className="flex justify-center">
                 {/* <ModalPromo css="px-2 border-2 hover:text-colors-dark-blue-ccd bg-transparent border-colors-cyan-ccd text-colors-cyan-ccd text-sm lg:text-base font-bold py-1 rounded-2xl shadow-lg hover:bg-[#00d3c5] hover:shadow-[0_0_25px_5px_rgba(0,234,223,0.7)] transition-all duration-300" /> */}
               </div>
             </div>
 
-          
             <div className="hidden mt-0 md:ml-auto md:flex justify-center md:justify-end">
               <button
                 className="text-white text-lg hover:text-cyanIngenia transition-all"
@@ -325,7 +323,7 @@ const Navbar = () => {
 
       <nav
         className={`${
-          showTopBar ? "mt-20 md:mt-[40.5px] z-20" : ""
+          showTopBar ? "mt-20 md:mt-[55.5px] z-20" : ""
         } w-full   text-white`}
       >
         <div
@@ -349,19 +347,17 @@ const Navbar = () => {
             </div>
             <Link href="/">
               <Image
-                src='https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/image-removebg-preview.png'
+                src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/image-removebg-preview.png"
                 alt="CCD Logo"
                 width={150}
                 height={150}
                 className="cursor-pointer "
-                
               />
             </Link>
           </div>
-                
+
           {/* Links de navegación */}
           <ul className="col-span-3 col-start-3 hidden lg:flex justify-center items-center space-x-8 text-white ">
-          
             <li>
               <Link
                 href="/"
@@ -378,7 +374,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold">
-                 GRADOS
+                  GRADOS
                   <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                 </button>
                 {activeCategory === "escuelas" && (
@@ -666,11 +662,9 @@ const Navbar = () => {
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-            <li>
-              {/* <ModalFormJobCCD /> */}
-            </li>
+            <li>{/* <ModalFormJobCCD /> */}</li>
           </ul>
-                    
+
           {/* Acciones */}
           <div className="col-span-2 col-start-6 flex justify-end items-center space-x-4 text-white">
             <Link
@@ -991,37 +985,55 @@ const Navbar = () => {
                 <ul className="flex flex-col gap-2">
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Contrataciones y Compras Públicas
                     </Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Planeamiento Estratégico y Gestión de Desarrollo
                     </Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Gestión Financiera y Administrativa
                     </Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Administración Documentaría y Atención al Ciudadano
                     </Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Gestión de Recursos Humanos en el Sector Público
                     </Link>
                   </li>
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/gestion" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/gestion"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Tecnología en el Sector Público
                     </Link>
                   </li>
@@ -1039,7 +1051,10 @@ const Navbar = () => {
                 <ul className="flex flex-col space-y-6">
                   <li className="flex items-start gap-2">
                     <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                    <Link href="/mineria" className="block hover:text-cyanIngenia">
+                    <Link
+                      href="/mineria"
+                      className="block hover:text-cyanIngenia"
+                    >
                       Control de operaciones mineras
                     </Link>
                   </li>
