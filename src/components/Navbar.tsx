@@ -12,6 +12,7 @@ import { FaRegStar } from "react-icons/fa6";
 // import PacksSectionModalCasiV2 from "./packsectionmodal-CASI-V2";
 import { MdArrowBackIosNew, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidRightArrow } from "react-icons/bi";
+import Vega from  "@/components/Contador"
 
 // import DropdownComponent from "../dropdown/dropdown";
 // import NewModalLogeoComponent from "./modal/newmodallogeo";
@@ -271,22 +272,25 @@ const Navbar = () => {
           md:space-x-4 text-sm md:text-base font-bold"
           >
           
-           
-           
-            <div className="flex justify-between items-center mb-3 md:mb-0 text-center md:text-left">
-              <div>
-                <p>APROVECHA NUESTROS CURSOS AL 80% DSCTO.</p>
-              </div>
-              <div className="md:ml-auto md:hidden justify-center">
-                <button
-                  className="text-white text-lg hover:text-cyanIngenia transition-all"
-                  onClick={() => setShowTopBar(false)}
-                >
-                  <IoMdCloseCircle />
-                </button>
-              </div>
-            </div>
-          
+          <div className=" text-white ">
+  <div className="container mx-auto flex justify-between items-center">
+    <p className="text-xs md:text-sm font-bold">
+      ¡Aprovecha nuestra <span className="text-white">PROMOCIÓN de verano</span>! <span className="text-white">80%</span> Dcto
+    </p>
+    <div className="scale-75">
+
+   <Vega targetDate="02/28/2025 23:59:59"/>
+    </div>
+    <button className="border border-white text-white font-bold px-3 py-1 rounded-md hover:bg-white hover:text-blue-700 transition-all">
+      ¡Compra Ahora!
+    </button>
+    <button className="text-white text-xl hover:text-gray-300 transition-all ml-4">
+      
+    </button>
+  </div>
+</div>
+
+
             <div className="flex flex-row items-center justify-between space-x-4">
              
               <div className="mb-0 mr-2">
