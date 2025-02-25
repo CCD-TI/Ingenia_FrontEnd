@@ -15,8 +15,8 @@ const img = {
 
 export default function Inicio() {
   return (
-    <div className="h-[96vh] max-lg:h-full w-full flex justify-center items-center bg-[linear-gradient(120deg,_#3185F7_10%,_#FFD700_90%)]">
-      <div className="flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
+    <div className="h-full py-20 max-lg:h-full w-full flex justify-center items-center bg-[linear-gradient(120deg,_#3185F7_10%,_#FFD700_90%)]">
+      <div className="my-10 flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
         {/* Primera columna texto */}
         <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-10 max-sm:gap-5">
           <h1 className="flex flex-col text-white ">

@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import { RRSSLateral } from "@/components/Modulos/RRSSLateral";
 import Navbar from "@/components/Navbar";
 import React from "react";
@@ -10,6 +11,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         <div className="flex-grow">{children}</div>
         <RRSSLateral />
       </div>
+      <Footer/>
     </div>
   );
 }

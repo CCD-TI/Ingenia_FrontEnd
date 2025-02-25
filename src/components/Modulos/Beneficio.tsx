@@ -1,93 +1,55 @@
-"use client";
-import Image from "next/image";
+"use client"
+
 import React, { useState } from "react";
-import { Tabs, Tab, Card, CardBody } from "@heroui/react";
 import { FaCheck } from "react-icons/fa6";
 
-export default function Beneficio() {
-  // const cursos = [
-  //   {
-  //     name: "Aritmética",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Trigometria",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Geometria",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Algebra",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Razonamiento M.",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Fisica",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  //   {
-  //     name: "Quimica",
-  //     icon: "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Iconos/landing/icono-matematicas.svg",
-  //     bgIcon: "bg-blue-500",
-  //     bg: "bg-blue-800/30",
-  //   },
-  // ];
-  const [selected, setSelected] = React.useState("Mensual");
+const Tabs = () => {
+    // Estado para manejar la pestaña seleccionada
+    const [selectedTab, setSelectedTab] = useState<string>("Mensual");
 
-  const getBackgroundColor = () => {
-    switch (selected) {
-      case "Mensual":
-        return "#ffcccc"; // Fondo rojo claro
-      case "Anual":
-        return "#ccffcc"; // Fondo verde claro
-      default:
-        return "#ffffff"; // Fondo blanco por defecto
-    }
-  };
-  return (
-    <div className={`${getBackgroundColor}`}>
+    return (
+      <div className="bg-blue-600">
+
       <div className="max-w-[100rem] mx-auto flex flex-col justify-center items-center gap-10 py-24">
-        <div className="flex items-center gap-2">
-          <div className="w-36 h-1.5 bg-white"></div>
-          <h1 className="text-[53px] font-bold text-white">Membresías</h1>
-          <div className="w-36 h-1.5 bg-white"></div>
-        </div>
-        <div className="text-5xl !text-white flex items-center gap-3">
-          Aprovecha el <span className="text-7xl font-extrabold">50% </span>{" "}
-          <span className="font-bold text-5xl">Dscto.</span> por apertura
-        </div>
-        <Tabs aria-label="Options"
-        variant="light"
-        selectedKey={selected} onSelectionChange={(key) => setSelected(key.toString())}
-        classNames={{
-           tab: "  !px-6 !py-5 text-2xl font-bold  !bg-transparent  ",
-           tabContent:"! !text-violet-600   ",
-           base: "   ",
-           tabList: "!bg-transparent border-white border-2 !p-0  rounded-full  ",
-           
-        }}
-        >
-          <Tab key="Mensual" title="Mensual" >
-            <Card className=" !border-none !shadow-none !bg-transparent     ">
-              <CardBody>
-                <div className="flex justify-center items-center gap-8">
+      <div className="flex items-center gap-2">
+        <div className="w-36 h-1.5 bg-white"></div>
+        <h1 className="text-[53px] font-bold text-white">Membresías</h1>
+        <div className="w-36 h-1.5 bg-white"></div>
+      </div>
+      <div className="text-5xl !text-white flex items-center gap-3">
+        Aprovecha el <span className="text-7xl font-extrabold">50% </span>{" "}
+        <span className="font-bold text-5xl">Dscto.</span> por apertura
+      </div>
+       
+            {/* Botones de las pestañas */}
+            <div className="w-[20rem] rounded-full flex bg-gray-100">
+                <button
+                    className={`flex-1 py-3 px-6 text-center font-medium text-gray-700 transition-colors duration-200 rounded-full ${
+                        selectedTab === "Mensual"
+                            ? "bg-blue-500 text-white"
+                            : "hover:bg-gray-200"
+                    }`}
+                    onClick={() => setSelectedTab("Mensual")}
+                >
+                   Mensual
+                </button>
+                <button
+                    className={`flex-1 py-3 px-6 text-center font-medium text-gray-700 transition-colors duration-200 rounded-full ${
+                        selectedTab === "Anual"
+                            ? "bg-blue-500 text-white"
+                            : "hover:bg-gray-200"
+                    }`}
+                    onClick={() => setSelectedTab("Anual")}
+                >
+                    Anual
+                </button>
+              
+            </div>
+
+            {/* Contenido de las pestañas */}
+            <div className=" ">
+                {selectedTab === "Mensual" && 
+                 <div className="w-full flex justify-center items-center gap-8">
                   <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                     <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
                       <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
@@ -194,21 +156,13 @@ export default function Beneficio() {
                     </div>
                   </div>
                 </div>
-              </CardBody>
-            </Card>
-          </Tab>
-          <Tab key="Anual" title="Anual">
-            <Card className=" !border-none !shadow-none !bg-transparent">
-              <CardBody>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur.
-              </CardBody>
-            </Card>
-          </Tab>
-        </Tabs>
+                }
+                {selectedTab === "Anual" && <div>Contenido de la pestaña 2</div>}
+            </div>
       </div>
-    </div>
-  );
-}
+      </div>
+    );
+};
+
+export default Tabs;
+
