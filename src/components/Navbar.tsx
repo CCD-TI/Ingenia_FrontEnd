@@ -374,7 +374,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold">
-                  GRADOS
+                 NIVELES
                   <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                 </button>
                 {activeCategory === "escuelas" && (
@@ -624,16 +624,8 @@ const Navbar = () => {
                 )}
               </div>
             </li>
-            <li>
-              <Link
-                href="/nosotros"
-                className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
-              >
-                QUIENES SOMOS
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li>
-            {/* <li>
+           
+            {/*<li>
               <Link
                 href="/corporativo"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300"
@@ -647,7 +639,7 @@ const Navbar = () => {
                 href="/promociones"
                 className="relative group md:text-xs xl:text-base text-cyanIngenia  hover:text-colors-cyan-ccd transition-all duration-300 flex items-center font-bold"
               >
-                PROMOCIONES
+               Promociones
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
                 <FaRegStar className="text-colors-cyan-ccd text-xl -mt-1 ml-1" />
               </Link>
@@ -666,14 +658,14 @@ const Navbar = () => {
           </ul>
 
           {/* Acciones */}
-          <div className="col-span-2 col-start-6 flex justify-end items-center space-x-4 text-white">
-            <Link
-              href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
-              target="_blank"
-              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-cyanIngenia text-white font-bold hover:bg-yellowIngenia border-2 border-transparent hover:border-white transition-all duration-300 rounded-full"
-            >
-              AULA VIRTUAL
-            </Link>
+          <div className="flex justify-end items-center">
+      <Link
+        href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
+        target="_blank"
+        className="relative group text-purple-500 font-bold text-sm px-4 py-2 bg-white border rounded-2xl shadow-md hover:bg-gray-100 hover:text-blue-700 transition-all"
+      >
+        Aula Virtual
+      </Link>
 
             {/* <Dropdown className="!min-w-28">
               <Button
