@@ -275,7 +275,12 @@ const Navbar = () => {
           <div className=" text-white ">
   <div className="container mx-auto flex justify-between items-center">
     <p className="text-xs md:text-sm font-bold">
-      ¡Aprovecha nuestra <span className="text-white">PROMOCIÓN de verano</span>! <span className="text-white">80%</span> Dcto
+      ¡Aprovecha nuestra <span className="text-white"> <strong>PROMOCIÓN </strong>de verano! </span>
+      <span className="text-white text-3xl font-extrabold drop-shadow-lg">80</span> 
+      <span className="flex flex-col items-center ml-1">
+          <span className="text-white text-lg">%</span>
+          <span className="text-white text-sm">Dcto</span>
+        </span>
     </p>
     <div className="scale-75">
 
