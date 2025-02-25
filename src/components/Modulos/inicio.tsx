@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { FaPlay } from "react-icons/fa6";
 import { environment } from "../../environments/environment";
+import { IoIosArrowForward } from "react-icons/io";
+import Contador from "../Contador";
 
 const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL || "";
 const img = {
@@ -17,24 +19,38 @@ export default function Inicio() {
       <div className="flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
         {/* Primera columna texto */}
         <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-10 max-sm:gap-5">
-          <h1 className="text-5xl max-xl:text-[2.6rem] font-semibold leading-[4.5rem] max-md:text-3xl max-sm:text-2xl">
-            ¿Ingresar a la Universidad o <br />
-            repasar todos tus ? <br />
-            Ingenia, es la solución
+          <h1 className="flex flex-col text-white ">
+            <span className="text-5xl font-extrabold leading-[0.2]">CONSTRUYE TU</span>
+            <span className="text-9xl font-extrabold ">FUTURO</span>
+          </h1>
+          <h1 className=" text-2xl font-bold text-white">
+          Educación accesible y de calidad para todos los estudiantes de la costa, sierra y selva del Perú.
           </h1>
           <div className="flex max-sm:flex-col gap-6">
-            <button className="bg-cyanIngenia rounded-full p-4 px-8 text-2xl font-bold text-white">
-              Cursos Comienza Ahora
+            <button className="bg-white border-2 border-violet-700 rounded-full p-3 py-4  text-base font-bold text-violet-700 flex items-center gap-2 size-fit">
+            <h1> Comienza ahora </h1><IoIosArrowForward className="size-[20px] " />
             </button>
-            <div className="flex gap-4 items-center">
-              <div className="p-4 bg-white w-fit rounded-full">
-                <FaPlay className="text-4xl text-cyanIngenia" />
-              </div>
-              <a href="" className="font-medium text-xl underline">
-                Mi primera clase
+            <div className="flex gap-4 items-center border-[3px] rounded-full p-3 py-4 text-white font-bold size-fit">
+              <a href="" className="font-medium text-base  flex gap-8 items-center">
+               <h1> Primera clase </h1><IoIosArrowForward className="size-[20px] " />
               </a>
             </div>
           </div>
+          <div>
+          <div className="flex text-white mt-7 mb-4">
+           <div>
+              <h1 className="text-9xl">80</h1>
+            </div>
+            <div className="flex flex-col gap-1 text-white ">
+              <p className="text-4xl font-bold">%</p>
+              <p className="text-xl font-bold">Dscto</p>
+              <p className="ml-[58px] font-bold text-2xl">PROMOCIÓN</p>
+           </div>
+           
+           </div>
+           <Contador targetDate="02/28/2025 23:59:59"/>
+          </div>
+
         </div>
 
         {/* Segunda columna Img */}

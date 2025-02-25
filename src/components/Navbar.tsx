@@ -28,7 +28,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL || "";
 const img = {
   logo:{
-    ingenia: `${storageUrl}/Home/Logo.png`,
+    ingenia: `${storageUrl}/Home/image-removebg-preview.png`,
   },
 };
 import { environment } from "../environments/environment";
@@ -320,8 +320,8 @@ const Navbar = () => {
         } w-full   text-white`}
       >
         <div
-          className={`mx-auto grid bg-white grid-cols-7 max-lg:grid-cols-3 grid-rows-1 gap-4 px-6 lg:px-14 py-2 fixed w-full z-50 transition-all duration-300  ${
-            isScrolled ? " bg-white " : "-mt-[0px]"
+          className={`mx-auto grid grid-cols-7 grid-rows-1 gap-4 px-6 lg:px-14 py-6 fixed w-full z-50 transition-all duration-300 ${
+            isScrolled ? "bg-blue-400 " : "-mt-[10px]"
           }`}
         >
           {/* Logo */}
@@ -332,15 +332,15 @@ const Navbar = () => {
                 onClick={toggleMenu}
               >
                 {menuOpen ? (
-                  <AiOutlineClose className="w-6 h-6 transition-transform duration-500 hidden text-black" />
+                  <AiOutlineClose className="w-6 h-6 transition-transform duration-500 hidden text-white" />
                 ) : (
-                  <AiOutlineMenu className="w-8 h-8 transition-transform duration-500 text-black" />
+                  <AiOutlineMenu className="w-8 h-8 transition-transform duration-500 text-white" />
                 )}
               </button>
             </div>
             <Link href="/">
               <Image
-                src={img.logo.ingenia}
+                src='https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/image-removebg-preview.png'
                 alt="CCD Logo"
                 width={150}
                 height={150}
@@ -351,12 +351,12 @@ const Navbar = () => {
           </div>
                 
           {/* Links de navegación */}
-          <ul className="col-span-3 col-start-3 hidden lg:flex justify-center items-center space-x-8 text-black ">
+          <ul className="col-span-3 col-start-3 hidden lg:flex justify-center items-center space-x-8 text-white ">
           
             <li>
               <Link
                 href="/"
-                className="relative group md:text-xs xl:text-base text-black transition-all duration-300 font-bold"
+                className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
                 INICIO
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -622,7 +622,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/nosotros"
-                className="relative group md:text-xs xl:text-base text-black transition-all duration-300 font-bold"
+                className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
                 QUIENES SOMOS
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -631,7 +631,7 @@ const Navbar = () => {
             {/* <li>
               <Link
                 href="/corporativo"
-                className="relative group md:text-xs xl:text-base text-black  transition-all duration-300"
+                className="relative group md:text-xs xl:text-base text-white  transition-all duration-300"
               >
                 CORPORATIVO
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -651,7 +651,7 @@ const Navbar = () => {
               <Link
                 // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
                 href="/validar"
-                className="relative group md:text-xs xl:text-base text-black  transition-all duration-300 font-bold"
+                className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
                 RANKING
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -726,7 +726,7 @@ const Navbar = () => {
           {/* Botón de cierre fuera del menú, visible solo cuando el menú está abierto */}
           <button
             onClick={toggleMenu}
-            className={`fixed top-4 left-[77%] text-black text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${
+            className={`fixed top-4 left-[77%] text-white text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${
               menuOpen ? "block" : "hidden"
             }
             `}

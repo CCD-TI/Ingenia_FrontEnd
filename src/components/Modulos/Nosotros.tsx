@@ -1,9 +1,11 @@
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
+import ModalText from "../Modals/ModalText";
 
 export const Nosotros = () => {
   return (
     <>
-      <div className="bg-creamIngenia p-8 text-center z-50">
+      <div className="bg-creamIngenia p-8 text-center z-50 py-20">
         {/* Título */}
         {/* <h1 className="text-4xl font-bold text-gray-800 mb-6">¿Quiénes Somos?</h1> */}
 
@@ -14,14 +16,14 @@ export const Nosotros = () => {
       </p> */}
 
         {/* Contenedor de Visión y Misión (Dos Columnas) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 px-24 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 px-24 gap-8 max-w-[100rem] mx-auto ">
           {/* Columna 1: Visión */}
           <section
-          className="group relative z-10 flex justify-center items-center overflow-hidden "
-          style={{ perspective: "800px" }}
-        >
-          {/* <span className="rounded-xl h-[6px] w-20 group-hover:w-28 bg-colors-sky-ccd group-hover:bg-colors-cyan-ccd transition duration-500"></span> Linea superior */}
-        
+            className="w-[50%] group relative z-10 flex justify-center items-center overflow-hidden "
+            style={{ perspective: "800px" }}
+          >
+            {/* <span className="rounded-xl h-[6px] w-20 group-hover:w-28 bg-colors-sky-ccd group-hover:bg-colors-cyan-ccd transition duration-500"></span> Linea superior */}
+
             <div
               style={{
                 display: "flex",
@@ -29,7 +31,6 @@ export const Nosotros = () => {
               }}
             >
               <video
-              
                 className="video-vertical   "
                 src="/video/video-docentes.mp4" // Asegúrate de colocar aquí la ruta correcta de tu video
                 controls={false} // Desactivamos los controles
@@ -39,31 +40,50 @@ export const Nosotros = () => {
                 loop
               />
             </div>
-        </section>
+          </section>
 
           {/* Columna 2: Misión */}
-          <div className="p-6 text-left flex flex-col justify-center items-center gap-4">
-            <div className="w-[650px] text-left flex flex-col justify-start">
-              <h2 className="text-7xl font-semibold text-cyanIngenia mb-4">
-                Quienes
-              </h2>
-              <h2 className="text-7xl font-semibold text-yellowIngenia mb-4">
-                Somos?
+          <div className=" text-left flex flex-col justify-center items-center gap-6 w-full">
+            <div className="w-full">
+              <h2 className="text-7xl font-semibold text-yellowIngenia mb-4 ">
+                ¿Quienes Somos?
               </h2>
             </div>
-            <p className="text-grayIngenia text-2xl w-[650px]">
-              Somos una Institución Educativa que bajo nuestro sistema vamos a
-              reforzar la educación de calidad.
+            <p className="text-grayIngenia text-2xl w-full">
+              Somos una Institución Educativa que bajo <br /> nuestro sistema
+              vamos a reforzar la <br />
+              educación de calidad.
             </p>
-            <div className="flex justify-center items-center gap-10">
-              <div className="flex relative justify-center items-center gap-4">
-                <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span>
-                <h3 className="text-grayIngenia text-2xl">Visión</h3>
-              </div>
-              <div className="flex relative justify-center items-center gap-4">
-                <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span>
-                <h3 className="text-grayIngenia text-2xl">Misión</h3>
-              </div>
+            <div className="flex justify-start items-start gap-16 w-full">
+              <ModalText
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim esse nostrum reiciendis consequatur est repellendus inventore dolor maxime ad animi necessitatibus, aperiam error natus! Modi eveniet doloremque sapiente cumque?
+"
+                button={
+                  <div className="flex flex-col justify-center items-start ">
+                    {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
+                    <h3 className="text-grayIngenia text-3xl font-bold">
+                      Misión
+                    </h3>
+                    <h3 className="flex items-center font-extralight">
+                      Conoce mas aquí <IoIosArrowForward className="text-5xl" />{" "}
+                    </h3>
+                  </div>
+                }
+              />
+              <ModalText
+                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim esse nostrum reiciendis consequatur est repellendus inventore dolor maxime ad animi necessitatibus, aperiam error natus! Modi eveniet doloremque sapiente cumque?"
+                button={
+                  <div className="flex flex-col justify-center items-start ">
+                    {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
+                    <h3 className="text-grayIngenia text-3xl font-bold">
+                      Visión
+                    </h3>
+                    <h3 className="flex items-center font-extralight">
+                      Conoce mas aquí <IoIosArrowForward className="text-5xl" />{" "}
+                    </h3>
+                  </div>
+                }
+              />
             </div>
           </div>
         </div>
