@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import {Providers} from "@/components/provider/provider"
+import { environment } from "@/environments/environment";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,44 +36,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon básico */}
+     
         <link
           rel="icon"
           type="image/png"
-          href="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/Logo-Sinletras.png"
+          href={`${environment.baseUrlStorage+"/Home/Logo-Sinletras.png"}`}
         />
 
-        {/* Favicon para diferentes dispositivos */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/Logo-Sinletras.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/Logo-Sinletras.png"
-        />
-
-        {/* Favicon para Apple Touch (iOS) */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/Logo-Sinletras.png"
-        />
-
-        {/* Favicon para Windows */}
-        <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-
-        {/* Favicon por defecto (en caso de que la URL dinámica falle) */}
-        <link
-          rel="icon"
-          type="image/png"
-          href="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/Logo-Sinletras.png"
-        />
+      
+       
       </head>
       <body className={inter.className}>
         <Providers>
