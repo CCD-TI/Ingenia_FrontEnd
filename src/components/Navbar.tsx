@@ -114,9 +114,9 @@ const Navbar = () => {
     [key: number]: Especializacion[];
   }>({});
   const [selectedSchool, setSelectedSchool] = useState<number | null>(null);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
   const [loading, setLoading] = useState(true);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   const [error, setError] = useState<string | null>(null);
   const hoveredSchoolRef = useRef<Set<number>>(new Set());
   const hasFetched = useRef(false);
