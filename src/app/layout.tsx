@@ -39,11 +39,8 @@ export default function RootLayout({
      
         <link
           rel="icon"
-          href={`${environment.baseUrlStorage+"/Home/Logo-Sinletras.png"}`}
+          href={environment.baseUrlStorage+"/Home/Logo-Sinletras.png"}
         />
-
-      
-       
       </head>
       <body className={inter.className}>
         <Providers>
