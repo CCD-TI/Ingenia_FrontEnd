@@ -34,6 +34,13 @@ const CarouselComponent = () => {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 850,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -53,7 +60,7 @@ const CarouselComponent = () => {
 
   return (
     <div
-      className="flex flex-col carousel-container mx-auto py-8 w-[90%] max-2xl:w-[70%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
+      className="flex flex-col carousel-container mx-auto py-8 w-[90%]  max-[1440px]:w-[70%]  max-xl:w-[80%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
       data-aos="zoom-out-right"
       data-aos-delay="200"
     >
@@ -63,10 +70,10 @@ const CarouselComponent = () => {
           const isMiddleImage =
             index === (currentSlide + 1) % imageItems.length; // El índice medio es el actual + 1 en un carrusel de 3
           return (
-            <div key={index} className="p-6">
+            <div key={index} className="p-6 w-fit">
               <div
-                className={`flex justify-center items-center rounded-lg ${
-                  isMiddleImage ? 'h-[30rem] w-[25rem] ' : 'h-[25rem] w-[25rem] my-7'
+                className={`flex  justify-center items-center rounded-lg ${
+                  isMiddleImage ? 'h-[30rem] w-[23rem] max-[1600px]:h-[25rem]  ' : ' max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7'
                 }`}
               >
                 <img

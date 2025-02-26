@@ -49,7 +49,7 @@ const Tabs = () => {
         {/* Contenido de las pestañas */}
         <div className=" ">
           {selectedTab === "Mensual" && (
-            <div className="w-full flex justify-center items-center gap-8">
+            <div className="w-full flex flex-wrap justify-center items-center gap-8">
               <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
@@ -152,7 +152,7 @@ const Tabs = () => {
             </div>
           )}
           {selectedTab === "Anual" && (
-            <div className="w-full flex justify-center items-center gap-8">
+            <div className="w-full flex flex-wrap justify-center items-center gap-8">
               <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">

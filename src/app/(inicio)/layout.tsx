@@ -9,7 +9,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
       <Navbar />
       <div className="w-full min-h-screen flex flex-col">
         <div className="flex-grow">{children}</div>
-        <RRSSLateral />
+        {/* <RRSSLateral /> */}
       </div>
       <Footer/>
     </div>

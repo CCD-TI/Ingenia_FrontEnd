@@ -8,7 +8,7 @@ const NivelesEducacion: React.FC = () => {
           <h2 className="text-white text-5xl font-semibold mb-8 text-left w-full">
             Niveles de Educación <br /> en Ingenia College
           </h2>
-          <div className="flex justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-10">
             <div>
               <div className="border-dashed border-2 p-1.5 rounded-3xl">
                 <div className="  h-[18rem] w-[15rem] border-gray-300 rounded-lg flex items-end overflow-hidden">
