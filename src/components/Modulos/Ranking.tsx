@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function StudentRanking() {
   return (
     <div className="bg-gradient-to-b from-purple-600 to-blue-500 p-4 md:p-8">
@@ -10,10 +12,12 @@ export default function StudentRanking() {
           {/* Segundo lugar */}
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
-              <img
+              <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Segundo lugar"
                 className="w-full h-full object-cover"
+                width={800}
+                height={800}
               />
             </div>
             <div className="bg-white rounded-lg p-4 text-center w-32 h-32 flex flex-col items-center justify-center">
@@ -27,10 +31,12 @@ export default function StudentRanking() {
           {/* Primer lugar */}
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
-              <img
+              <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Primer lugar"
                 className="w-full h-full object-cover"
+                width={800}
+                height={800}
               />
             </div>
             <div className="bg-white rounded-lg p-4 text-center w-32 h-40 flex flex-col items-center justify-center">
@@ -53,10 +59,12 @@ export default function StudentRanking() {
           {/* Tercer lugar */}
           <div className="flex flex-col items-center">
             <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
-              <img
+              <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Tercer lugar"
                 className="w-full h-full object-cover"
+                height={800}
+                width={800}
               />
             </div>
             <div className="bg-white rounded-lg p-4 text-center w-32 h-24 flex flex-col items-center justify-center">
@@ -84,10 +92,12 @@ export default function StudentRanking() {
               {Array.from({ length: 7 }).map((_, index) => (
                 <tr key={index} className="border-t">
                   <td className="py-2 px-4">
-                    <img
+                    <Image
                       src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                       alt={`Estudiante ${index + 1}`}
                       className="w-10 h-10 rounded-full"
+                      width={800}
+                      height={800}
                     />
                   </td>
                   <td className="py-2 px-4 text-blue-600">Nombre y Apellido</td>

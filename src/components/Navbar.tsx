@@ -387,10 +387,12 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
-                              <img
+                              <Image
                                 src={images.gestion}
                                 alt="Icono Gestión"
                                 className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
+                                width={800}
+                                height={800}
                               />
                             </div>
                             Gestión
@@ -440,10 +442,12 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                              <img
+                              <Image
                                 src={images.ingenieria}
                                 alt="Icono Ingeniería"
                                 className="text-white text-[2px] p-[5px]"
+                                width={800}
+                                height={800}
                               />
                             </div>
                             Ingeniería
@@ -491,10 +495,12 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-orange-500">
-                              <img
+                              <Image
                                 src={images.mineria}
                                 alt="Icono Minería"
                                 className="text-white text-[2px] p-[5px]"
+                                width={800}
+                                height={800}
                               />
                             </div>
                             Minería
@@ -544,9 +550,12 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-1  rounded-xl bor flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                              <img
+                              <Image
+                                alt="Rutas"
                                 src={images.rutas}
                                 className="text-white text-[2px] p-[5px]"
+                                width={800}
+                                height={800}
                               />{" "}
                               {/* Tamaño del ícono ajustado */}
                             </div>
@@ -870,7 +879,9 @@ const Navbar = () => {
                       className="hover:text-gray-400 flex items-center gap-4 text-xl"
                     >
                       <div className=" flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                        <img
+                        <Image
+                          width={800}
+                          height={800}
                           src={images.ingenieria}
                           alt="Icono Gestión"
                           className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
@@ -885,7 +896,9 @@ const Navbar = () => {
                       className="hover:text-gray-400 flex items-center gap-4 text-xl"
                     >
                       <div className=" flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
-                        <img
+                        <Image
+                          width={800}
+                          height={800}
                           src={images.gestion}
                           alt="Icono Gestión"
                           className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
@@ -900,10 +913,12 @@ const Navbar = () => {
                       className="hover:text-gray-400 flex items-center gap-4 text-xl"
                     >
                       <div className=" flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-orange-500">
-                        <img
+                        <Image
                           src={images.mineria}
                           alt="Icono Gestión"
                           className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
+                          width={800}
+                          height={800}
                         />
                       </div>
                       Mineria

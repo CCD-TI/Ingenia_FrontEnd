@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
+import Image from "next/image";
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
 const imageItems = [
   "https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Imagen/Cursos/PortadaFinal/100_COM.jpg",
@@ -73,10 +74,14 @@ const CarouselComponent = () => {
             <div key={index} className="p-6 w-fit">
               <div
                 className={`flex  justify-center items-center rounded-lg ${
-                  isMiddleImage ? 'h-[30rem] w-[23rem] max-[1600px]:h-[25rem]  ' : ' max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7'
+                  isMiddleImage
+                    ? "h-[30rem] w-[23rem] max-[1600px]:h-[25rem]  "
+                    : " max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7"
                 }`}
               >
-                <img
+                <Image
+                  width={800}
+                  height={800}
                   src={imageUrl}
                   alt={`Imagen ${index + 1}`}
                   className="w-full h-full rounded-lg mb-4"
@@ -91,7 +96,11 @@ const CarouselComponent = () => {
 };
 
 // Componentes de flecha personalizados
-const CustomNextArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLButtonElement> }) => (
+const CustomNextArrow = ({
+  onClick,
+}: {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}) => (
   <>
     <button
       className="absolute top-1/2 -right-16 max-sm:right-[1rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
@@ -104,10 +113,15 @@ const CustomNextArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLBu
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 5l7 7-7 7"
+        />
       </svg>
     </button>
-    <div className='absolute top-[42.5%] right-[21px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden'>
+    <div className="absolute top-[42.5%] right-[21px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
         className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none"
         onClick={onClick}
@@ -119,14 +133,23 @@ const CustomNextArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLBu
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
         </svg>
       </button>
     </div>
   </>
 );
 
-const CustomPrevArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLButtonElement> }) => (
+const CustomPrevArrow = ({
+  onClick,
+}: {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}) => (
   <>
     <button
       className="absolute top-1/2 -left-16 max-sm:left-4 transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
@@ -139,10 +162,15 @@ const CustomPrevArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLBu
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 19l-7-7 7-7"
+        />
       </svg>
     </button>
-    <div className='absolute top-[42.5%] left-6 transform -translate-y-1/2 z-10  to-white/30 h-[60%] w-[10%] rounded-lg block max-xl:hidden'>
+    <div className="absolute top-[42.5%] left-6 transform -translate-y-1/2 z-10  to-white/30 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
         className="absolute top-1/2 -left-[3rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full focus:outline-none"
         onClick={onClick}
@@ -154,7 +182,12 @@ const CustomPrevArrow = ({ onClick }: { onClick?: React.MouseEventHandler<HTMLBu
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
       </button>
     </div>

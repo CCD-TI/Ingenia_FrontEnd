@@ -1,4 +1,5 @@
 
+import Image from 'next/image'
 import React from 'react'
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa'
 import { IoLocationSharp } from 'react-icons/io5'
@@ -67,7 +68,7 @@ export default function footer() {
         <p className='flex items-center mt-2'><PiBookOpenText className='text-[#F1B23E]' />Libro de reclamaciones</p>
         <div className="mt-2">
           <p>¡Escanea aquí!</p>
-          <img src="" alt="QR Code" className="w-24 mt-2"/>
+          <Image width={800} height={800} src="" alt="QR Code" className="w-24 mt-2"/>
         </div>
         </div>
     </div>
