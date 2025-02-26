@@ -29,15 +29,15 @@ const Tabs = () => {
         {/* Botones de las pestañas */}
         <div className="w-[20rem] rounded-full flex bg-transparent border-3">
           <button
-            className={`flex-1 py-3 px-6 text-3xl font-extrabold text-center text-white transition-colors duration-200 rounded-full ${
-              selectedTab === "Mensual" ? "bg-white text-violet-600" : ""
+            className={`flex-1 py-3 px-6 text-3xl font-extrabold text-center  transition-colors duration-200 rounded-full ${
+              selectedTab === "Mensual" ? "bg-white !text-violet-600" : ""
             }`}
             onClick={() => setSelectedTab("Mensual")}
           >
             Mensual
           </button>
           <button
-            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold text-white transition-colors duration-200 rounded-full ${
+            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold  transition-colors duration-200 rounded-full ${
               selectedTab === "Anual" ? "bg-white text-yellow-600" : ""
             }`}
             onClick={() => setSelectedTab("Anual")}
