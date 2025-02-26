@@ -39,12 +39,12 @@ export default function Inicio() {
           <div>
           <div className="flex text-white mt-7 mb-4">
            <div>
-              <h1 className="text-9xl">80</h1>
+              <h1 className="text-9xl max-lg:text-6xl">80</h1>
             </div>
-            <div className="flex flex-col gap-1 text-white ">
-              <p className="text-4xl font-bold">%</p>
-              <p className="text-xl font-bold">Dscto</p>
-              <p className="ml-[58px] font-bold text-2xl">PROMOCIÓN</p>
+            <div className="flex flex-col gap-1 text-white  ">
+              <p className="text-4xl font-bold max-lg:text-xl  max-lg:leading-[0] ">%</p>
+              <p className="text-sm font-bold">Dscto</p>
+              <p className="ml-[58px] font-bold text-2xl max-lg:text-base max-lg:leading-[1.5] max-lg:ml-[40px]">PROMOCIÓN</p>
            </div>
            
            </div>

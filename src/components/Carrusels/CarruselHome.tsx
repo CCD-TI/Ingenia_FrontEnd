@@ -40,7 +40,7 @@ const CarouselComponent = () => {
         },
       },
       {
-        breakpoint: 850,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -71,12 +71,12 @@ const CarouselComponent = () => {
           const isMiddleImage =
             index === (currentSlide + 1) % imageItems.length; // El índice medio es el actual + 1 en un carrusel de 3
           return (
-            <div key={index} className="p-6 w-fit">
+            <div key={index} className="p-6 max-sm:p-0 ">
               <div
-                className={`flex  justify-center items-center rounded-lg ${
+                className={`flex justify-center items-center rounded-lg ${
                   isMiddleImage
                     ? "h-[30rem] w-[23rem] max-[1600px]:h-[25rem]  "
-                    : " max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7"
+                    : " max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7 mx-auto"
                 }`}
               >
                 <Image

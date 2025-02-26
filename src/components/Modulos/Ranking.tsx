@@ -20,7 +20,7 @@ export default function StudentRanking() {
                 height={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-32 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-24 w-32 h-32 flex flex-col items-center justify-center">
               <div className="text-5xl font-bold text-yellow-400">2</div>
               <div className="text-sm text-yellow-400 font-semibold">
                 Segundo Lugar
@@ -39,7 +39,7 @@ export default function StudentRanking() {
                 height={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-40 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-24 w-32 h-40 flex flex-col items-center justify-center">
               <div className="text-yellow-400 mb-2">
                 <svg
                   className="w-8 h-8"
@@ -67,7 +67,7 @@ export default function StudentRanking() {
                 width={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-24 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-24 w-32 h-24 flex flex-col items-center justify-center">
               <div className="text-5xl font-bold text-yellow-400">3</div>
               <div className="text-sm text-yellow-400 font-semibold">
                 Tercer <br /> Lugar
@@ -76,16 +76,16 @@ export default function StudentRanking() {
           </div>
         </div>
 
-        <div className="bg-red-600  rounded-xl p-6 max-w-4xl mx-auto">
+        <div className="bg-white  rounded-xl p-6 max-sm:p-2 w-fit mx-auto">
           <table className="w-full">
             <thead>
               <tr className="text-left">
-                <th className="py-2 px-4 max-sm:hidden">Avatar</th>
-                <th className="py-2 px-4">Nombre</th>
-                <th className="py-2 px-4">Grado</th>
-                <th className="py-2 px-4">Nota</th>
-                <th className="py-2 px-4">Tiempo</th>
-                <th className="py-2 px-4">Puntos</th>
+                <th className="py-2 px-4 max-sm:px-2 max-sm:hidden">Avatar</th>
+                <th className="py-2 px-4 max-sm:px-2">Nombre</th>
+                <th className="py-2 px-4 max-sm:px-2">Grado</th>
+                <th className="py-2 px-4 max-sm:px-2">Nota</th>
+                <th className="py-2 px-4 max-sm:px-2 max-sm:hidden">Tiempo</th>
+                <th className="py-2 px-4 max-sm:px-2">Puntos</th>
               </tr>
             </thead>
             <tbody>
@@ -100,11 +100,11 @@ export default function StudentRanking() {
                       height={800}
                     />
                   </td>
-                  <td className="py-2 px-4 text-blue-600">Nombre y Apellido</td>
-                  <td className="py-2 px-4">2° do</td>
-                  <td className="py-2 px-4">20</td>
-                  <td className="py-2 px-4">1 hr y 30 min</td>
-                  <td className="py-2 px-4 text-blue-600 font-semibold">100</td>
+                  <td className="py-2 px-4 max-sm:px-2 text-blue-600 text-xs">Nombre y Apellido</td>
+                  <td className="py-2 px-4 max-sm:px-2 text-xs">2° do</td>
+                  <td className="py-2 px-4 max-sm:px-2 text-xs">20</td>
+                  <td className="py-2 px-4 max-sm:px-2 text-xs max-sm:hidden">1 hr y 30 min</td>
+                  <td className="py-2 px-4 max-sm:px-2 text-blue-600 font-semibold text-xs">100</td>
                 </tr>
               ))}
             </tbody>

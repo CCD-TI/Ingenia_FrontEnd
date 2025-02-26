@@ -267,14 +267,16 @@ const Navbar = () => {
           md:space-x-4 text-sm md:text-base font-bold"
           >
             <div className=" text-white ">
-              <div className="flex gap-6 items-center justify-center">
-                <div className="flex max-xl:flex-col items-center gap-2">
-                  <div className="text-xs md:text-sm font-bold flex items-center">
+              <div className="flex gap-6 max-sm:gap-2 w-full items-center justify-center">
+                <div className="flex max-xl:flex-col items-center gap-2 max-sm:gap-0">
+                  <div className="text-xs md:text-sm font-bold flex gap-2 items-center">
+                    <div className="max-sm:flex flex-col">
                     ¡Aprovecha nuestra{" "}
                     <span className="text-white">
                       {" "}
                       <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
                     </span>
+                    </div>
                     <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
                       80
                       <div>
@@ -283,30 +285,21 @@ const Navbar = () => {
                       </div>
                     </div>
                   </div>
-                  <div className=" flex gap-6">
+                  <div className=" flex gap-6 items-center max-sm:gap-2">
                     <Vega targetDate="02/28/2025 23:59:59" />
 
-                    <button className="border border-white h-fit text-white font-bold px-4 py-1 rounded-xl hover:bg-white hover:text-blue-700 transition-all">
+                    <button className="border border-white h-fit text-white font-bold px-4 py-1 max-sm:leading-[1] rounded-xl max-sm:text-[9px] hover:bg-white hover:text-blue-700 transition-all">
                   ¡Compra Ahora!
                 </button>
                   </div>
                 </div>
              
-                <button className="text-white text-xl hover:text-gray-300 transition-all ml-4"></button>
               </div>
             </div>
 
-            <div className="flex flex-row items-center justify-between space-x-4">
-              <div className="mb-0 mr-2">
-                {/* <CountdownTimerTopBar targetDate={contador} /> */}
-              </div>
+           
 
-              <div className="flex justify-center">
-                {/* <ModalPromo css="px-2 border-2 hover:text-colors-dark-blue-ccd bg-transparent border-colors-cyan-ccd text-colors-cyan-ccd text-sm lg:text-base font-bold py-1 rounded-2xl shadow-lg hover:bg-[#00d3c5] hover:shadow-[0_0_25px_5px_rgba(0,234,223,0.7)] transition-all duration-300" /> */}
-              </div>
-            </div>
-
-            <div className=" mt-0 md:ml-auto md:flex justify-center md:justify-end">
+            <div className=" mt-0 md:ml-auto md:flex justify-center md:justify-end max-sm:absolute max-sm:right-6">
               <button
                 className="text-white text-lg hover:text-cyanIngenia transition-all"
                 onClick={() => setShowTopBar(false)}
@@ -322,11 +315,11 @@ const Navbar = () => {
 
       <nav
         className={`${
-          showTopBar ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.8rem] z-20" : ""
+          showTopBar ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.4rem] z-20" : ""
         } w-full   text-white`}
       >
         <div
-          className={`mx-auto grid grid-cols-7 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
+          className={`mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
             isScrolled ? "bg-blue-400 " : ""
           }`}
         >

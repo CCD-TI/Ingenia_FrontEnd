@@ -22,7 +22,7 @@ interface Propstext{
   
     return (
       <>
-        <Button className="!bg-transparent !size-fit !px-0" onPress={onOpen}>{button} </Button>
+        <button className="!bg-transparent !size-fit !px-0 !rounded-none" onClick={onOpen}>{button} </button>
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
           <ModalContent>
             {(onClose) => (

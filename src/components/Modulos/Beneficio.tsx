@@ -83,7 +83,7 @@ const Tabs = () => {
                 </div>
               </div>
 
-              <div className="w-[27rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[27rem] max-sm:w-[22rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-gradient-to-t from-amber-500 to-violet-900 rounded-3xl flex items-center  text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
@@ -186,7 +186,7 @@ const Tabs = () => {
                 </div>
               </div>
 
-              <div className="w-[27rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[27rem] h-[35rem] max-sm:w-[22rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-gradient-to-t from-amber-500 to-blue-600 rounded-3xl flex items-center  text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
