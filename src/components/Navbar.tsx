@@ -263,31 +263,35 @@ const Navbar = () => {
           }
         >
           <div
-            className="  flex flex-col md:flex-row md:items-center md:justify-center 
+            className="  flex flex-row md:items-center md:justify-center 
           md:space-x-4 text-sm md:text-base font-bold"
           >
             <div className=" text-white ">
-              <div className="flex gap-3">
-                <div className="text-xs md:text-sm font-bold flex items-center">
-                  ¡Aprovecha nuestra{" "}
-                  <span className="text-white">
-                    {" "}
-                    <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
-                  </span>
-                  <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
-                    80
-                    <div>
-                      <h1 className="text-xs leading-[1] ">%</h1>
-                      <p className="text-xs leading-[1]">Dscto</p>
+              <div className="flex gap-6 items-center justify-center">
+                <div className="flex max-xl:flex-col items-center gap-2">
+                  <div className="text-xs md:text-sm font-bold flex items-center">
+                    ¡Aprovecha nuestra{" "}
+                    <span className="text-white">
+                      {" "}
+                      <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
+                    </span>
+                    <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
+                      80
+                      <div>
+                        <h1 className="text-xs leading-[1] ">%</h1>
+                        <p className="text-xs leading-[1]">Dscto</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="">
-                  <Vega targetDate="02/28/2025 23:59:59" />
-                </div>
-                <button className="border border-white text-white font-bold px-4 py-1 rounded-xl hover:bg-white hover:text-blue-700 transition-all">
+                  <div className=" flex gap-6">
+                    <Vega targetDate="02/28/2025 23:59:59" />
+
+                    <button className="border border-white h-fit text-white font-bold px-4 py-1 rounded-xl hover:bg-white hover:text-blue-700 transition-all">
                   ¡Compra Ahora!
                 </button>
+                  </div>
+                </div>
+             
                 <button className="text-white text-xl hover:text-gray-300 transition-all ml-4"></button>
               </div>
             </div>
@@ -302,7 +306,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="hidden mt-0 md:ml-auto md:flex justify-center md:justify-end">
+            <div className=" mt-0 md:ml-auto md:flex justify-center md:justify-end">
               <button
                 className="text-white text-lg hover:text-cyanIngenia transition-all"
                 onClick={() => setShowTopBar(false)}
@@ -318,12 +322,12 @@ const Navbar = () => {
 
       <nav
         className={`${
-          showTopBar ? "mt-20 md:mt-[55.5px] z-20" : ""
+          showTopBar ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.8rem] z-20" : ""
         } w-full   text-white`}
       >
         <div
-          className={`mx-auto grid grid-cols-7 grid-rows-1 gap-4 px-6 lg:px-14 py-6 fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? "bg-blue-400 " : "-mt-[10px]"
+          className={`mx-auto grid grid-cols-7 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
+            isScrolled ? "bg-blue-400 " : ""
           }`}
         >
           {/* Logo */}
@@ -358,7 +362,7 @@ const Navbar = () => {
                 href="/"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                INICIO
+                Inicio
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -369,7 +373,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold">
-                  GRADOS
+                  Niveles
                   <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180" />
                 </button>
                 {activeCategory === "escuelas" && (
@@ -633,8 +637,8 @@ const Navbar = () => {
                 href="/nosotros"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                QUIENES SOMOS
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                Nosotros 
+               <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
             {/* <li>
@@ -651,7 +655,7 @@ const Navbar = () => {
                 href="/promociones"
                 className="relative group md:text-xs xl:text-base text-cyanIngenia  hover:text-colors-cyan-ccd transition-all duration-300 flex items-center font-bold"
               >
-                PROMOCIONES
+                Promociones
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
                 <FaRegStar className="text-colors-cyan-ccd text-xl -mt-1 ml-1" />
               </Link>
@@ -662,7 +666,7 @@ const Navbar = () => {
                 href="/validar"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                RANKING
+                Ranking
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -674,7 +678,7 @@ const Navbar = () => {
             <Link
               href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
               target="_blank"
-              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-cyanIngenia text-white font-bold hover:bg-yellowIngenia border-2 border-transparent hover:border-white transition-all duration-300 rounded-full"
+              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-white text-violet-600 font-bold hover:bg-yellowIngenia border-2 border-transparent hover:border-white transition-all duration-300 rounded-full"
             >
               AULA VIRTUAL
             </Link>

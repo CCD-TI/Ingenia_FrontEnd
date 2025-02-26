@@ -16,12 +16,12 @@ const Tabs = () => {
       }`}
     >
       <div className="max-w-[100rem] mx-auto flex flex-col justify-center items-center gap-6 py-24">
-        <div className="flex items-center gap-2">
+        <div className="flex max-sm:flex-col items-center gap-2">
           <div className="w-36 h-1.5 bg-white"></div>
           <h1 className="text-[53px] font-bold text-white">Membresías</h1>
           <div className="w-36 h-1.5 bg-white"></div>
         </div>
-        <div className="text-5xl !text-white flex items-center gap-3">
+        <div className="text-5xl !text-white flex items-center gap-3 max-lg:flex-col">
           Aprovecha el <span className="text-7xl font-extrabold">50% </span>{" "}
           <span className="font-bold text-5xl">Dscto.</span> por apertura
         </div>

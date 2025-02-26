@@ -8,10 +8,10 @@ export default function StudentRanking() {
         RANKING DE ESTUDIANTES
       </h1>
       <div className="flex justify-center gap-20 items-center max-lg:flex-col">
-        <div className="flex justify-center items-end gap-4 mb-12 ">
+        <div className="flex justify-center items-end gap-4 max-sm:gap-1 mb-12 ">
           {/* Segundo lugar */}
           <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
+            <div className="w-24 h-24 max-sm:size-[4.5rem] rounded-full overflow-hidden mb-2">
               <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Segundo lugar"
@@ -20,7 +20,7 @@ export default function StudentRanking() {
                 height={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center w-32 h-32 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-32 flex flex-col items-center justify-center">
               <div className="text-5xl font-bold text-yellow-400">2</div>
               <div className="text-sm text-yellow-400 font-semibold">
                 Segundo Lugar
@@ -30,7 +30,7 @@ export default function StudentRanking() {
 
           {/* Primer lugar */}
           <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
+            <div className="w-24 h-24 max-sm:size-[4.5rem] rounded-full overflow-hidden mb-2">
               <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Primer lugar"
@@ -39,7 +39,7 @@ export default function StudentRanking() {
                 height={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center w-32 h-40 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-40 flex flex-col items-center justify-center">
               <div className="text-yellow-400 mb-2">
                 <svg
                   className="w-8 h-8"
@@ -58,7 +58,7 @@ export default function StudentRanking() {
 
           {/* Tercer lugar */}
           <div className="flex flex-col items-center">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-2">
+            <div className="w-24 h-24 max-sm:size-[4.5rem] rounded-full overflow-hidden mb-2">
               <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                 alt="Tercer lugar"
@@ -67,7 +67,7 @@ export default function StudentRanking() {
                 width={800}
               />
             </div>
-            <div className="bg-white rounded-lg p-4 text-center w-32 h-24 flex flex-col items-center justify-center">
+            <div className="bg-white rounded-lg p-4 text-center max-sm:w-28 w-32 h-24 flex flex-col items-center justify-center">
               <div className="text-5xl font-bold text-yellow-400">3</div>
               <div className="text-sm text-yellow-400 font-semibold">
                 Tercer <br /> Lugar
@@ -76,11 +76,11 @@ export default function StudentRanking() {
           </div>
         </div>
 
-        <div className="bg-white  rounded-xl p-6 max-w-4xl mx-auto">
+        <div className="bg-red-600  rounded-xl p-6 max-w-4xl mx-auto">
           <table className="w-full">
             <thead>
               <tr className="text-left">
-                <th className="py-2 px-4">Avatar</th>
+                <th className="py-2 px-4 max-sm:hidden">Avatar</th>
                 <th className="py-2 px-4">Nombre</th>
                 <th className="py-2 px-4">Grado</th>
                 <th className="py-2 px-4">Nota</th>
@@ -91,11 +91,11 @@ export default function StudentRanking() {
             <tbody>
               {Array.from({ length: 7 }).map((_, index) => (
                 <tr key={index} className="border-t">
-                  <td className="py-2 px-4">
+                  <td className="py-2 px-4 max-sm:hidden">
                     <Image
                       src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/images.png"
                       alt={`Estudiante ${index + 1}`}
-                      className="w-10 h-10 rounded-full"
+                      className="w-10 h-10 rounded-full max-sm:hidden"
                       width={800}
                       height={800}
                     />

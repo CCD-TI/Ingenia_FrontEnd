@@ -20,10 +20,10 @@ export default function Inicio() {
         {/* Primera columna texto */}
         <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-10 max-sm:gap-5">
           <h1 className="flex flex-col text-white ">
-            <span className="text-5xl font-extrabold leading-[0.2]">CONSTRUYE TU</span>
-            <span className="text-9xl font-extrabold ">FUTURO</span>
+            <span className="text-5xl max-sm:text-2xl font-extrabold leading-[0.2]">CONSTRUYE TU</span>
+            <span className="text-9xl max-sm:text-6xl font-extrabold ">FUTURO</span>
           </h1>
-          <h1 className=" text-2xl font-bold text-white">
+          <h1 className=" text-2xl max-sm:text-base font-bold text-white">
           Educación accesible y de calidad para todos los estudiantes de la costa, sierra y selva del Perú.
           </h1>
           <div className="flex max-sm:flex-col gap-6">
