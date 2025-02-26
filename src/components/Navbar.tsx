@@ -270,8 +270,8 @@ const Navbar = () => {
           >
             <div className=" text-white ">
               <div className="flex gap-3">
-                <p className="text-xs md:text-sm font-bold flex items-center">
-                  ¡Aprovecha nuestra {" "}
+                <div className="text-xs md:text-sm font-bold flex items-center">
+                  ¡Aprovecha nuestra{" "}
                   <span className="text-white">
                     {" "}
                     <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
@@ -279,14 +279,11 @@ const Navbar = () => {
                   <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
                     80
                     <div>
-                      <h1 className="text-xs leading-[1] ">
-                        %
-                      </h1>
+                      <h1 className="text-xs leading-[1] ">%</h1>
                       <p className="text-xs leading-[1]">Dscto</p>
                     </div>
                   </div>
-
-                </p>
+                </div>
                 <div className="">
                   <Vega targetDate="02/28/2025 23:59:59" />
                 </div>
