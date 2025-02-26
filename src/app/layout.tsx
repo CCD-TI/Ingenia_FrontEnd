@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   ],
   // Configuración de Open Graph para redes sociales
   openGraph: {
-    title: "Centro de Capacitación y Desarrollo CCD",
+    title: "Ingenia College CCD",
     description:
-      "Descubre programas de formación continua y capacitación profesional en Perú.",
+      "Descubre la mejor formacion educativa del peru.",
     url: "https://ingeniafrontend.vercel.app/",
     siteName: "Ingenia College",
     images: [
