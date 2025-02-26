@@ -7,7 +7,7 @@ export default function StudentRanking() {
       <h1 className="text-center text-white text-4xl font-bold mb-12">
         RANKING DE ESTUDIANTES
       </h1>
-      <div className="flex justify-center gap-20 items-center max-lg:flex-col">
+      <div className="flex justify-center gap-20 items-center max-xl:flex-col">
         <div className="flex justify-center items-end gap-4 max-sm:gap-1 mb-12 ">
           {/* Segundo lugar */}
           <div className="flex flex-col items-center">

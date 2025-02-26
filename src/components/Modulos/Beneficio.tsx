@@ -50,7 +50,7 @@ const Tabs = () => {
         <div className=" ">
           {selectedTab === "Mensual" && (
             <div className="w-full flex flex-wrap justify-center items-center gap-8">
-              <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Aprendiz</h1>
@@ -83,7 +83,7 @@ const Tabs = () => {
                 </div>
               </div>
 
-              <div className="w-[27rem] max-sm:w-[22rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[27rem] max-sm:w-[20rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-gradient-to-t from-amber-500 to-violet-900 rounded-3xl flex items-center  text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
@@ -116,7 +116,7 @@ const Tabs = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-white/30 rounded-3xl  size-full flex items-center text-white">
                   <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Avanzado</h1>
@@ -153,7 +153,7 @@ const Tabs = () => {
           )}
           {selectedTab === "Anual" && (
             <div className="w-full flex flex-wrap justify-center items-center gap-8">
-              <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Aprendiz</h1>
@@ -186,7 +186,7 @@ const Tabs = () => {
                 </div>
               </div>
 
-              <div className="w-[27rem] h-[35rem] max-sm:w-[22rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[27rem] h-[35rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-gradient-to-t from-amber-500 to-blue-600 rounded-3xl flex items-center  text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
@@ -218,7 +218,7 @@ const Tabs = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-[22rem] h-[30rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
+              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
                 <div className="bg-white/30 rounded-3xl  size-full flex items-center text-white">
                   <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <h1 className="text-3xl font-extrabold">Plan Avanzado</h1>
