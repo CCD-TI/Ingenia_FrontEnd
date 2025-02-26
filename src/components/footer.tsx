@@ -7,7 +7,7 @@ import { PiBookOpenText } from 'react-icons/pi'
 
 export default function footer() {
   return (
-    <footer className="w-screen bg-purple-700 text-white py-6">
+    <footer className="w-full bg-purple-700 text-white py-6">
     <div className="max-w-[100rem] w-full mx-auto px-6 flex flex-wrap gap-32 justify-center">
       
       {/* Información de contacto */}
