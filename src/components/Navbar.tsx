@@ -245,7 +245,18 @@ const Navbar = () => {
 
   // Función para manejar el hover al salir de la subcategoría
   const handleSubMouseLeave = () => setActiveSubCategory(null);
-
+  const handleScroll = (e:any, targetId:any) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+        const navbarHeight = 79; // Altura del navbar en píxeles
+        const offset = targetElement.offsetTop - navbarHeight;
+        window.scrollTo({
+            top: offset,
+            behavior: 'smooth',
+        });
+    }
+};
   useEffect(() => {
     if (selectedSchool && !hasFetched.current) {
       fetchEspecializaciones(selectedSchool);
@@ -271,11 +282,11 @@ const Navbar = () => {
                 <div className="flex max-xl:flex-col items-center gap-2 max-sm:gap-0">
                   <div className="text-xs md:text-sm font-bold flex gap-2 items-center">
                     <div className="max-sm:flex flex-col">
-                    ¡Aprovecha nuestra{" "}
-                    <span className="text-white">
-                      {" "}
-                      <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
-                    </span>
+                      ¡Aprovecha nuestra{" "}
+                      <span className="text-white">
+                        {" "}
+                        <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
+                      </span>
                     </div>
                     <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
                       80
@@ -289,15 +300,12 @@ const Navbar = () => {
                     <Vega targetDate="02/28/2025 23:59:59" />
 
                     <button className="border border-white h-fit text-white font-bold px-4 py-1 max-sm:leading-[1] rounded-xl max-sm:text-[9px] hover:bg-white hover:text-blue-700 transition-all">
-                  ¡Compra Ahora!
-                </button>
+                      ¡Compra Ahora!
+                    </button>
                   </div>
                 </div>
-             
               </div>
             </div>
-
-           
 
             <div className=" mt-0 md:ml-auto md:flex justify-center md:justify-end max-sm:absolute max-sm:right-6">
               <button
@@ -315,12 +323,14 @@ const Navbar = () => {
 
       <nav
         className={`${
-          showTopBar ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.4rem] z-20" : ""
+          showTopBar
+            ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.4rem] z-20"
+            : ""
         } w-full   text-white`}
       >
         <div
           className={`mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? "bg-blue-400 " : ""
+            isScrolled ? "bg-blue-500/80 backdrop:blur-xl " : ""
           }`}
         >
           {/* Logo */}
@@ -352,7 +362,8 @@ const Navbar = () => {
           <ul className="col-span-3 col-start-3 hidden lg:flex justify-center items-center space-x-8 text-white ">
             <li>
               <Link
-                href="/"
+                onClick={(e) => handleScroll(e, "inicio")}
+                href="#inicio"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
                 Inicio
@@ -365,10 +376,14 @@ const Navbar = () => {
                 onMouseEnter={() => handleMouseEnter("escuelas")}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold">
+                <Link
+                  href="#niveles"
+                  className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold"
+                  onClick={(e)=> handleScroll(e , 'niveles')}
+               >
                   Niveles
                   <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180" />
-                </button>
+                </Link>
                 {activeCategory === "escuelas" && (
                   <div className="absolute top-full left-0 bg-colors-night-blue-ccd2 bg-opacity-60 rounded-2xl py-4 shadow-lg backdrop-blur-md">
                     {/* Subcategorías */}
@@ -392,7 +407,7 @@ const Navbar = () => {
                                 height={800}
                               />
                             </div>
-                            Gestión
+                            Primaria
                           </Link>
                         </div>
                         {activeSubCategory === "gestion" && (
@@ -447,7 +462,7 @@ const Navbar = () => {
                                 height={800}
                               />
                             </div>
-                            Ingeniería
+                            Secundaria
                           </Link>
                         </div>
                         {activeSubCategory === "ingenieria" && (
@@ -500,7 +515,7 @@ const Navbar = () => {
                                 height={800}
                               />
                             </div>
-                            Minería
+                            Pre universitario
                           </Link>
                         </div>
                         {activeSubCategory === "mineria" && (
@@ -541,7 +556,7 @@ const Navbar = () => {
                         // onMouseEnter={() => handleSubMouseEnter("rutas")}
                         onMouseLeave={handleSubMouseLeave}
                       >
-                        <div className="px-4">
+                        {/* <div className="px-4">
                           <Link
                             href="/"
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-1  rounded-xl bor flex items-center gap-3"
@@ -554,12 +569,12 @@ const Navbar = () => {
                                 width={800}
                                 height={800}
                               />{" "}
-                              {/* Tamaño del ícono ajustado */}
+                           
                             </div>
                             Rutas
-                            {/* <MdKeyboardArrowRight /> */}
+                          
                           </Link>
-                        </div>
+                        </div> */}
                         {/* {activeSubCategory === "rutas" && (
                         <ul className="flex flex-col gap-2 absolute w-80 top-0 left-full bg-colors-night-blue-ccd2 bg-opacity-60 p-4 rounded-2xl shadow-lg backdrop-blur-md">
                           <li className="flex items-start gap-2">
@@ -627,11 +642,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/nosotros"
+                href="#nosotros"
+                onClick={(e) => handleScroll(e, "nosotros")}
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                Nosotros 
-               <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                Nosotros
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
             {/* <li>
@@ -645,8 +661,9 @@ const Navbar = () => {
             </li> */}
             <li>
               <Link
-                href="/promociones"
-                className="relative group md:text-xs xl:text-base text-cyanIngenia  hover:text-colors-cyan-ccd transition-all duration-300 flex items-center font-bold"
+                onClick={(e) => handleScroll(e, "promociones")}
+                href="#promociones"
+                className="relative group md:text-xs xl:text-base text-white  hover:text-colors-cyan-ccd transition-all duration-300 flex items-center font-bold"
               >
                 Promociones
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -656,7 +673,8 @@ const Navbar = () => {
             <li>
               <Link
                 // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
-                href="/validar"
+                onClick={(e) => handleScroll(e, "ranking")}
+                href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
                 Ranking
@@ -796,7 +814,7 @@ const Navbar = () => {
                   <Link
                     onClick={toggleMenu}
                     href="/promociones"
-                    className="relative group md:text-xs xl:text-base text-cyanIngenia font-bold hover:text-colors-cyan-ccd transition-all duration-300 flex justify-between items-center"
+                    className="relative group md:text-xs xl:text-base text-amber-500 font-bold hover:text-colors-cyan-ccd transition-all duration-300 flex justify-between items-center"
                   >
                     PROMOCIONES
                     <IoIosArrowForward />

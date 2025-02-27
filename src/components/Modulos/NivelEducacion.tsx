@@ -2,7 +2,7 @@ import React from "react";
 
 const NivelesEducacion: React.FC = () => {
   return (
-    <div className="w-full flex  justify-center items-center py-16   bg-yellowIngenia">
+    <div id="niveles" className="w-full flex  justify-center items-center py-16   bg-yellowIngenia">
       <div className="max-w-[100rem] w-[90%] mx-auto flex flex-col justify-center  m-6 ">
         <div className="w-fit mx-auto flex flex-col justify-center items-center gap-10">
           <h2 className="text-white text-5xl font-semibold mb-8 text-left w-full">

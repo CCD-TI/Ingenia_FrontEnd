@@ -9,6 +9,7 @@ const Tabs = () => {
 
   return (
     <div
+    id="promociones"
       className={`${
         selectedTab === "Mensual"
           ? "bg-gradient-to-t from-amber-300 to-violet-900"

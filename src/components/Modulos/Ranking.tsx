@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function StudentRanking() {
   return (
-    <div className="bg-gradient-to-b from-purple-600 to-blue-500 p-4 md:p-8">
+    <div id="ranking" className="bg-gradient-to-b from-purple-600 to-blue-500 p-4 md:p-8">
     <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10">
-      <h1 className="text-center text-white text-4xl font-bold mb-12">
+      <h1 className="text-center text-white text-5xl max-sm:text-3xl font-bold mb-12">
         RANKING DE ESTUDIANTES
       </h1>
       <div className="flex justify-center gap-20 items-center max-xl:flex-col">

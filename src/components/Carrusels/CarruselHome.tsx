@@ -75,8 +75,8 @@ const CarouselComponent = () => {
               <div
                 className={`flex justify-center items-center rounded-lg ${
                   isMiddleImage
-                    ? "h-[30rem] w-[23rem] max-[1600px]:h-[25rem]  "
-                    : " max-[1440px]:h-[25rem] max-[1440px]:my-0 max-[1600px]:h-[20rem]  h-[25rem] w-[23rem] my-7 mx-auto"
+                    ? "scale-100 max-[1440px]:scale-90  mx-auto  "
+                    : " scale-80 max-[1440px]:scale-90 mx-auto"
                 }`}
               >
                 <Image

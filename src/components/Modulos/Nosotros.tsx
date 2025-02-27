@@ -5,7 +5,7 @@ import ModalText from "../Modals/ModalText";
 export const Nosotros = () => {
   return (
     <>
-      <div className="bg-creamIngenia p-8 text-center z-50 py-20">
+      <div id="nosotros" className="bg-creamIngenia p-8 text-center z-50 py-20">
         {/* Título */}
         {/* <h1 className="text-4xl font-bold text-gray-800 mb-6">¿Quiénes Somos?</h1> */}
 
