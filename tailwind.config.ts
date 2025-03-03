@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       webkitTextStroke: {
         1: '1px', // Grosor del contorno: 1px
         2: '2px', // Grosor del contorno: 2px
