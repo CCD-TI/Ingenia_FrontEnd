@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 
@@ -9,38 +9,37 @@ const Tabs = () => {
 
   return (
     <div
-    id="promociones"
-      className={`${
-        selectedTab === "Mensual"
-          ? "bg-gradient-to-t from-amber-300 to-violet-900"
-          : "bg-gradient-to-t from-amber-300 to-blue-600"
-      }`}
+      id="promociones"
+      className={`${selectedTab === "Mensual"
+        ? "bg-gradient-to-b from-[#03B6FB] via-[#8ABDAE] to-[#F88119] "
+        : "bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#167F99_56.07%)]"
+        }`}
     >
       <div className="max-w-[100rem] mx-auto flex flex-col justify-center items-center gap-6 py-24">
-        <div className="flex max-sm:flex-col items-center gap-2">
-          <div className="w-36 h-1.5 bg-white"></div>
-          <h1 className="text-[53px] font-bold text-white">Membresías</h1>
-          <div className="w-36 h-1.5 bg-white"></div>
+        <div className="flex items-center gap-4 w-full max-sm:flex-col">
+          <div className="flex-1 h-1.5 bg-white max-sm:w-36"></div>
+          <h1 className="text-[53px] font-poppins font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,2)]">Membresías</h1>
+          <div className="flex-1 h-1.5 bg-white max-sm:w-36"></div>
         </div>
+
         <div className="text-5xl !text-white flex items-center gap-3 max-lg:flex-col">
-          Aprovecha el <span className="text-7xl font-extrabold">50% </span>{" "}
-          <span className="font-bold text-5xl">Dscto.</span> por apertura
+          <span className="font-poppins font-normal"> Aprovecha el</span><span className="text-7xl font-bold  text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">50% </span>{" "}
+          <span className="font-poppins font-bold text-5xl  text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">Dscto.</span>
+          <span className="font-poppins font-normal">por apertura</span>
         </div>
 
         {/* Botones de las pestañas */}
-        <div className="w-[20rem] rounded-full flex bg-transparent border-3">
+        <div className="w-[20rem] rounded-2xl flex bg-transparent border-3 mb-7">
           <button
-            className={`flex-1 py-3 px-6 text-3xl font-extrabold text-center text-white transition-colors duration-200 rounded-full ${
-              selectedTab === "Mensual" ? "bg-white !text-violet-600" : ""
-            }`}
+            className={`flex-1 py-4 px-6 text-3xl font-extrabold text-center  text-white transition-colors duration-200 rounded-xl ${selectedTab === "Mensual" ? "bg-white text-[#05ABDD] " : ""
+              }`}
             onClick={() => setSelectedTab("Mensual")}
           >
             Mensual
           </button>
           <button
-            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold text-white transition-colors duration-200 rounded-full ${
-              selectedTab === "Anual" ? "bg-white text-yellow-600" : ""
-            }`}
+            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold text-white transition-colors duration-200 rounded-xl ${selectedTab === "Anual" ? "bg-white text-[#05ABDD] " : ""
+              }`}
             onClick={() => setSelectedTab("Anual")}
           >
             Anual
@@ -50,19 +49,35 @@ const Tabs = () => {
         {/* Contenido de las pestañas */}
         <div className=" ">
           {selectedTab === "Mensual" && (
-            <div className="w-full flex flex-wrap justify-center items-center gap-8">
-              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
+            <div className="w-full flex flex-wrap justify-center items-center gap-10">
+
+
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -20, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150, damping: 12 }}
+              >
+                <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white border-3 border-white">
+
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Aprendiz</h1>
-                    <div className="flex items-end">
-                      <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>5</p>
-                      </div>
-                      <p className="text-2xl">/Mensual</p>
+                    <div className="flex flex-col items-center gap-6">
+                    <div className="bg-[#F9B233] p-[9px] rounded-full text-sm font-poppins font-extrabold mr-[100px] shadow-[0px_8px_40px_8px_#F9B23380]">
+  Nivel Aprendiz
+</div>
+
+                      <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
+                                  after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
+                                  after:scale-130 after:-z-10">
+                        Plan Aprendiz
+                      </h1>
                     </div>
-                    <hr className="border-2 w-full " />
+                    <div className="flex items-end">
+                      <p className="text-6xl font-extrabold">S/</p>
+                      <p className="text-6xl font-extrabold">5</p>
+                      <p className="text-2xl mb-6 ml-4">/ mensual</p>
+                    </div>
+
+
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
                       <h1 className="text-base">
@@ -76,18 +91,33 @@ const Tabs = () => {
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl">
-                      {" "}
+
+
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
+
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="w-[27rem] max-sm:w-[20rem] h-[35rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className="bg-gradient-to-t from-amber-500 to-violet-900 rounded-3xl flex items-center  text-white size-full">
+
+
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -25, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150, damping: 12 }}
+              >
+                <div className="bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#63DEFd_56%)] rounded-[40px] flex items-center border-3 border-white text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
+                    <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
+                    after:absolute after:inset-0 after:bg-[#63defd] after:opacity-90 after:blur-lg 
+                    after:scale-130 after:-z-10">Plan Avanzado</h1>
                     <div className="flex items-end">
                       <div className="text-4xl font-extrabold items-end flex gap-2">
                         <p className="text-5xl">S/</p>
@@ -95,7 +125,7 @@ const Tabs = () => {
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
-                    <hr className="border-2 w-full " />
+
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
                       <h1 className="text-base">
@@ -110,17 +140,28 @@ const Tabs = () => {
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl mt-10 border-white rounded-2xl">
-                      {" "}
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
-              </div>
-              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className="bg-white/30 rounded-3xl  size-full flex items-center text-white">
+              </motion.div>
+
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -25, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150, damping: 12 }}
+              >
+                <div className="bg-white/30 rounded-[40px]  size-full flex items-center border-3 border-white text-white">
                   <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Avanzado</h1>
+                    <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
+                    after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
+                    after:scale-130 after:-z-10">Plan Avanzado</h1>
                     <div className="flex items-end">
                       <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
                         <p className="text-5xl">S/</p>
@@ -128,7 +169,7 @@ const Tabs = () => {
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
-                    <hr className="border-2 w-full " />
+
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
                       <h1 className="text-base">
@@ -143,21 +184,41 @@ const Tabs = () => {
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl">
-                      {" "}
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
+
                   </div>
                 </div>
-              </div>
+              </motion.div>
+
+
+
             </div>
           )}
           {selectedTab === "Anual" && (
             <div className="w-full flex flex-wrap justify-center items-center gap-8">
-              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className=" bg-white/30 rounded-3xl flex items-center  size-full gap-6 text-white">
+
+
+
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -20, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150, damping: 12 }}
+              >
+
+                <div className=" bg-white/30 rounded-[40px] flex items-center  size-full gap-6 border-3 border-white text-white">
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Aprendiz</h1>
+
+                    <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
+                    after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
+                    after:scale-130 after:-z-10">Plan Avanzado</h1>
+
                     <div className="flex items-end">
                       <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
                         <p className="text-5xl">S/</p>
@@ -165,7 +226,7 @@ const Tabs = () => {
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
-                    <hr className="border-2 w-full " />
+
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
                       <h1 className="text-base">
@@ -179,18 +240,28 @@ const Tabs = () => {
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl">
-                      {" "}
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="w-[27rem] h-[35rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className="bg-gradient-to-t from-amber-500 to-blue-600 rounded-3xl flex items-center  text-white size-full">
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -25, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 150, damping: 12 }}
+              >
+
+                <div className="bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#63DEFD_56.07%)] rounded-[40px] flex items-center 
+                  border-3 border-white text-white size-full">
                   <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Ingenia</h1>
+                    <h1 className="text-3xl font-extrabold uppercase">Plan Ingenia</h1>
                     <div className="flex items-end">
                       <div className="text-4xl font-extrabold items-end flex gap-2">
                         <p className="text-5xl">S/</p>
@@ -198,11 +269,11 @@ const Tabs = () => {
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
-                    <hr className="border-2 w-full " />
+
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
                       <h1 className="text-base">
-                        Acceso a 5 libros virtuales por 12 meses 
+                        Acceso a 5 libros virtuales por 12 meses
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
@@ -212,46 +283,74 @@ const Tabs = () => {
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl mt-10 border-white rounded-2xl">
-                      {" "}
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
-              </div>
-              <div className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2 ">
-                <div className="bg-white/30 rounded-3xl  size-full flex items-center text-white">
-                  <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 p-4">
-                    <h1 className="text-3xl font-extrabold">Plan Avanzado</h1>
+              </motion.div>
+
+
+
+
+
+
+              <motion.div
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl border-dashed border-2 border-white/20 p-2"
+                whileHover={{ y: -20, scale: 1.02 }} // Elevación y agrandamiento leve
+                transition={{ type: "spring", stiffness: 150, damping: 12 }} // Transición suave
+              >
+                <div className="bg-white/30 rounded-[40px] size-full flex items-center border-3 border-white text-white">
+                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
+
+                    <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
+        after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
+        after:scale-130 after:-z-10">Plan Avanzado</h1>
+
                     <div className="flex items-end">
-                      <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
+                      <div className="w-full text-4xl items-end font-extrabold flex gap-2">
                         <p className="text-5xl">S/</p>
                         <p>599.99</p>
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
-                    <hr className="border-2 w-full " />
+
                     <div className="flex items-start gap-1 ">
-                      <FaCheck className="text-2xl w-[10%]  " />
-                      <h1 className="text-base w-[90%] ">
+                      <FaCheck className="text-2xl w-[10%]" />
+                      <h1 className="text-base w-[90%]">
                         Acceso a todos los libros virtual y clases en vivo por 12 meses
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
-                    <FaCheck className="text-2xl w-[10%]  " />
-                    <h1 className="text-base w-[90%] ">
-                        Acceso a mas de 6000 ejercicios y 6000 videos
-                        explicativos
+                      <FaCheck className="text-2xl w-[10%]" />
+                      <h1 className="text-base w-[90%]">
+                        Acceso a más de 6000 ejercicios y 6000 videos explicativos
                       </h1>
                     </div>
 
-                    <button className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl">
-                      {" "}
+                    <motion.button
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
+                      whileHover={{ y: -6, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    >
                       Adquirir Plan
-                    </button>
+                    </motion.button>
+
                   </div>
                 </div>
-              </div>
+              </motion.div>
+
+
+
+
+
+
             </div>
           )}
         </div>
