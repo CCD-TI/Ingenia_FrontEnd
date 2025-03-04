@@ -270,7 +270,7 @@ const Navbar = () => {
       {showTopBar && (
         <div
           className={
-            "group w-full bg-gradient-to-r from-violet-600 via-blue-500 to-purple-600 text-white flex items-center justify-center px-6 py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            "bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
           }
         >
           <div
@@ -326,18 +326,18 @@ const Navbar = () => {
           showTopBar
             ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.4rem] z-20"
             : ""
-        } w-full   text-white`}
+        } w-full   text-black`}
       >
         <div
           className={`mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
-            isScrolled ? "bg-blue-500/80 backdrop:blur-xl " : ""
+            isScrolled ? "bg-white " : ""
           }`}
         >
           {/* Logo */}
           <div className="col-span-2 flex gap-4 items-center">
             <div className="lg:hidden">
               <button
-                className="text-white focus:outline-none"
+                className="text-black focus:outline-none"
                 onClick={toggleMenu}
               >
                 {menuOpen ? (
@@ -349,10 +349,11 @@ const Navbar = () => {
             </div>
             <Link href="/">
               <Image
-                src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/image-removebg-preview.png"
+        
+                src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/logoIngeniacolores.png"
                 alt="CCD Logo"
-                width={150}
-                height={150}
+                width={160}
+                height={160}
                 className="cursor-pointer "
               />
             </Link>
@@ -366,7 +367,7 @@ const Navbar = () => {
                 href="#inicio"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                Inicio
+                 <span  className="text-[#05abdd] font-poppins text-[20px]">Inicio</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -381,8 +382,8 @@ const Navbar = () => {
                   className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold"
                   onClick={(e)=> handleScroll(e , 'niveles')}
                >
-                  Niveles
-                  <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180" />
+                 <span  className="text-[#05abdd] font-poppins text-[20px]">Niveles</span>
+                  <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180 text-[#05abdd]" />
                 </Link>
                 {activeCategory === "escuelas" && (
                   <div className="absolute top-full left-0 bg-colors-night-blue-ccd2 bg-opacity-60 rounded-2xl py-4 shadow-lg backdrop-blur-md">
@@ -646,7 +647,7 @@ const Navbar = () => {
                 onClick={(e) => handleScroll(e, "nosotros")}
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                Nosotros
+                <span  className="text-[#05abdd] font-poppins text-[20px]">Embajadores</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -659,7 +660,10 @@ const Navbar = () => {
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li> */}
+             {/*
             <li>
+
+             
               <Link
                 onClick={(e) => handleScroll(e, "promociones")}
                 href="#promociones"
@@ -670,15 +674,17 @@ const Navbar = () => {
                 <FaRegStar className="text-colors-cyan-ccd text-xl -mt-1 ml-1" />
               </Link>
             </li>
-            <li>
+            */}
+            <li className="">
               <Link
                 // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
                 onClick={(e) => handleScroll(e, "ranking")}
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                Ranking
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="text-[#05abdd] font-poppins text-[20px]">Ranking</span>
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
             <li>{/* <ModalFormJobCCD /> */}</li>
@@ -689,7 +695,7 @@ const Navbar = () => {
             <Link
               href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
               target="_blank"
-              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-white text-violet-600 font-bold hover:bg-yellowIngenia border-2 border-transparent hover:border-white transition-all duration-300 rounded-full"
+              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-yellowIngenia text-white font-bold  border-4 border-transparent hover:border-black transition-all duration-300 rounded-full"
             >
               AULA VIRTUAL
             </Link>
@@ -826,7 +832,7 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
                     target="_blank"
-                    className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 bg-white text-blue-800 font-bold hover:bg-blue-800 hover:text-white border-2 border-transparent hover:border-white transition-all duration-300 rounded-xl px-4"
+                    className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-3 bg-white text-blue-800 font-bold hover:bg-blue-800 hover:text-white border-2 border-transparent hover:border-white transition-all duration-300 rounded-xl px-4"
                   >
                     AULA VIRTUAL
                   </Link>

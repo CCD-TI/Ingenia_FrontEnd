@@ -3,7 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const NivelesEducacion: React.FC = () => {
   return (
-    <div id="niveles" className="w-full flex  justify-center items-center py-16 bg-white">
+    <div id="niveles" className="w-full flex  justify-center items-center pb-7 bg-white">
       <div className="max-w-[100rem] w-[90%] mx-auto flex flex-col justify-center  m-6 ">
         <div className="w-fit mx-auto flex flex-col justify-center items-center gap-10 ">
           <h2 className="text-5xl font-semibold mb-8 w-full text-center uppercase text-[#05abdd]">

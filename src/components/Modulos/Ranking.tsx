@@ -62,13 +62,8 @@ export default function StudentRanking() {
             
             <div className="bg-[#7f7f7f] rounded-t-[10px] p-4 text-center max-sm:w-24 w-36 h-[300px] flex flex-col items-center justify-center">
               <div className="text-yellow-400 mb-2">
-                <svg
-                  className="w-8 h-8"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                </svg>
+             
+               
               </div>
               <div className="text-5xl m text-white font-black leading-[4rem] scale-y-150 mt-[-80px]">1</div>
               <div className="text-md text-white font-semibold">
