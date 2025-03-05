@@ -10,7 +10,21 @@ import { FaXTwitter } from "react-icons/fa6";
 
 function CursoDetalle() {
   return (
-    <div className="w-full h-full pt-20  px-6 bg-blue-500">
+    <div className="w-full h-full pt-20  px-6 bg-blue-500 relative">
+         <div
+        className="bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/grado.jpg')]   bg-no-repeat bg-contain w-full h-full absolute -top-24 left-0"
+        style={{ clipPath: "ellipse(55% 25% at 50% 0%)" }}
+      >
+
+       <div className="size-full flex gap-4 items-end justify-center h-[300px]">
+            <div className="flex items-start justify-center">
+              <p className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">4</p>
+              <p className="text-3xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">to</p>
+            </div>
+            <h1 className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">GRADO</h1>
+       </div>
+
+      </div>
       <div className="max-w-[95rem] mx-auto flex flex-col items-center">
         <div className="w-[80%] h-full  mx-auto mt-[18rem] flex  justify-center gap-[2rem] items-end px-10 py-4">
           <div className=" w-fit h-full flex flex-col items-start justify-centr gap-2  rounded-xl ">
