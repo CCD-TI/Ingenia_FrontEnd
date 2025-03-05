@@ -65,10 +65,10 @@ export const Nosotros = () => {
                   <div className="flex flex-col justify-center items-start">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
                     <div className="">
-                    <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia pr-16">
+                    <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia pr-16 mb-1">
                       Misión
                     </h3>
-                    <h3 className="flex items-center font-poppins font-normal max-md:text-xs  ">
+                    <h3 className="flex items-center font-poppins font-normal max-md:text-xs border-2 border-[#05abdd] pl-2 rounded-lg ">
                       Conoce mas aquí <IoIosArrowForward className=" max-md:text-3xl text-5xl text-[#05abdd]" />{" "}
                     </h3>
 
@@ -80,12 +80,12 @@ export const Nosotros = () => {
               <ModalText
                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim esse nostrum reiciendis consequatur est repellendus inventore dolor maxime ad animi necessitatibus, aperiam error natus! Modi eveniet doloremque sapiente cumque?"
                 button={
-                  <div className="flex flex-col justify-center items-start ">
+                  <div className="flex flex-col justify-center items-start  ">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
-                    <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-[#05abdd]">
+                    <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-[#05abdd] mb-1">
                       Visión
                     </h3>
-                    <h3 className="flex items-center max-md:text-xs font-poppins font-normal ">
+                    <h3 className="flex items-center max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] pl-2 rounded-lg">
                       Conoce mas aquí <IoIosArrowForward className=" max-md:text-3xl text-5xl text-[#05abdd]" />{" "}
                     </h3>
                    

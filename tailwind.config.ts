@@ -10,9 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      
+      
       webkitTextStroke: {
         1: '1px', // Grosor del contorno: 1px
         2: '2px', // Grosor del contorno: 2px
@@ -29,13 +32,28 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
       colors: {
         // PALETA OFICIAL CCD
         yellowIngenia: "#F9B233", // RGB(249, 178, 51)
         cyanIngenia: "#3185F7", // RGB(49, 133, 247)
       },
+      animation: {
+        'bounce-soft': 'bounceSoft 1.2s infinite'
+      },
+      keyframes: {
+        bounceSoft: {
+          '0%, 100%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(0px)' }
+        }
+      }
     },
   },
-  plugins: [heroui()]
+  plugins: [
+    heroui(), 
+    require("tailwindcss-animated") 
+  ],
+  
+  
 };
 export default config;

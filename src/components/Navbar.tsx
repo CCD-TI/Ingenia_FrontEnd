@@ -7,7 +7,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 // import { useSession } from "next-auth/react";
 import { IoIosArrowForward, IoMdCloseCircle } from "react-icons/io";
 // import CountdownTimerTopBar from "./countdowntimertopbar";
-import { FaRegStar } from "react-icons/fa6";
+import { FaRegStar, FaUser } from "react-icons/fa6";
 // import { Modal } from "@mui/material";
 // import PacksSectionModalCasiV2 from "./packsectionmodal-CASI-V2";
 import { MdArrowBackIosNew, MdKeyboardArrowDown } from "react-icons/md";
@@ -270,7 +270,7 @@ const Navbar = () => {
       {showTopBar && (
         <div
           className={
-            "bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
           }
         >
           <div
@@ -329,7 +329,7 @@ const Navbar = () => {
         } w-full   text-black`}
       >
         <div
-          className={`mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed w-full z-50 transition-all duration-300 ${
+          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed  z-50 transition-all duration-300 ${
             isScrolled ? "bg-white " : ""
           }`}
         >
@@ -360,7 +360,7 @@ const Navbar = () => {
           </div>
 
           {/* Links de navegación */}
-          <ul className="col-span-3 col-start-3 hidden lg:flex justify-center items-center space-x-8 text-white ">
+          <ul className="col-span-3 col-start-3 hidden lg:flex justify-end items-center space-x-6 text-white ">
             <li>
               <Link
                 onClick={(e) => handleScroll(e, "inicio")}
@@ -690,55 +690,38 @@ const Navbar = () => {
             <li>{/* <ModalFormJobCCD /> */}</li>
           </ul>
 
-          {/* Acciones */}
-          <div className="col-span-2 col-start-6 flex justify-end items-center space-x-4 text-white">
-            <Link
-              href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
-              target="_blank"
-              className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 max-lg:hidden bg-yellowIngenia text-white font-bold  border-4 border-transparent hover:border-black transition-all duration-300 rounded-full"
-            >
-              AULA VIRTUAL
-            </Link>
+          <div className="col-span-2 col-start-6 flex flex-row items-center space-x-7 text-white mr-72">
+  {/* Botón AULA VIRTUAL */}
+  <Link
+    href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
+    target="_blank"
+    className="relative group text-base py-2 px-6 bg-yellow-500 text-white font-bold border-4 border-transparent hover:border-black transition-all duration-300 rounded-full flex items-center justify-center whitespace-nowrap"
+  >
+    Aula Virtual
+  </Link>
 
-            {/* <Dropdown className="!min-w-28">
-              <Button
-                href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
-                variant="bordered"
-              >
-                Aula Virtual
-              </Button>
+  {/* Ícono de usuario */}
+  <FaUser className="text-3xl text-[#05abdd] flex-shrink-0" />
+</div>
 
-              <DropdownTrigger className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-2 bg-white text-colors-dark-blue-ccd font-bold hover:bg-colors-dark-blue-ccd hover:text-white border-2 border-transparent hover:border-white transition-all duration-300 rounded-full">
-                <Button variant="bordered">Aula Virtual</Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions" className="">
-                <DropdownItem
-                  key="nueva-plataforma"
-                  href="http://localhost:9000/plataforma"
-                  className="bg-colors-sky-ccd !text-white mb-1 hover:!bg-colors-cyan-ccd hover:!text-colors-dark-blue-ccd rounded-xl"
-                >
-                  Nueva Plataforma
-                </DropdownItem>
-                <DropdownItem
-                  href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
-                  key="plataforma-anterior"
-                >
-                  Plataforma Anterior
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown> */}
 
-            {/* Cart Icon */}
-            {/* <CarritoE /> */}
+        
 
-            {/* User Icon with Modal or Dropdown */}
-            {/* {session ? (
-              <DropdownComponent /> // Si hay sesión, muestra el menú desplegable
-            ) : (
-              <NewModalLogeoComponent array={[]} /> // Si no hay sesión, muestra el modal
-            )} */}
-          </div>
+         
+
+          
+
+       
+
+
+
+
+
+
+          
+          
         </div>
+
 
         {/* Menú desplegable para móvil */}
         <div className="inset-0 flex-1 relative ">
@@ -837,6 +820,8 @@ const Navbar = () => {
                     AULA VIRTUAL
                   </Link>
                 </li>
+                
+               
                 {/* <li>
                   <a
                     href="/about"
