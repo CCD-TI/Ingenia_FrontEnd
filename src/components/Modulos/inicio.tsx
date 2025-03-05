@@ -48,7 +48,7 @@ export default function Inicio() {
            </div>
            
            </div>
-           <Contador targetDate="02/28/2025 23:59:59"/>
+           <Contador targetDate="04/28/2025 23:59:59"/>
           </div>
 
         </div>
