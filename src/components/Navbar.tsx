@@ -270,7 +270,7 @@ const Navbar = () => {
       {showTopBar && (
         <div
           className={
-            "bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            "w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
           }
         >
           <div
