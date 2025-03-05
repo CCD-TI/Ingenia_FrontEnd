@@ -29,16 +29,16 @@ const Tabs = () => {
         </div>
 
         {/* Botones de las pestañas */}
-        <div className="w-[20rem] rounded-2xl flex bg-transparent border-3 mb-7">
+        <div className="w-[20rem] rounded-2xl flex bg-transparent border-3 mb-7 ">
           <button
-            className={`flex-1 py-4 px-6 text-3xl font-extrabold text-center  text-white transition-colors duration-200 rounded-xl ${selectedTab === "Mensual" ? "bg-cyan-400 text-[#05ABDD] " : ""
+            className={`flex-1 py-4 px-6 text-3xl font-extrabold text-center   transition-colors duration-200 rounded-xl ${selectedTab === "Mensual" ? "bg-white text-[#05ABDD] " : ""
               }`}
             onClick={() => setSelectedTab("Mensual")}
           >
             Mensual
           </button>
           <button
-            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold text-white transition-colors duration-200 rounded-xl ${selectedTab === "Anual" ? "bg-orange-400 text-[#05ABDD] " : ""
+            className={`flex-1 py-3 px-6 text-center text-3xl font-extrabold transition-colors duration-200 rounded-xl ${selectedTab === "Anual" ? "bg-white text-[#05ABDD] " : ""
               }`}
             onClick={() => setSelectedTab("Anual")}
           >
@@ -47,7 +47,7 @@ const Tabs = () => {
         </div>
 
         {/* Contenido de las pestañas */}
-        <div className=" ">
+        <div className="">
           {selectedTab === "Mensual" && (
             <div className="w-full flex flex-wrap justify-center items-center gap-10">
 
@@ -61,9 +61,7 @@ const Tabs = () => {
 
                   <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
                     <div className="flex flex-col items-center gap-6">
-                    <div className="bg-[#F9B233] p-[9px] rounded-full text-sm font-poppins font-extrabold mr-[100px] shadow-[0px_8px_40px_8px_#F9B23380]">
-  Nivel Aprendiz
-</div>
+                    
 
                       <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
                                   after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
@@ -94,14 +92,14 @@ const Tabs = () => {
 
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors"
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
                       Adquirir Plan
                     </motion.button>
-
                   </div>
                 </div>
               </motion.div>
@@ -141,8 +139,9 @@ const Tabs = () => {
                     </div>
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors "
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
@@ -185,13 +184,16 @@ const Tabs = () => {
                     </div>
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors "
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
                       Adquirir Plan
                     </motion.button>
+
+
 
                   </div>
                 </div>
@@ -241,8 +243,9 @@ const Tabs = () => {
                     </div>
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors"
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
@@ -284,8 +287,9 @@ const Tabs = () => {
                     </div>
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors"
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
@@ -334,14 +338,14 @@ const Tabs = () => {
                     </div>
 
                     <motion.button
-                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl"
-                      whileHover={{ y: -6, scale: 1.05 }}
+                      className="w-full p-3 px-6 border-2 text-2xl border-white rounded-2xl transition-colors"
+                      initial={{ color: "#ffffff" }}
+                      whileHover={{ y: -6, scale: 1.05, backgroundColor: "#F0E803", color: "#ffffff" }}
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 200, damping: 10 }}
                     >
                       Adquirir Plan
                     </motion.button>
-
                   </div>
                 </div>
               </motion.div>

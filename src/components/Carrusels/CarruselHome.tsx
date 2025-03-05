@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -53,7 +54,7 @@ const CarouselComponent = () => {
       </div>
     ),
     customPaging: (i: number) => (
-      <button className="w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-600 focus:outline-none border-2 border-transparent active:border-blue-500" />
+      <button className="w-3 h-3 rounded-full border-2 border-transparent bg-white/10 hover:bg-white focus:outline-none  active:border-blue-500" />
     ),
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
@@ -79,13 +80,27 @@ const CarouselComponent = () => {
                     : " scale-80 max-[1440px]:scale-90 mx-auto"
                 }`}
               >
-                <Image
-                  width={800}
-                  height={800}
-                  src={imageUrl}
-                  alt={`Imagen ${index + 1}`}
-                  className="w-full h-full rounded-lg mb-4"
-                />
+          
+
+    <div className="bg-white/30 p-6 rounded-2xl shadow-lg flex items-center space-x-6 w-[500px]">
+      {/* Contenedor del ícono */}
+      <div className="bg-white rounded-full p-4 flex items-center justify-center">
+        <FaRegUserCircle className="text-6xl text-gray-600" />
+      </div>
+
+      {/* Contenido del testimonio */}
+      <div>
+        <h3 className="text-gray-800 font-bold text-lg">Pedro Castillo</h3>
+        <div className="flex text-yellow-400 text-lg">
+          ★★★★★
+        </div>
+        <p className="text-gray-600 text-sm mt-2">
+          “Mis hijos mejoraron mucho con su primer módulo”.
+        </p>
+      </div>
+    </div>
+ 
+
               </div>
             </div>
           );
@@ -103,12 +118,12 @@ const CustomNextArrow = ({
 }) => (
   <>
     <button
-      className="absolute top-1/2 -right-16 max-sm:right-[1rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
+      className="absolute top-1/2 -right-16 max-sm:right-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
       onClick={onClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
+        className="h-6 w-6 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -123,12 +138,12 @@ const CustomNextArrow = ({
     </button>
     <div className="absolute top-[42.5%] right-[21px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
-        className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none"
+        className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none"
         onClick={onClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-8 w-8 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -152,7 +167,7 @@ const CustomPrevArrow = ({
 }) => (
   <>
     <button
-      className="absolute top-1/2 -left-16 max-sm:left-4 transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
+      className="absolute top-1/2 -left-16 max-sm:left-4 transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
       onClick={onClick}
     >
       <svg
@@ -172,12 +187,12 @@ const CustomPrevArrow = ({
     </button>
     <div className="absolute top-[42.5%] left-6 transform -translate-y-1/2 z-10  to-white/30 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
-        className="absolute top-1/2 -left-[3rem] transform -translate-y-1/2 bg-[#00DACF] hover:bg-white text-[#142D52] p-2 rounded-full focus:outline-none"
+        className="absolute top-1/2 -left-[3rem] transform -translate-y-1/2  p-2 rounded-full focus:outline-none"
         onClick={onClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-8 w-8 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
