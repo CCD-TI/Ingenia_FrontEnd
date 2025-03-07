@@ -19,13 +19,14 @@ import { IoBook } from "react-icons/io5";
 
 function CursoDetalle() {
   return (
-    <div className="w-full h-full pt-10  px-6 bg- relative bg-white bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/FondoTrama-ingenia-img.jpg') bg-repeat]">
+    <div className="w-full h-full pt-10  px-6 bg- relative bg-white bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/FondoTrama-ingenia-img.jpg')] bg-repeat">
       <div
         className="bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/grado.jpg')]   bg-no-repeat bg-contain w-full h-full absolute -top-24 left-0"
         style={{ clipPath: "ellipse(55% 30% at 50% 0%)" }}
       >
-        <div className="size-full flex gap-4 items-end justify-center h-[300px]">
-          <div className="flex items-start justify-center">
+        <div className="size-full flex flex-col  gap-4 items-center justify-end h-[300px] mt-10">
+         <div className="flex items-center gap-4">
+         <div className="flex items-start justify-center">
             <p className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
               4
             </p>
@@ -36,13 +37,18 @@ function CursoDetalle() {
           <h1 className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
             GRADO
           </h1>
+         </div>
+          <h1 className="text-3xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">PRIMARIA</h1>
         </div>
+       
       </div>
       <div className="max-w-[100rem] w-full mx-auto flex flex-col items-center">
         <div className="w-[90%] h-full  mx-auto mt-[18rem] flex  justify-center gap-[4rem] items-start px-10 py-4">
           <div className=" w-[65%] h-full flex flex-col items-start justify-centr gap-2  rounded-xl ">
             <div>
-              <h1 className="text-6xl font-extrabold mb-4 text-cyan-400">Física</h1>
+              <h1 className="text-6xl font-extrabold mb-4 text-cyan-400">
+                Física
+              </h1>
             </div>
             <div>
               <h1 className="font-bold text-3xl py-2 text-cyan-400">Resumen</h1>
@@ -62,10 +68,12 @@ function CursoDetalle() {
                   height={200}
                   className="rounded-3xl w-full h-[500px] object-cover my-3 "
                 />
-                <FaRegCirclePlay  className="absolute text-9xl  left-[43%] top-[40%]  text-yellow-300 "/>
+                <FaRegCirclePlay className="absolute text-9xl  left-[43%] top-[40%]  text-cyan-400/60 " />
               </div>
               <div className="w-full relative">
-                <h1 className="text-3xl font-bold absolute text-cyan-400">Mas Materias</h1>
+                <h1 className="text-3xl font-bold absolute text-cyan-400">
+                  Mas Materias
+                </h1>
                 <CarruselCursos />
               </div>
             </div>
