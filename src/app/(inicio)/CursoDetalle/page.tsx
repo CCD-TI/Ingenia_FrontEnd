@@ -109,7 +109,7 @@ function CursoDetalle() {
               <div className="flex flex-col items-center gap-6 w-full">
                 <ModalContents
                   button={
-                    <div className="p-4 bg-yellow-500 rounded-2xl w-[250px] text-white font-bold text-xl flex gap-2 justify-center items-center  ">
+                    <div className="p-4 bg-yellow-500 rounded-2xl border-2 border-dashed w-[250px] text-white font-bold text-xl flex gap-2 justify-center items-center  ">
                       <h1>Temario</h1>
                       <IoBook className="text-2xl" />
                     </div>
@@ -162,8 +162,8 @@ function CursoDetalle() {
               <div className="flex flex-col items-center gap-16 w-full">
                 <ModalContents
                   button={
-                    <div className="w-[250px] p-4 bg-yellow-500 rounded-2xl text-white font-bold text-xl flex gap-2 justify-center items-center ">
-                      <h1>!Comprar Ahora¡ </h1>
+                    <div className="w-[250px] p-4 bg-yellow-500 border-dashed border-2 rounded-2xl text-white font-bold text-xl flex gap-2 justify-center items-center ">
+                      <h1>¡Comprar Ahora!</h1>
                       <FaCartShopping className="text-2xl" />
                     </div>
                   }
@@ -180,105 +180,10 @@ function CursoDetalle() {
           </div>
         </div>
       </div>
+      
+      
 
-      {/* <div className="max-w-[95rem] mx-auto flex flex-col items-center">
-        <div className="w-[80%] h-full  mx-auto mt-[2rem] flex  justify-center gap-[2rem] items-start px-10 py-4">
-          <div className=" w-fit h-full flex flex-col items-start justify-centr gap-2  rounded-xl ">
-            <div>
-              <h1 className="text-4xl font-extrabold mb-4">TEMARIO</h1>
-              <p className="w-[70%] mb-8 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio debitis voluptas voluptatem praesentium rerum
-                doloremque accusamus, dignissimos at doloribus maxime quod
-                ducimus maiores dicta iste fuga, amet cupiditate modi nostrum.
-              </p>
-            </div>
-            <div className="size-fit flex flex-col gap-3">
-              <div className="flex flex-col  gap-4 rounded-xl">
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-xl " />
-                  <p className="text-xs w-[70%] ">
-                    Lorem ipsum dolor sit amet, consectetur aonem vero nihil
-                    voluptate pariatur dolorem enim, est impedit quos sint ipsa
-                    nesciunt.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-xl " />
-                  <p className="text-xs  w-[70%]">
-                    Lorem ipsum dolor sit amet, consectetur aonem vero nihil
-                    voluptate pariatur dolorem enim, est impedit quos sint ipsa
-                    nesciunt.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-xl " />
-                  <p className="text-xs  w-[70%]">
-                    Lorem ipsum dolor sit amet, consectetur aonem vero nihil
-                    voluptate pariatur dolorem enim, est impedit quos sint ipsa
-                    nesciunt.
-                  </p>
-                </div>
-                <div className="flex items-start gap-2">
-                  <FaCheckCircle className="text-xl " />
-                  <p className="text-xs  w-[70%]">
-                    Lorem ipsum dolor sit amet, consectetur aonem vero nihil
-                    voluptate pariatur dolorem enim, est impedit quos sint ipsa
-                    nesciunt.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <h1 className="font-bold text-4xl">OTROS CURSOS</h1>
-                <div className="flex gap-4">
-                       <div className="size-[110px]  rounded-xl bg-white">
-                        </div>  
-                       <div className="size-[110px]  rounded-xl bg-white">
-                        </div>  
-                       <div className="size-[110px]  rounded-xl bg-white">
-                        </div>  
-                       <div className="size-[110px]  rounded-xl bg-white">
-                        </div>  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className=" h-fit p-2 border-dashed border-[1.5px]  bg-transparent rounded-xl w-[600px]  ">
-            <div className="size-full bg-green-600/30 p-4 rounded-xl flex flex-col items-center gap-4">
-              <div>
-                <Image
-                  alt=""
-                  src="https://pub-9d2abfa175714e64aed33b90722a9fd5.r2.dev/Multimedia/Imagen/Ccd/Banners/BannerPrincipal-04.jpg"
-                  width={700}
-                  height={700}
-                  className="rounded-full  size-[250px] p-2 "
-                />
-              </div>
-              <h1>NOMBRE Y APELLIDO</h1>
-              <h2 className="mt-4"> PROFESOR</h2>
-              <p className="text-center text-xs px-2">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Explicabo delectus quia ad voluptatum voluptates nihil eligendi
-                fugiat
-              </p>
-              <div className="flex justify-between items-center  gap-6">
-                <div className="rounded-full p-2 bg-white text-green-600">
-                  <FaFacebookF />
-                </div>
-                <div className="rounded-full p-2 bg-white text-green-600">
-                  <FaInstagram />
-                </div>
-                <div className="rounded-full p-2 bg-white text-green-600">
-                  <FaXTwitter />
-                </div>
-                <div className="rounded-full p-2 bg-white text-green-600">
-                  <FaTiktok />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+                  
     </div>
   );
 }
