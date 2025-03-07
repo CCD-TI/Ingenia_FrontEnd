@@ -52,7 +52,7 @@ function CursoDetalle() {
             </div>
             <div>
               <h1 className="font-bold text-3xl py-2 text-cyan-400">Resumen</h1>
-              <p>
+              <p className="font-semibold text-slate-500">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
                 facere expedita earum quisquam saepe eligendi ullam aliquid,
                 obcaecati reiciendis repudiandae totam voluptatem, consectetur
@@ -60,13 +60,13 @@ function CursoDetalle() {
               </p>
             </div>
             <div className="size-full flex flex-col gap-4">
-              <div className="border-[1.5px] border-dashed bg-transparent  rounded-xl relative">
+              <div className="border-[2px] border-cyan-300 border-dashed bg-transparent  rounded-xl relative my-4">
                 <Image
                   alt=""
                   src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/profesora.jpg"
                   width={1000}
                   height={200}
-                  className="rounded-3xl w-full h-[500px] object-cover my-3 "
+                  className="rounded-3xl w-full h-[500px] object-cover p-2 "
                 />
                 <FaRegCirclePlay className="absolute text-9xl  left-[43%] top-[40%]  text-cyan-400/60 " />
               </div>
