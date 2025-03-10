@@ -161,7 +161,7 @@ const Navbar = () => {
     } catch (err) {
       setError(
         "Hubo un error al obtener la información: " +
-          ((err as Error)?.message || err)
+        ((err as Error)?.message || err)
       );
       console.error(err);
     } finally {
@@ -220,18 +220,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollY = window.scrollY;
-  //     setShowTopBar(currentScrollY === 0);
-  //     setLastScrollY(currentScrollY);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
-
-  // Función para manejar el hover en las categorías principales
+ 
 
   const handleMouseEnter = (category: React.SetStateAction<string | null>) =>
     setActiveCategory(category);
@@ -245,18 +234,18 @@ const Navbar = () => {
 
   // Función para manejar el hover al salir de la subcategoría
   const handleSubMouseLeave = () => setActiveSubCategory(null);
-  const handleScroll = (e:any, targetId:any) => {
+  const handleScroll = (e: any, targetId: any) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-        const navbarHeight = 79; // Altura del navbar en píxeles
-        const offset = targetElement.offsetTop - navbarHeight;
-        window.scrollTo({
-            top: offset,
-            behavior: 'smooth',
-        });
+      const navbarHeight = 79; // Altura del navbar en píxeles
+      const offset = targetElement.offsetTop - navbarHeight;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth',
+      });
     }
-};
+  };
   useEffect(() => {
     if (selectedSchool && !hasFetched.current) {
       fetchEspecializaciones(selectedSchool);
@@ -271,9 +260,9 @@ const Navbar = () => {
         <div
           className={
 
-            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center px-[391px] py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center  py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
 
-            
+
           }
         >
           <div
@@ -325,16 +314,14 @@ const Navbar = () => {
       {/* Navbar */}
 
       <nav
-        className={`${
-          showTopBar
-            ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[5.4rem] z-20"
+        className={`${showTopBar
+            ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[4.4rem] z-20"
             : ""
-        } w-full   text-black`}
+          } w-full   text-black`}
       >
         <div
-          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-4 grid-rows-1 gap-4 px-6 lg:px-14 py-3 fixed  z-50 transition-all duration-300 ${
-            isScrolled ? "bg-white " : ""
-          }`}
+          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-3  gap-4 px-6 lg:px-14 py-3 fixed  z-50 transition-all duration-300 ${isScrolled ? "bg-white " : ""
+            }`}
         >
           {/* Logo */}
           <div className="col-span-2 flex gap-4 items-center">
@@ -344,20 +331,20 @@ const Navbar = () => {
                 onClick={toggleMenu}
               >
                 {menuOpen ? (
-                  <AiOutlineClose className="w-6 h-6 transition-transform duration-500 hidden text-white" />
+                  <AiOutlineClose className="w-6 h-6 transition-transform duration-500 hidden text-[#05abdd]" />
                 ) : (
-                  <AiOutlineMenu className="w-8 h-8 transition-transform duration-500 text-white" />
+                  <AiOutlineMenu className="w-8 h-8 transition-transform duration-500 text-[#05abdd]" />
                 )}
               </button>
             </div>
             <Link href="/">
               <Image
-        
+
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/logoIngeniacolores.png"
                 alt="CCD Logo"
                 width={160}
                 height={160}
-                className="cursor-pointer "
+                className="cursor-pointer  "
               />
             </Link>
           </div>
@@ -370,7 +357,7 @@ const Navbar = () => {
                 href="#inicio"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                 <span  className="text-[#05abdd] font-poppins text-[20px]">Inicio</span>
+                <span className="text-[#05abdd] font-poppins text-[20px]">Inicio</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -383,9 +370,9 @@ const Navbar = () => {
                 <Link
                   href="#niveles"
                   className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold"
-                  onClick={(e)=> handleScroll(e , 'niveles')}
-               >
-                 <span  className="text-[#05abdd] font-poppins text-[20px]">Niveles</span>
+                  onClick={(e) => handleScroll(e, 'niveles')}
+                >
+                  <span className="text-[#05abdd] font-poppins text-[20px]">Niveles</span>
                   <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180 text-[#05abdd]" />
                 </Link>
                 {activeCategory === "escuelas" && (
@@ -650,7 +637,7 @@ const Navbar = () => {
                 onClick={(e) => handleScroll(e, "nosotros")}
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                <span  className="text-[#05abdd] font-poppins text-[20px]">Embajadores</span>
+                <span className="text-[#05abdd] font-poppins text-[20px]">Embajadores</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -663,7 +650,7 @@ const Navbar = () => {
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li> */}
-             {/*
+            {/*
             <li>
 
              
@@ -693,36 +680,37 @@ const Navbar = () => {
             <li>{/* <ModalFormJobCCD /> */}</li>
           </ul>
 
-          <div className="col-span-2 col-start-6 flex flex-row items-center space-x-7 text-white mr-72">
-  {/* Botón AULA VIRTUAL */}
-  <Link
-    href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
-    target="_blank"
-    className="relative group text-base py-2 px-6 bg-yellow-500 text-white font-bold border-4 border-transparent hover:border-black transition-all duration-300 rounded-full flex items-center justify-center whitespace-nowrap"
-  >
-    Aula Virtual
-  </Link>
+          <div className="col-span-2 col-start-6 flex flex-row items-center space-x-7 text-white max-lg:mr-0 mr-72">
+            {/* Botón AULA VIRTUAL */}
+            <Link
+              href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
+              target="_blank"
+              className="relative group text-base py-2 px-6 bg-yellow-500 text-white font-bold border-4 border-transparent hover:border-black transition-all 
+    duration-300 rounded-full flex items-center justify-center whitespace-nowrap max-sm:hidden"
+            >
+              Aula Virtual
+            </Link>
 
-  {/* Ícono de usuario */}
-  <FaUser className="text-3xl text-[#05abdd] flex-shrink-0" />
-</div>
-
-
-        
-
-         
-
-          
-
-       
+            {/* Ícono de usuario */}
+            <FaUser className="text-3xl text-[#05abdd] flex-shrink-0" />
+          </div>
 
 
 
 
 
 
-          
-          
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -730,9 +718,8 @@ const Navbar = () => {
         <div className="inset-0 flex-1 relative ">
           {/* Capa de desenfoque detrás del contenido */}
           <div
-            className={`fixed inset-0 bg-black/50 z-[99999999999]  ${
-              menuOpen ? "block" : "hidden"
-            }`}
+            className={`fixed inset-0 bg-black/50 z-[99999999999]  ${menuOpen ? "block" : "hidden"
+              }`}
           >
             <div className="absolute inset-0 bg-transparent filter blur-lg"></div>
           </div>
@@ -740,9 +727,8 @@ const Navbar = () => {
           {/* Botón de cierre fuera del menú, visible solo cuando el menú está abierto */}
           <button
             onClick={toggleMenu}
-            className={`fixed top-4 left-[77%] text-white text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${
-              menuOpen ? "block" : "hidden"
-            }
+            className={`fixed top-4 left-[77%] text-black text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${menuOpen ? "block" : "hidden"
+              }
             `}
           >
             <AiOutlineClose className="bg-white rounded-full p-2 w-10 h-10" />
@@ -750,9 +736,8 @@ const Navbar = () => {
 
           {/* Menú desplegable */}
           <div
-            className={`w-[75%] fixed z-[99999999999]   inset-0 bg-colors-night-blue-ccd2 text-white flex flex-col justify-start p-8 items-start  h-screen transform ${
-              menuOpen ? "translate-x-0" : "-translate-x-full"
-            } transition-transform duration-500 ease-in-out`}
+            className={`w-[75%] fixed z-[99999999999]   inset-0 bg-white text-white flex flex-col justify-start p-8 items-start  h-screen transform ${menuOpen ? "translate-x-0" : "-translate-x-full"
+              } transition-transform duration-500 ease-in-out`}
           >
             {/* Menú principal */}
             {!subMenuOpen && !secondMenuOpen ? (
@@ -761,7 +746,7 @@ const Navbar = () => {
                   <Link
                     onClick={toggleMenu}
                     href="/"
-                    className="relative group md:text-xs xl:text-base text-white transition-all duration-300 flex justify-between"
+                    className="relative group md:text-xs xl:text-base  transition-all duration-300 flex justify-between text-[#05abdd]"
                   >
                     INICIO <IoIosArrowForward />
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent  via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -775,7 +760,7 @@ const Navbar = () => {
                     onMouseLeave={handleMouseLeave}
                     onClick={toggleSubMenu}
                   >
-                    <button className="    md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia justify-between w-full">
+                    <button className="    md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia justify-between w-full text-[#05abdd]">
                       ESCUELAS
                       <IoIosArrowForward />
                     </button>
@@ -785,7 +770,7 @@ const Navbar = () => {
                   <Link
                     onClick={toggleMenu}
                     href="/nosotros"
-                    className="relative group md:text-xs xl:text-base text-white transition-all duration-300 flex justify-between"
+                    className="relative group md:text-xs xl:text-base text-[#05abdd] transition-all duration-300 flex justify-between"
                   >
                     NOSOTROS <IoIosArrowForward />
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
@@ -795,7 +780,7 @@ const Navbar = () => {
                   <Link
                     onClick={toggleMenu}
                     href="/corporativo"
-                    className="relative group md:text-xs xl:text-base text-white transition-all duration-300 flex justify-between"
+                    className="relative group md:text-xs xl:text-base text-[#05abdd] transition-all duration-300 flex justify-between"
                   >
                     CORPORATIVO
                     <IoIosArrowForward />
@@ -818,56 +803,14 @@ const Navbar = () => {
                     onClick={toggleMenu}
                     href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
                     target="_blank"
-                    className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-3 bg-white text-blue-800 font-bold hover:bg-blue-800 hover:text-white border-2 border-transparent hover:border-white transition-all duration-300 rounded-xl px-4"
+                    className="relative group md:text-xs xl:text-base md:px-2 xl:px-4 py-3 bg-yellow-500 text-white font-bold hover:bg-blue-800 hover:text-white border-2 border-transparent hover:border-white transition-all duration-300 rounded-xl px-4"
                   >
                     AULA VIRTUAL
                   </Link>
                 </li>
-                
-               
-                {/* <li>
-                  <a
-                    href="/about"
-                    className="hover:text-gray-400"
-                    onClick={toggleMenu}
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/services"
-                    className="hover:text-gray-400"
-                    onClick={toggleMenu}
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <button
-                    onClick={toggleSubMenu}
-                    className="hover:text-gray-400"
-                  >
-                    Diplomas
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={toggleSecondMenu}
-                    className="hover:text-gray-400"
-                  >
-                    Cursos
-                  </button>
-                </li>
-                <li>
-                  <a
-                    href="/contact"
-                    className="hover:text-gray-400"
-                    onClick={toggleMenu}
-                  >
-                    Contact
-                  </a>
-                </li> */}
+
+
+          
               </ul>
             ) : subMenuOpen &&
               !innerSubMenuOpen &&

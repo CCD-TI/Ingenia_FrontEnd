@@ -70,21 +70,24 @@ const Tabs = () => {
                       </h1>
                     </div>
                     <div className="flex items-end">
-                      <p className="text-6xl font-extrabold">S/</p>
-                      <p className="text-6xl font-extrabold">5</p>
-                      <p className="text-2xl mb-6 ml-4">/ mensual</p>
+                      <div className="text-4xl font-extrabold items-end flex gap-2">
+                        <p className="text-5xl max-sm:text-3xl">S/</p>
+                        <p className="max-sm:text-3xl">5.00</p>
+                      </div>
+                      <p className="text-2xl max-sm:text-3xl">/Mensual</p>
                     </div>
+
 
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a un libro virtual de un curso por 30 dias
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a un libro virtual de un curso por 30 dias
                       </h1>
                     </div>
@@ -112,28 +115,28 @@ const Tabs = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >
                 <div className="bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#63DEFd_56%)] rounded-[40px] flex items-center border-3 border-white text-white size-full">
-                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
+                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 pt-6">
                     <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
                     after:absolute after:inset-0 after:bg-[#63defd] after:opacity-90 after:blur-lg 
                     after:scale-130 after:-z-10">Plan Avanzado</h1>
                     <div className="flex items-end">
                       <div className="text-4xl font-extrabold items-end flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>59.99</p>
+                        <p className="text-5xl max-sm:text-3xl">S/</p>
+                        <p className="max-sm:text-3xl">59.99</p>
                       </div>
-                      <p className="text-2xl">/Mensual</p>
+                      <p className="text-2xl max-sm:text-3xl">/Mensual</p>
                     </div>
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
-                        Acceso a todos los libros virtuales <br />y Clases en
+                      <h1 className="text-base max-sm:text-sm">
+                        Acceso a todos los libros virtuales y Clases en
                         vivo de todos los cursos por 30 dias
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso más de 4000 ejercicios y 4000 videos explicativos
                       </h1>
                     </div>
@@ -157,27 +160,27 @@ const Tabs = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >
                 <div className="bg-white/30 rounded-[40px]  size-full flex items-center border-3 border-white text-white">
-                  <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 p-4">
+                  <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 pt-6">
                     <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
                     after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
                     after:scale-130 after:-z-10">Plan Avanzado</h1>
                     <div className="flex items-end">
                       <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>19.99</p>
+                        <p className="text-5xl max-sm:text-3xl ">S/</p>
+                        <p className="max-sm:text-3xl ">19.99</p>
                       </div>
-                      <p className="text-2xl">/Mensual</p>
+                      <p className="text-2xl max-sm:text-3xl ">/Mensual</p>
                     </div>
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a 5 libros virtuales por 30 dias
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-3xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a mas de 400 ejercicios y 4000 videos
                         explicativos
                       </h1>
@@ -215,7 +218,7 @@ const Tabs = () => {
               >
 
                 <div className=" bg-white/30 rounded-[40px] flex items-center  size-full gap-6 border-3 border-white text-white">
-                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
+                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6">
 
                     <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
                     after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
@@ -223,21 +226,21 @@ const Tabs = () => {
 
                     <div className="flex items-end">
                       <div className="w-full text-4xl  items-end font-extrabold flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>39.90</p>
+                        <p className="text-5xl max-sm:text-3xl">S/</p>
+                        <p className="max-sm:text-3xl">39.90</p>
                       </div>
                       <p className="text-2xl">/Mensual</p>
                     </div>
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a un libro virtual de un curso por 12 meses
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
-                      <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <FaCheck className="text-2xl " />
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a mas de 800 ejercicios y 850 ejercicios y 850 videos explicativos
                       </h1>
                     </div>
@@ -263,25 +266,25 @@ const Tabs = () => {
 
                 <div className="bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#63DEFD_56.07%)] rounded-[40px] flex items-center 
                   border-3 border-white text-white size-full">
-                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 p-4">
+                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 pt-6 ">
                     <h1 className="text-3xl font-extrabold uppercase">Plan Ingenia</h1>
                     <div className="flex items-end">
                       <div className="text-4xl font-extrabold items-end flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>199.99</p>
+                        <p className="text-5xl max-sm:text-3xl">S/</p>
+                        <p className="max-sm:text-3xl">199.99</p>
                       </div>
-                      <p className="text-2xl">/Mensual</p>
+                      <p className="text-2xl max-sm:text-3xl">/Mensual</p>
                     </div>
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso a 5 libros virtuales por 12 meses
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl" />
-                      <h1 className="text-base">
+                      <h1 className="text-base max-sm:text-sm">
                         Acceso más de 4000 ejercicios y 4000 videos explicativos
                       </h1>
                     </div>
@@ -310,7 +313,7 @@ const Tabs = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 12 }} // Transición suave
               >
                 <div className="bg-white/30 rounded-[40px] size-full flex items-center border-3 border-white text-white">
-                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 p-4">
+                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6">
 
                     <h1 className="text-2xl font-extrabold uppercase text-white relative z-10
         after:absolute after:inset-0 after:bg-orange-400 after:opacity-90 after:blur-lg 
@@ -318,21 +321,21 @@ const Tabs = () => {
 
                     <div className="flex items-end">
                       <div className="w-full text-4xl items-end font-extrabold flex gap-2">
-                        <p className="text-5xl">S/</p>
-                        <p>599.99</p>
+                        <p className="text-5xl max-sm:text-3xl">S/</p>
+                        <p className="max-sm:text-3xl">599.99</p>
                       </div>
-                      <p className="text-2xl">/Mensual</p>
+                      <p className="text-2xl max-sm:text-2xl">/Mensual</p>
                     </div>
 
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl w-[10%]" />
-                      <h1 className="text-base w-[90%]">
+                      <h1 className="text-base w-[90%] max-sm:text-sm">
                         Acceso a todos los libros virtual y clases en vivo por 12 meses
                       </h1>
                     </div>
                     <div className="flex items-start gap-1 ">
                       <FaCheck className="text-2xl w-[10%]" />
-                      <h1 className="text-base w-[90%]">
+                      <h1 className="text-base w-[90%] max-sm:text-sm">
                         Acceso a más de 6000 ejercicios y 6000 videos explicativos
                       </h1>
                     </div>
