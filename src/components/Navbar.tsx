@@ -289,7 +289,7 @@ const Navbar = () => {
                     </div>
                   </div>
                   <div className=" flex gap-6 items-center max-sm:gap-2">
-                    <Vega targetDate="02/28/2025 23:59:59" />
+                    <Vega targetDate="04/28/2025 23:59:59" />
 
                     <button className="border border-white h-fit text-white font-bold px-4 py-1 max-sm:leading-[1] rounded-xl max-sm:text-[9px] hover:bg-white hover:text-blue-700 transition-all">
                       ¡Compra Ahora!

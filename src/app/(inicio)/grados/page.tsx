@@ -99,7 +99,7 @@ const Grado = () => {
               </span>
             </div>
           </div>
-          <div className="w-[40%] flex flex-col  gap-4">
+          <div className="w-fit flex flex-col  gap-4">
             <div className="w-[350px] h-[450px]  border-dashed border-3 border-yellow-300 p-2 rounded-2xl ">
               <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/gradoejmNi%C3%B1a.jpeg"
@@ -109,6 +109,9 @@ const Grado = () => {
                 alt="Niña estudiando"
               />
             </div>
+            <button className="border-dashed border-3 p-4 rounded-2xl border-yellow-300  w-full font-extrabold text-xl">
+              Comprar ahora
+            </button>
           </div>
         </div>
       </div>
