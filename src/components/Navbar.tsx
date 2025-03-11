@@ -169,22 +169,7 @@ const Navbar = () => {
     }
   };
 
-  // Este efecto solo se ejecuta una vez cuando el componente se monta
 
-  // const toggleMenu = () => {
-  //   setMenuOpen((menuOpen) => {
-  //     const newState = !menuOpen;
-
-  //     // Bloquear/desbloquear scroll
-  //     if (newState) {
-  //       document.body.style.overflow = "hidden"; // Bloquea el scroll
-  //     } else {
-  //       document.body.style.overflow = ""; // Restaura el scroll
-  //     }
-
-  //     return newState;
-  //   });
-  // };
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -260,7 +245,7 @@ const Navbar = () => {
         <div
           className={
 
-            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center  py-2 z-20 transition-all fixed top-0 shadow-md duration-1000"
+            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center  py-2 max-sm:py-1 z-20 transition-all fixed top-0 shadow-md duration-1000"
 
 
           }
@@ -272,7 +257,7 @@ const Navbar = () => {
             <div className=" text-white ">
               <div className="flex gap-6 max-sm:gap-2 w-full items-center justify-center">
                 <div className="flex max-xl:flex-col items-center gap-2 max-sm:gap-0">
-                  <div className="text-xs md:text-sm font-bold flex gap-2 items-center">
+                  <div className="text-xs md:text-sm font-bold flex gap-16 max-sm:gap-10 items-center">
                     <div className="max-sm:flex flex-col">
                       ¡Aprovecha nuestra{" "}
                       <span className="text-white">

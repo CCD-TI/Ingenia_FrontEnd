@@ -16,7 +16,7 @@ export default function StudentRanking() {
 </div>
                     
     <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10  max-lg:w-[10rem] max-sm:w-[5rem]">
-      <h1 className="text-center text-[#05abdd] text-6xl max-sm:text-3xl font-poppins font-bold mb-12">
+      <h1 className="text-center text-[#05abdd] text-6xl max-sm:text-4xl font-poppins font-bold mb-12">
         RANKING <span className=" text-yellowIngenia">DE ESTUDIANTES</span>
       </h1>
       <div className="flex justify-center gap-32 items-center max-xl:flex-col">
@@ -36,20 +36,21 @@ export default function StudentRanking() {
               />
             </div>
            
-            <div className="border-t border-l border-r border-yellow-300 text-xs font-bold w-[100px] rounded-t-[10px] ml-1 bg-gradient-to-b from-[#FFD36E] to-[#F9A825] text-white shadow-lg shadow-yellow-500">
-  <h3 className="px-3 py-1 text-center uppercase drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)]">Oro Amarillo</h3>
+            <div className="border-t border-l border-r border-yellow-300 text-xs font-bold w-[100px] rounded-t-[10px] 
+            ml-1 bg-gradient-to-b from-[#FFD36E] to-[#F9A825] text-white shadow-lg shadow-yellow-500 max-sm:w-20 ">
+  <h3 className="px-3 py-1 text-center uppercase drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)] max-sm:px-1">Oro </h3>
 </div>
 
 
 
 
-    <div className="bg-[#f9b233] text-white font-semibold px-4 py-3 rounded-md text-center mb-2 w-36">
+    <div className="bg-[#f9b233] text-white font-semibold px-4 py-3 rounded-md text-center mb-2 w-36 max-sm:text-sm max-sm:w-28 max-sm:px-1">
         Pedro Fierro <br/> Carranza
     </div>
 
-            <div className="bg-[#f9b233] rounded-t-[10px] p-4 text-center max-sm:w-24 w-36 h-[200px] flex flex-col items-center justify-center">
+            <div className="bg-[#f9b233] rounded-t-[10px] p-4 text-center max-sm:w-28 w-36 h-[200px] flex flex-col items-center justify-center ">
               <div className="text-5xl  text-white font-black leading-[4rem] scale-y-150">2</div>
-              <div className="text-md text-white font-semibold">
+              <div className="text-md text-white font-semibold ">
                 Segundo Lugar
               </div>
             </div>
@@ -76,17 +77,20 @@ export default function StudentRanking() {
             <div className="flex flex-col items-center">
 
   {/* Encabezado */}
-<div className="border-t border-l border-r border-yellow-500 text-xs font-bold w-[100px] rounded-t-[10px] ml-1 bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-900 shadow-lg shadow-yellow-600">
-  <h3 className="px-3 py-1 text-center uppercase drop-shadow-lg">🏆 Paladio</h3>
+<div className="border-t border-l border-r border-yellow-500 text-xs font-bold w-[100px] rounded-t-[10px] ml-1 
+bg-gradient-to-b from-yellow-400 to-yellow-700 text-gray-900 shadow-lg shadow-yellow-600 max-sm:w-20">
+  <h3 className="px-3 py-1 text-center uppercase drop-shadow-lg "> Paladio</h3>
 </div>
 
 {/* Nombre */}
-<div className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white font-semibold px-4 py-3 rounded-md text-center mb-2 w-36 shadow-lg shadow-yellow-700 border border-yellow-500 drop-shadow-2xl">
+<div className="bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white font-semibold px-4 py-3 
+rounded-md text-center mb-2 w-36 shadow-lg shadow-yellow-700 border border-yellow-500 drop-shadow-2xl max-sm:text-sm max-sm:w-28">
   Leonardinho <br /> Suárez
 </div>
 
 {/* Primer Lugar */}
-<div className="bg-gradient-to-b from-black via-gray-900 to-gray-800 rounded-t-[10px] p-4 text-center w-36 h-[300px] flex flex-col items-center justify-center shadow-2xl shadow-yellow-800 border-4 border-yellow-500 relative">
+<div className="bg-gradient-to-b from-black via-gray-900 to-gray-800 rounded-t-[10px] p-4 text-center w-36 
+h-[300px] flex flex-col items-center justify-center shadow-2xl shadow-yellow-800 border-4 border-yellow-500 relative max-sm:w-28">
   
   {/* Efecto de resplandor dorado aún más fuerte */}
   <div className="absolute top-8 w-24 h-24 bg-yellow-400 blur-3xl opacity-10 shadow-yellow-500 shadow-xl"></div>
@@ -128,15 +132,16 @@ export default function StudentRanking() {
                 width={800}
               />                        
             </div>
-            <div className="border-t border-l border-r border-gray-500 text-xs font-bold w-[100px] rounded-t-[10px] ml-1 bg-gradient-to-b from-[#E0E0E0] to-[#B0B0B0] text-gray-900 shadow-lg shadow-gray-600">
+            <div className="border-t border-l border-r border-gray-500 text-xs font-bold w-[100px] rounded-t-[10px] ml-1 
+            bg-gradient-to-b from-[#E0E0E0] to-[#B0B0B0] text-gray-900 shadow-lg shadow-gray-600 max-sm:w-16">
   <h3 className="px-3 py-1 text-center uppercase drop-shadow-[0_1px_3px_rgba(0,0,0,0.3)]">PLATA</h3>
 </div>
 
 
-    <div className="bg-[#9d9d9d] text-white font-semibold px-4 py-3 rounded-md text-center mb-2 w-36">
+    <div className="bg-[#9d9d9d] text-white font-semibold px-4 py-3 rounded-md text-center mb-2 w-36 max-sm:text-sm max-sm:w-24">
         Andrea <br/> del Río
     </div>
-            <div className="bg-[#bbbbbb] rounded-t-[10px] p-4 text-center max-sm:w-24 w-36 h-[170px] flex flex-col items-center justify-center">
+            <div className="bg-[#bbbbbb] rounded-t-[10px] p-4 text-center max-sm:w-24 w-36 h-[170px] flex flex-col items-center justify-center ">
               <div className="text-5xl  text-white font-black leading-[4rem] scale-y-150">3</div>
               <div className="text-md text-white font-semibold">
                 Tercer <br /> Lugar
