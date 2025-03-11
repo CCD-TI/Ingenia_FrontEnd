@@ -4,16 +4,18 @@ import Image from "next/image";
 export default function StudentRanking() {
   return (
     <div id="ranking" className="bg-white p-4 md:p-8">
-       <div className="relative flex items-center justify-center w-[1300px] mx-44">
-                      {/* Línea */}
-                      <div className="w-full h-[2px] bg-gray-300 mt-12"></div>
 
-                      {/* Círculos en los extremos */}
-                      <div className="absolute left-0 w-3 h-3 bg-gray-400 rounded-full mt-12"></div>
-                      <div className="absolute right-0 w-3 h-3 bg-gray-400 rounded-full mt-12"></div>
-                    </div>
+
+        <div className="relative flex items-center justify-center w-full max-w-[1300px] px-4 mx-auto mt-12">
+  {/* Línea */}
+  <div className="w-full h-[2px] bg-gray-300"></div>
+
+  {/* Círculos en los extremos */}
+  <div className="absolute left-0 w-3 h-3 bg-gray-400 rounded-full"></div>
+  <div className="absolute right-0 w-3 h-3 bg-gray-400 rounded-full"></div>
+</div>
                     
-    <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10">
+    <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10  max-lg:w-[10rem] max-sm:w-[5rem]">
       <h1 className="text-center text-[#05abdd] text-6xl max-sm:text-3xl font-poppins font-bold mb-12">
         RANKING <span className=" text-yellowIngenia">DE ESTUDIANTES</span>
       </h1>
