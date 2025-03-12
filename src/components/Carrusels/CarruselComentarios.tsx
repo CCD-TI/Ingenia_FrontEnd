@@ -133,6 +133,37 @@ export default function PartnersShowcase() {
     },
   ];
 
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+
+    if (!container) return;
+
+    // Función para bloquear el scroll manual
+    const preventScroll = (event: WheelEvent | TouchEvent) => {
+      event.preventDefault();
+    };
+
+    // Agregar event listeners para bloquear el scroll manual
+    container.addEventListener("wheel", preventScroll, { passive: false });
+    container.addEventListener("touchmove", preventScroll, { passive: false });
+
+    // Limpiar event listeners al desmontar el componente
+    return () => {
+      container.removeEventListener("wheel", preventScroll);
+      container.removeEventListener("touchmove", preventScroll);
+    };
+  }, []);
+
+  // Ejemplo de scroll programático
+  const scrollToBottom = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo({
+        top: scrollContainerRef.current.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  };
+
   const scrollUp = () => {
     if (scrollContainerRef.current) {
       const newPosition = Math.max(0, scrollPosition - 100);
@@ -193,9 +224,9 @@ export default function PartnersShowcase() {
         className="absolute right-0 top-0 w-full h-full object-cover opacity-80"
       /> */}
 
-      <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-20">
+      <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="relative max-xl:w-[20rem] w-[30rem] h-[450px]">
+          <div className="relative max-xl:w-[20rem] w-[30rem] h-[468px]">
             <button
               onClick={scrollUp}
               className="absolute -top-20 left-1/2 -translate-x-1/2 z-10  bg-opacity-75 p-2 rounded-full "
@@ -218,7 +249,7 @@ export default function PartnersShowcase() {
                         : "opacity-50"
                     )}
                   >
-                    <div className="bg-white shadow-2xl border-2 rounded-xl flex w-full items-center gap-4 p-4">
+                    <div className="bg-slate-100 shadow-2xl border-2 rounded-xl flex w-full items-center gap-4 p-4">
                       <Image
                         src={partner.logo}
                         alt="user"
@@ -259,7 +290,7 @@ export default function PartnersShowcase() {
               >
                 <div className="w-full relative">  
                   <FaQuoteLeft className="text-cyan-300 text-5xl absolute left-0" />
-                  <h1 className="text-5xl p-4 text-center text-black">{partner.description}</h1>
+                  <h1 className="text-4xl p-4 text-center text-slate-500 font-bold font-poppins leading-[1.5] pt-14 ">{partner.description}</h1>
                   <FaQuoteRight className="text-cyan-300 text-5xl absolute right-0" />
                 </div>
               </div>

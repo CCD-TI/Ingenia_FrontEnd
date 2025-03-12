@@ -371,17 +371,17 @@ const Navbar = () => {
                       >
                         <div className="px-4">
                           <Link
-                            href="/gestion"
+                            href="/grados"
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
-                              <Image
+                              {/* <Image
                                 src={images.gestion}
                                 alt="Icono Gestión"
                                 className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
                                 width={800}
                                 height={800}
-                              />
+                              /> */}
                             </div>
                             Primaria
                           </Link>
@@ -430,13 +430,13 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                              <Image
+                              {/* <Image
                                 src={images.ingenieria}
                                 alt="Icono Ingeniería"
                                 className="text-white text-[2px] p-[5px]"
                                 width={800}
                                 height={800}
-                              />
+                              /> */}
                             </div>
                             Secundaria
                           </Link>
@@ -472,7 +472,7 @@ const Navbar = () => {
                         )}
                       </li>
 
-                      <li
+                      {/* <li
                         className="relative group"
                         onMouseEnter={() => handleSubMouseEnter("mineria", 3)}
                         onMouseLeave={handleSubMouseLeave}
@@ -523,7 +523,7 @@ const Navbar = () => {
                             )}
                           </ul>
                         )}
-                      </li>
+                      </li> */}
                       {/* Linea Separadora */}
                       <hr className="border-t-2 border-cyanIngenia w-full p-0 m-0" />
                       {/* Rutas */}
