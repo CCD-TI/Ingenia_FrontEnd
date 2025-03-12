@@ -39,8 +39,9 @@ export default function footer() {
 
 
         {/* Programas */}
-        <div className='flex flex-col gap-10'>
-          <div className=''>
+      <div className='max-md:mr-16'>
+
+          <div className='mb-4'>
             <h2 className='text-lg font-bold  pb-1 text-white font-poppins uppercase'>Niveles</h2>
             <ul className="mt-2 space-y-1">
               <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Primaria</li>
@@ -62,7 +63,8 @@ export default function footer() {
             </ul>
 
           </div>
-        </div>
+      </div>
+      
 
 
 

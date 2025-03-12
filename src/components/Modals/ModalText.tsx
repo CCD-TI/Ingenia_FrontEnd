@@ -9,36 +9,43 @@ import {
     Button,
     useDisclosure,
   } from "@heroui/react";
+import { body, img } from "framer-motion/client";
   
 import { ReactNode } from "react";
   
 interface Propstext{
-        text:string,
+   
         button:ReactNode
+        modal:ReactNode
+       
+       
 }
 
-  export default function App({text,button}:Propstext) {
+  export default function App({button,modal}:Propstext) {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
   
     return (
       <>
-        <button className="!bg-transparent !size-fit !px-0 !rounded-none" onClick={onOpen}>{button} </button>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-          <ModalContent>
+        <button className="!bg-transparent !size-fit !px-0 !rounded-none " onClick={onOpen}>{button} </button>
+        <Modal  
+        size="2xl"
+          isOpen={isOpen} onOpenChange={onOpenChange}
+          classNames={
+
+                {body:"!p-0"}
+                
+          } 
+          
+          >
+
+          <ModalContent className="!p-0">
             {(onClose) => (
               <>
                 {/* <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader> */}
-                <ModalBody className="h-full">
-                  {text}
+                <ModalBody className="h-full bg-[url('/img/yellow.jpeg')]">
+                {modal}
                 </ModalBody>
-                {/* <ModalFooter>
-                  <Button color="danger" variant="light" onPress={onClose}>
-                    Close
-                  </Button>
-                  <Button color="primary" onPress={onClose}>
-                    Action
-                  </Button>
-                </ModalFooter> */}
+               
               </>
             )}
           </ModalContent>
