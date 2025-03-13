@@ -60,20 +60,20 @@ export const Nosotros = () => {
               <ModalText
 
                 modal={
-                  <div className=" shadow-xl shadow-gray-700/20 flex w-full ">
+                  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-[url('/img/yellow.jpeg')] ">
 
                     <div className=" flex flex-col gap-1 items-center  w-[480px]">
 
                       <h1 className="text-4xl font-poppins font-extrabold text-center text-white flex items-center justify-center mt-6 w-full gap-3 drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] 
                  [text-shadow:_-2px_-2px_0_#facc15,_2px_-2px_0_#facc15,_-2px_2px_0_#facc15,_2px_2px_0_#facc15] tracking-[0.2em] ">
                    
-                        VISIÓN
+                        MISIÓN
                       </h1>
 
                       <Image
                         src="/img/student.png"
                         alt="Primer lugar"
-                        className=" object-cover animate-jump animate-infinite animate-duration-[7000ms] animate-ease-linear"
+                        className=" object-cover animate-jump  "
                         width={200}
                         height={200}
                       />
@@ -115,38 +115,50 @@ export const Nosotros = () => {
 
               <ModalText
 
-                modal={
-                  <div className="rounded-2xl shadow-xl shadow-gray-700/20 border border-gray-200 bg-white overflow-hidden 
-                    transition-all scale-95 hover:scale-100">
-                    {/* Imagen arriba */}
-                    <Image
-                      src="/img/inge.jpg"
-                      alt="Tercer lugar"
-                      className="w-full object-cover transition-y-[-50] transition-transform duration-75"
-                      height={400}
-                      width={400}
-                    />
+modal={
+  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-[url('/img/turquesa.jpg')] ">
 
+    <div className=" flex flex-col gap-9  w-[480px]">
 
-                    <div className="px-6 py-8 flex flex-col gap-6 bg-[#d3d3d3]">
+      <h1 className="text-4xl font-poppins font-extrabold text-center text-white flex items-center justify-center mt-6 w-full gap-3 drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] 
+[text-shadow:_-2px_-2px_0_#05abdd,_2px_-2px_0_#05abdd,_-2px_2px_0_#05abdd,_2px_2px_0_#05abdd] tracking-[0.2em]  ">
+   
+        VISIÓN
+      </h1>
 
-                      <p className="font-poppins font-medium text-center text-white text-lg leading-relaxed ">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
-                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore a?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque in provident enim aperiam saepe quaerat! Alias,
+      <Image
+        src="/img/blue.png"
+        alt="Primer lugar"
+        className=" object-contain ml-10 mb-6 animate-jump "
+        width={160}
+        height={130}
+      />
+    </div>
 
-                      </p>
-                    </div>
-                  </div>
-                }
+             
+
+    <div className="px-4 py-5 w-full">     
+      <div className=" bg-white/50 shadow-2xl  border-2 border-[#05abdd] p-2 rounded-xl">
+      <p className="font-poppins  text-center text-black text-sm leading-relaxed ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque in provident enim aperiam saepe quaerat! Alias,
+        m, consequuntur amet, natus omnis quidem suscipit inventore enim esse recusandae quis maiores obcaecati!
+       
+      </p>
+        </div>               
+      
+    </div>
+  </div>
+}
 
 
                 button={
                   <div className="flex flex-col justify-center items-start">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
                     <div className="">
-                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia  pr-24 mb-1">
-                        Misión
+                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-[#05abdd]   pr-24 mb-1">
+                        Visión
                       </h3>
                       <h3 className="flex items-center max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
                         Conoce más aquí <IoIosArrowForward className="text-4xl text-[#05abdd]" />

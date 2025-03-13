@@ -39,13 +39,35 @@ const config: Config = {
         cyanIngenia: "#3185F7", // RGB(49, 133, 247)
       },
       animation: {
-        'bounce-soft': 'bounceSoft 1.2s infinite'
+        'bounce-soft': 'bounceSoft 1.2s infinite',
+        "spin-slow": "spinSlow 7s linear infinite",
+        "pulse-slow": "pulseSlow 7s infinite",
+        "jump": "jump 2s ease-in-out forwards",
+        "pulse-custom": "pulseCustom 2s ease-in-out infinite",
+              // Pulso más lento
       },
       keyframes: {
         bounceSoft: {
           '0%, 100%': { transform: 'translateY(-20px)' },
           '50%': { transform: 'translateY(0px)' }
+        },
+        spinSlow: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        pulseSlow: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+        jump: {
+          "0%, 100%": { transform: "translateY(0)" }, 
+          "50%": { transform: "translateY(-1px)" }, // Ajusta la altura del salto
+        },
+        pulseCustom: {
+          "0%, 100%": { opacity: "1" },  // Comienza y termina con opacidad completa
+          "50%": { opacity: "0.5" },     // A la mitad del ciclo, reduce la opacidad
         }
+        
         
       }
     },

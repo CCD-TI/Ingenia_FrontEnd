@@ -42,7 +42,7 @@ interface Propstext{
             {(onClose) => (
               <>
                 {/* <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader> */}
-                <ModalBody className="h-full bg-[url('/img/yellow.jpeg')]">
+                <ModalBody className="h-full ">
                 {modal}
                 </ModalBody>
                
