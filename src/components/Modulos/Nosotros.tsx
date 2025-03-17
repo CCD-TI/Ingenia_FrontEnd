@@ -10,7 +10,7 @@ import { IoEyeSharp } from "react-icons/io5";
 export const Nosotros = () => {
   return (
     <>
-      <div id="nosotros" className="bg-white p-9   text-center z-50 py-16 max-sm:px-3">
+      <div id="nosotros" className="bg-black p-9   text-center z-50 py-16 max-sm:px-3">
 
 
         {/* Contenedor de Visión y Misión (Dos Columnas) */}
@@ -47,7 +47,7 @@ export const Nosotros = () => {
 
 
             <div className="text-center md:text-left w-full max-w-[600px] px-4 md:px-6 lg:px-8 xl:px-12 mr-auto max-lg:mx-auto">
-              <p className="text-grayIngenia text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins font-normal max-lg:text-center  ">
+              <p className="text-grayIngenia text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins text-white font-normal max-lg:text-center  ">
                 Somos una Institución Educativa que bajo
                 nuestro sistema vamos a reforzar la
                 educación de calidad.
@@ -103,7 +103,7 @@ export const Nosotros = () => {
                       <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia  pr-24 mb-1">
                         Misión
                       </h3>
-                      <h3 className="flex items-center max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
+                      <h3 className="flex items-center text-white max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
                         Conoce más aquí <IoIosArrowForward className="text-4xl text-[#05abdd]" />
                       </h3>
 
@@ -160,7 +160,7 @@ modal={
                       <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-[#05abdd]   pr-24 mb-1">
                         Visión
                       </h3>
-                      <h3 className="flex items-center max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
+                      <h3 className="flex items-center text-white max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
                         Conoce más aquí <IoIosArrowForward className="text-4xl text-[#05abdd]" />
                       </h3>
 
@@ -176,13 +176,13 @@ modal={
         </div>
 
         <div className="relative flex items-center justify-center w-full max-w-[1300px] px-4 mx-auto mt-12">
-          {/* Línea */}
-          <div className="w-full h-[2px] bg-gray-300"></div>
+        {/* Línea */}
+        <div className="w-full h-[2px] bg-[#05abdd] "></div>
 
-          {/* Círculos en los extremos */}
-          <div className="absolute left-0 w-3 h-3 bg-gray-400 rounded-full"></div>
-          <div className="absolute right-0 w-3 h-3 bg-gray-400 rounded-full"></div>
-        </div>
+        {/* Círculos en los extremos */}
+        <div className="absolute left-0 w-3 h-3 bg-[#1b5a79] rounded-full"></div>
+        <div className="absolute right-0 w-3 h-3 bg-[#1b5a79] rounded-full"></div>
+      </div>
 
 
 
