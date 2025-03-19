@@ -8,17 +8,16 @@ interface DropdownProps {
   BgColor: string;
 }
 
-export default function CursosDropdown({ TextColor,BgColor }: DropdownProps) {
+export default function CursosDropdown({ TextColor, BgColor }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="relative">
+    <div 
+      className="relative"
+      onMouseEnter={() => setIsOpen(true)} // Se abre cuando el mouse entra
+      onMouseLeave={() => setIsOpen(false)} // Se cierra solo cuando el mouse deja todo el área
+    >
       <button
-        onClick={toggleDropdown}
         className="flex items-center justify-between gap-2 bg-white rounded-lg px-6 py-3 w-full md:w-auto"
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -33,7 +32,8 @@ export default function CursosDropdown({ TextColor,BgColor }: DropdownProps) {
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 w-full bg-white rounded-lg shadow-lg z-10 p-4 text-white">
+        <div className="absolute mt-1 w-full bg-white rounded-lg shadow-lg z-10 p-4 text-white">
+
           <ul className="space-y-2">
             <li>
               <a
@@ -46,7 +46,7 @@ export default function CursosDropdown({ TextColor,BgColor }: DropdownProps) {
             <li>
               <a
                 href="#"
-                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400  rounded-md text-white`}
+                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400 rounded-md text-white`}
               >
                 Curso 2
               </a>
@@ -54,7 +54,7 @@ export default function CursosDropdown({ TextColor,BgColor }: DropdownProps) {
             <li>
               <a
                 href="#"
-                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400  rounded-md text-white`}
+                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400 rounded-md text-white`}
               >
                 Curso 3
               </a>
@@ -62,7 +62,7 @@ export default function CursosDropdown({ TextColor,BgColor }: DropdownProps) {
             <li>
               <a
                 href="#"
-                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400  rounded-md`}
+                className={`block ${BgColor} px-4 py-2 hover:bg-slate-400 rounded-md`}
               >
                 Curso 4
               </a>

@@ -5,25 +5,24 @@ import React from "react";
 
 const Grado = () => {
   return (
-    <div className="flex w-full h-full pt-20  px-6 relative bg-white">
-      <div
-        className="bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/grado.jpg')]   bg-no-repeat bg-contain w-full h-full absolute -top-24 left-0"
-        style={{ clipPath: "ellipse(55% 30% at 50% 0%)" }}
-      >
-
-       <div className="size-full flex gap-4 items-end justify-center h-[300px]">
-            <div className="flex items-start justify-center">
-              <p className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">4</p>
-              <p className="text-3xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">to</p>
+    <div className="flex flex-col gap-2 w-full h-full pt-32  px-6 relative bg-gradient-to-r from-gray-900 via-teal-500 to-indigo-20">
+      
+      <div className="flex items-start justify-center">
+              <p className="text-9xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">4</p>
+              <p className="text-5xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">to</p>
+              <h1 className="text-9xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">GRADO</h1>
             </div>
-            <h1 className="text-7xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)]">GRADO</h1>
-       </div>
+        
+    
+     
+      
+     
 
-      </div>
-
-      <div className="max-w-[100] mx-auto flex flex-col items-center">
-        <div className="flex flex-wrap justify-center gap-[5rem] items-center w-full mt-[18rem] ">
+      <div className="max-w-[2050]  flex flex-col items-center">
+        <div className="flex flex-wrap justify-center gap-[10rem] items-center w-full mt-[7rem] ">
           <div className="flex flex-col items-center justify-center bg-yellow-500  rounded-xl p-4  ">
+
+
             <div className=" w-[330px] h-[250px] bg-white rounded-xl overflow-hidden ">
               <Image
                 alt=""
@@ -62,10 +61,28 @@ const Grado = () => {
           </div>
         </div>
 
+
+
+        <div className="bg-white w-[1880px]  mt-7 px-12 py-10">
+          <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellowIngenia text-5xl mb-6">VIDEO EDUCATIVO</h1>
+          <div className="bg-[url('/img/clase.jpg')] bg-cover bg-center w-full h-[700px] rounded-3xl ">
+          </div>         
+        </div>
+
+       
+
+
+
+
+
+
+
+
+
         <div className="w-full mx-auto flex justify-center gap-[5rem]  mt-16 py-10">
           <div className="w-[50%] h-full flex flex-col items-start gap-4">
-            <h1 className="text-4xl font-bold text-sky-500">Clases Online</h1>
-            <p className="text-sm text-wrap ">
+            <h1 className="text-5xl font-bold text-sky-500">Clases Online</h1>
+            <p className="text-2xl text-wrap text-white">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
               Asperiores, omnis iure reprehenderit ex suscipit debitis, facilis
               <br />
@@ -78,7 +95,7 @@ const Grado = () => {
               illum autem possimus?
             </p>
 
-            <div className="flex justify-between gap-4 h-full ">
+            <div className="flex justify-between gap-8 mt-4 h-full ">
               <span className="border-4 border-neutral-300 bg-sky-500 p-4 size-[130px] rounded-full text-white font-bold flex flex-col items-center justify-center text-xl">
                 <p className="flex items-center">
                   10 <span>+</span>
@@ -100,16 +117,16 @@ const Grado = () => {
             </div>
           </div>
           <div className="w-fit flex flex-col  gap-4">
-            <div className="w-[350px] h-[450px]  border-dashed border-3 border-yellow-300 p-2 rounded-2xl ">
+            <div className="w-[450px] h-[550px]  border-dashed border-3 border-black p-2 rounded-2xl ">
               <Image
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/gradoejmNi%C3%B1a.jpeg"
-                width={900}
-                height={900}
+                width={700}
+                height={700}
                 className="size-full object-cover rounded-2xl "
                 alt="Niña estudiando"
               />
             </div>
-            <button className="border-dashed border-3 p-4 rounded-2xl border-yellow-300  w-full font-extrabold text-xl">
+            <button className="border-dashed border-3 p-4 rounded-2xl border-black w-full font-extrabold text-2xl text-white">
               Comprar ahora
             </button>
           </div>
