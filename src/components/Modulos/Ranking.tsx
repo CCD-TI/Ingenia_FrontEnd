@@ -16,18 +16,20 @@ export default function StudentRanking() {
       puntos: "100",
       bg: "bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700",
       animación:"top", 
-      textColor: "text-white"     
+      textColor: "text-white"  ,
+      shadow: "drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]"   
     },
     {
       avatar:"/img/martillo.png",
-      nombre: "pepito",
+      nombre: "Enrique",
       grado: "2do",
       nota: "20",
       TiempoE: "1 hora",
       puntos: "100",
       bg: "bg-gradient-to-b from-gray-400 via-gray-500 to-gray-900",
       animación:"top",
-      textColor: "text-white" 
+      textColor: "text-white"  ,
+      shadow: "drop-shadow-[0_0_5px_rgba(255,255,255,1)]"   
 
     },
     {
@@ -39,7 +41,8 @@ export default function StudentRanking() {
       puntos: "100",
       bg: "bg-gradient-to-t from-cyan-900 via-cyan-600 to-cyan-400",
       animación:"top",
-      textColor: "text-white" 
+      textColor: "text-white"  ,
+      shadow: "drop-shadow-[0_0_12px_rgba(0,180,255,1)]"   
 
     },
     {
@@ -51,7 +54,7 @@ export default function StudentRanking() {
       textColor: "text-black",
       puntos: "100",
       bg: "bg-white",
-      animación:"top"
+    
     },
     {
       avatar:"/img/casco.png",
@@ -62,8 +65,7 @@ export default function StudentRanking() {
       TiempoE: "1 hora",
       puntos: "100",
       bg: "bg-white",
-      animación:"top",
-
+    
     },
     {
       avatar:"/img/casco.png",
@@ -74,7 +76,7 @@ export default function StudentRanking() {
       TiempoE: "1 hora",
       puntos: "100",
       bg: "bg-white", 
-      animación:"top"
+     
 
     }
   ]
@@ -96,10 +98,10 @@ export default function StudentRanking() {
           RANKING <span className=" text-yellowIngenia">DE ESTUDIANTES</span>
         </h1>
         <div className=" justify-center gap-32 items-center max-xl:flex-col">
-          <div className="flex justify-center items-end gap-6 max-sm:gap-1 mb-12 ">
+          <div className="flex justify-center items-end gap-6 max-sm:gap-1 max-lg:gap-3 mb-12 ">
 
             {/* Quinto lugar */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center max-md:hidden">
               <div className="mb-7">
                 <h2 className="text-white">Carlos Lee</h2>
                 <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]"></div>
@@ -126,12 +128,14 @@ export default function StudentRanking() {
 
 
             {/* Cuarto lugar */}
-            <div className="flex flex-col items-center">
-            <div className="mb-7">
-                <h2 className="text-white">Carlos Lee</h2>
-                <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]"></div>
-              </div>
-              <div className="w-20 h-20 max-sm:size-[4.5rem] overflow-hidden mb-2">
+            <div className="flex flex-col items-center max-md:hidden">
+            <h2 className="text-white max-sm:hidden">Carlos Lee </h2>
+               
+                <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]  mb-7">
+                
+                </div>
+              
+              <div className="w-20 h-20 max-sm:size-[4.5rem]  overflow-hidden mb-2">
                 <Image
                   src="/img/audifonos.png"
                   alt="Tercer lugar"
@@ -146,7 +150,7 @@ export default function StudentRanking() {
 
 
               <div className="bg-[#8ac8d6] rounded-t-[30px] p-4 text-center max-sm:w-24 w-36 h-[180px] flex flex-col items-center justify-center ">
-                <div className="text-[80px]  text-white font-black leading-[4rem] scale-y-150">4</div>
+                <div className="text-[80px] max-sm:hidden text-white font-black leading-[4rem] scale-y-150">4</div>
 
               </div>
             </div>
@@ -277,31 +281,36 @@ export default function StudentRanking() {
                   <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Nota</th>
                   <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Tiempo Exámen</th>
                   <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Puntos</th>
+                 
                   
                 </tr>
               </thead>
               <tbody>
                 {datos.map((data, index) => (
                   <tr key={index} className="">
-                    <td className="py-2 px-4 max-sm:hidden">
+                    <td className={`py-2 px-4 max-sm:hidden ${data.bg} `}>
                     
-                      <Image
+                     <div className=" border-2 rounded-full p-2">
+                     <Image
                         src= {data.avatar}
                         alt={`Estudiante ${index + 1}`}
-                        className="w-10 h-10 rounded-full max-sm:hidden"
+                        className="w-7 h-7  max-sm:hidden "
                         width={800}
                         height={800}
                       />
+                     </div>
                     </td>
                     <td className={`py-2 px-4 max-sm:px-2 text-center ${data.textColor} font-poppins font-semibold text-xs ${data.bg}`}>{data.nombre} </td>
                     <td className={`py-2 px-4 max-sm:px-2 text-center ${data.textColor} text-xs font-poppins font-semibold  ${data.bg}`}>2° do</td>
                     <td className={`py-2 px-4 max-sm:px-2 text-center text-xs font-poppins ${data.textColor} font-semibold  ${data.bg}`}>20 </td>
                     <td className={`py-2 px-4 max-sm:px-2 text-center text-xs font-poppins font-semibold ${data.textColor} ${data.bg} max-sm:hidden text-[#167F99] border-collapse border-0 `}>1 hr y 30 min</td>
-                    <td className={`py-2 px-4 max-sm:px-2 text-center text-xs  ${data.textColor}font-poppins font-semibold  ${data.bg}`}>100</td>                    
-                    <td className={`py-[6px]  px-[20px] mt-3 max-sm:px-2 ${data.textColor} font-semibold text-xs  drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]
-                    bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700  text-white ${data.textColor} flex gap-1 rounded-l-xl  ${data.bg}`}>{data.animación}{data.bgg}<MdOutlineStarPurple500 
+                    <td className={`py-2 px-4 max-sm:px-2 text-center text-xs  ${data.textColor}font-poppins font-semibold   ${data.bg}`}> 100 </td>                    
+                   <td className={`${data.bg}`}>
+                   <div className={`py-[6px]  px-[20px] mt-3 max-sm:px-2 ${data.textColor} font-semibold text-xs  
+                      text-white ${data.textColor} flex gap-1 rounded-l-xl ${data.shadow} ${data.bg}`}>{data.animación}<MdOutlineStarPurple500 
                     className="text-white"/> 
-                    </td>
+                    </div>
+                   </td>
                      
                    
                   </tr>
