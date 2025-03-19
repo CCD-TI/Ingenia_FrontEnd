@@ -1,35 +1,37 @@
 import { ChevronDownIcon } from 'lucide-react';
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
+import { FaRegEnvelope } from 'react-icons/fa6';
+import { MdOutlineWhatsapp } from 'react-icons/md';
 
 function Page() {
   return (
     <> 
    
       <div className="bg-[url('/img/estudio.jpg')] bg-cover bg-center w-full h-screen rounded-b-[100px] relative">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-[#205375]/80 to-[#78C0E0]/60 rounded-b-[100px] w-full h-screen"></div>
-      <div className='flex gap-56 items-center pl-72 py-50'>
-        <h1 className='font-poppins font-extrabold text-[50px] z-20 text-white '> AUMENTA EL <br />POTENCIAL <br />
-        <span className='text-[30px] font-poppins font-light'> DE LA FUTURA <br />GENERACION</span>
-        </h1>
-        <div className='flex flex-col gap-16'> 
-        <div className='z-20 w-full pr-52 mb-3  '>
-        <p className=' text-white font-poppins font-light text-lg'>Lorem ipsum dolor sit, amet consectetur   <br /> adipisicing elit. Aspernatur fugiat ad 
-           <span> non  <br /> quia expedita magni similique reprehenderit   <br /> quaerat est? Perspiciatis consequuntur tempora   <br /> natus provident exercitationem dolores excepturi placeat 
-            <br /> </span>
-            </p>
-        </div> 
-        <div className='text-white z-30'>
-            <h1>Forma parte de nuestro equipo de embajadores</h1>
-        </div>
-        <div className='flex items-center gap-12 z-40'>
-            <button className='text-white bg'>Contactanos</button>
-            <button className='text-white'>Whatssap</button>
-        </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30
 
-        </div>
-       
-       
+
+
+ rounded-b-[100px] w-full h-screen"></div>
+
+      <div className='text-center z-50 absolute inset-0 mt-48 px-6 max-sm:mt-40 max-sm:px-3'>
+        <h1 className='text-white text-6xl font-poppins font-semibold max-sm:text-4xl'>AUMENTA EL POTENCIAL</h1>
+        <h1 className='text-white text-6xl font-poppins font-semibold  max-sm:text-4xl'>DE LA FUTURA GENERACIÓN</h1>
+        <h2 className='text-white mt-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laudantium facilis magnam 
+            quasi? <br /> Praesentium ullam eum voluptatem sunt, tenetur nulla non similique explicabo eaque quasi optio iure animi <br /> aliquam  facilis?
+            tenetur nulla non similique explicabo eaque quasi Ratione laudantium facilis magnam</h2>
+            <p className='text-white mt-7 text-lg font-poppins font-semibold'>¡Únete ahora y forma parte de nuestro equipo de Embajadores!</p>
+           
+           <div className='mt-4 flex items-center justify-center gap-16 max-[400px]:flex-col max-[400px]:gap-4'>
+           <button className=' px-4 py-1 max-sm:mr-4  bg-white rounded-md  font-poppins font-semibold flex items-center gap-1 text-gray-600'><FaRegEnvelope className='text-gray-600
+            w-6 h-6'/>Contáctanos</button>
+           <button className='text-gray-600 px-4 py-1 bg-white rounded-md  font-poppins font-semibold flex items-center gap-1'><MdOutlineWhatsapp className='text-gray-600
+           w-6 h-6'/> Whatsapp</button>
+
+           </div>
+           
+
       </div>
       
       
@@ -37,8 +39,8 @@ function Page() {
 
       <div className="bg-[url('/img/black.jpg')] bg-cover bg-center w-full h-screen">
 
-      <div className='flex items-start    gap-80'>
-        <h1 className=" text-7xl font-bold mt-28 ml-28 p-6 font-poppins text-cyan-700  drop-shadow-[0_10px_8px_rgba(0,0,10,0.5)] ">¿Interesado en <br /> formar parte?</h1>
+      <div className='flex items-start gap-80  max-[400px]:flex-col max-[400px]:gap-2'>
+        <h1 className=" text-7xl font-bold m-28 max-sm:m-4   p-6 font-poppins text-cyan-700  drop-shadow-[0_10px_8px_rgba(0,0,10,0.5)] max-sm:text-4xl ">¿Interesado en <br /> formar parte?</h1>
         <div className='bg-white p-5 mt-10 rounded-2xl drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] mb-5'>
         <h1 className="text-gray-600 text-xl font-bold">Completa tus datos</h1>
         <h2 className="text-gray-600 text-sm pt-6 [word-spacing:0.1em]">Rellena el formulario con los siguientes datos</h2>

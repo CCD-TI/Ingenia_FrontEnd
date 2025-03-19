@@ -164,7 +164,7 @@ const Tabs = () => {
                 whileHover={{ y: -25, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >
-                <div className="bg-gradient-to-t from-orange-800 via-orange-600 to-orange-400 rounded-[40px]  size-full flex items-center border-3 border-white text-white">
+                <div className="bg-gradient-to-t from-orange-800 via-orange-600 to-orange-400 rounded-3xl size-full flex items-center border-3 border-white text-white">
                   <div className="w-[80%] h-ffit mx-auto flex flex-col justify-center items-center gap-6 pt-6">
                     <h1 className="text-xl font-extrabold uppercase text-orange-600 rounded-full  bg-white py-2 px-4">Plan Avanzado</h1>
                     <div className="flex items-end">
@@ -220,8 +220,8 @@ const Tabs = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >
 
-                <div className=" bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700 rounded-[40px] flex items-center  size-full gap-6 border-3 border-white text-white">
-                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6 rounded-[40px] ">
+                <div className=" bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700 rounded-3xl flex items-center  size-full gap-6 border-3 border-white text-white">
+                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6  ">
 
                     <h1 className="text-xl font-extrabold uppercase text-amber-700 relative rounded-full  bg-white py-2 px-4">Plan Avanzado</h1>
 
@@ -265,9 +265,9 @@ const Tabs = () => {
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >
 
-                <div className="bg-gradient-to-t from-cyan-900 via-cyan-600 to-cyan-400  rounded-[40px] flex items-center 
+                <div className="bg-gradient-to-t from-cyan-900 via-cyan-600 to-cyan-400 rounded-3xl flex items-center 
                   border-3 border-white text-white size-full">
-                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 pt-6 ">
+                  <div className="w-[80%] mx-auto flex flex-col justify-center items-center gap-6 pt-6 rounded-3xl">
                     <h1 className="text-xl font-black font-poppins uppercase bg-white py-2 px-4 text-cyan-600 rounded-full mr-20">Plan Ingenia</h1>
                     <div className="flex items-end">
                       <div className="text-4xl font-extrabold items-end flex gap-2">
@@ -313,8 +313,8 @@ const Tabs = () => {
                 whileHover={{ y: -20, scale: 1.02 }} // Elevación y agrandamiento leve
                 transition={{ type: "spring", stiffness: 150, damping: 12 }} // Transición suave
               >
-                <div className="bg-gradient-to-t from-orange-800 via-orange-600 to-orange-400 rounded-[40px] size-full flex items-center border-3 border-white text-white">
-                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6">
+                <div className="bg-gradient-to-t from-orange-800 via-orange-600 to-orange-400 rounded-3xl size-full flex items-center border-3 border-white text-white">
+                  <div className="w-[80%] h-fit mx-auto flex flex-col justify-center items-center gap-6 pt-6 rounded-3xl">
 
                     <h1 className="text-xl font-extrabold uppercase text-orange-600 rounded-full  bg-white py-2 px-4">Plan Avanzado</h1>
 
