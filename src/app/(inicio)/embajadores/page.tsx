@@ -9,6 +9,7 @@ function Page() {
         <>
 
             <div className="bg-[url('/img/estudio.jpg')] bg-cover bg-center w-full h-[800px]  relative">
+            
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 w-full h-[800px]"></div>
 
                 <div className='text-center z-50 absolute inset-0 mt-48 px-6 max-sm:mt-40 max-sm:px-3'>
