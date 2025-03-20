@@ -39,7 +39,7 @@ export default function CursosDropdown({ TextColor, BgColor,Hover,BorderH }: Dro
         
         <div 
         className="absolute mt-0 w-full bg-white/50 shadow-[0_0_10px_2px_rgba(255,255,255,0.8)] border-2  rounded-b-lg  
-       p-4 text-white z-30"
+       p-4 text-white z-10"
         >
 
           <ul className="space-y-2">

@@ -1,7 +1,10 @@
 "use client";
+import CarruselComentarios from "@/components/Carrusels/CarruselComentarios";
+import CursosCarrusel from "@/components/Carrusels/CursosCarrusel";
 import DropdownList from "@/components/Desplegables/DropdownList";
+import Beneficios from "@/components/Modulos/Beneficio";
+import SectionCursos from "@/components/Modulos/CursoDetalleComponet/SectionCursos";
 import { motion } from "framer-motion";
-
 import Image from "next/image";
 import React from "react";
 
@@ -24,11 +27,11 @@ const Grado = () => {
 
 
 
-      <div className="max-w-[100rem]  flex flex-col items-center ">
+      <div className="max-w-[100rem]  flex flex-col items-center  ">
         <div className="flex flex-wrap justify-center lg:gap-[12rem] items-center w-full mt-[4rem]  max-sm:flex-col max-sm:gap-3 md:gap-12 mb-16">
 
           <motion.div className="flex flex-col items-center justify-center bg-gradient-to-t from-yellow-600 via-[#21212151] to-[#21212100] p-4
-           rounded-xl   hover:shadow-[0_0_50px_0_#F9B233]"
+           rounded-xl z-10  hover:shadow-[0_0_50px_0_#F9B233]"
             whileHover={{ y: -20, scale: 1.02 }}
             transition={{ type: "spring", stiffness: 150, damping: 12 }}>
 
@@ -56,7 +59,7 @@ const Grado = () => {
           </motion.div >
 
           <motion.div
-            className="flex flex-col items-center justify-center bg-gradient-to-t from-[#179EC1] via-[#21212151] to-[#21212100] rounded-xl 
+            className="flex flex-col items-center justify-center bg-gradient-to-t from-[#179EC1] via-[#21212151] to-[#21212100] z-10   rounded-xl 
             p-4  hover:shadow-[0_0_50px_0_#38bdf8]"
             whileHover={{ y: -20, scale: 1.02 }}
             transition={{ type: "spring", stiffness: 150, damping: 12 }}
@@ -93,8 +96,7 @@ const Grado = () => {
       <div className="bg-white w-full   ">
         <div className="max-w-[100rem]  px-12 py-10 mx-auto mt-9 ">
 
-          <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellow-500 text-7xl  tracking-[3px]  
-          drop-shadow-[0_0_10px_rgba(249,178,51,1)] relative z-30">VIDEO EDUCATIVO</h1>
+          <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellow-500 text-7xl  tracking-[3px]  drop-shadow-[0_0_10px_rgba(249,178,51,1)]">VIDEO EDUCATIVO</h1>
           <Image
             alt="un video introductorio"
             src="/img/clase.jpg"
@@ -105,6 +107,10 @@ const Grado = () => {
         </div>
       </div>
 
+      <Beneficios/>
+      <CarruselComentarios/>
+      <SectionCursos/>
+      
     </div>
   );
 };
