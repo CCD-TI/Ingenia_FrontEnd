@@ -289,9 +289,9 @@ export default function PartnersShowcase() {
                 )}
               >
                 <div className="w-full relative">  
-                  <FaQuoteLeft className="text-cyan-300 text-5xl absolute left-0" />
-                  <h1 className="text-4xl p-4 text-center text-slate-500 font-bold font-poppins leading-[1.5] pt-14 ">{partner.description}</h1>
-                  <FaQuoteRight className="text-cyan-300 text-5xl absolute right-0" />
+                  <FaQuoteLeft className=" text-5xl absolute left-0" />
+                  <h1 className="text-4xl p-4 text-center text-black font-bold font-poppins leading-[1.5] pt-14 ">{partner.description}</h1>
+                  <FaQuoteRight className=" text-5xl absolute right-0" />
                 </div>
               </div>
             ))}
