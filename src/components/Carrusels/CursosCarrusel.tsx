@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { AiFillLike } from "react-icons/ai";
@@ -52,13 +53,13 @@ const CarouselComponent = () => {
     ],
     appendDots: (dots: React.ReactNode) => (
       <div>
-        <ul className="flex justify-center mt-4 space-x-2">{dots}</ul>
+        <ul className="flex justify-center mt-4 space-x-3">{dots}</ul>
       </div>
     ),
     customPaging: (i: number) => (
       <button className="w-3 h-3 rounded-full border-2 border-transparent bg-white/10 hover:bg-white focus:outline-none  active:border-blue-500" />
     ),
-    nextArrow: <CustomNextArrow />,
+    nextArrow: <CustomNextArrow  />,
     prevArrow: <CustomPrevArrow />,
   };
 
@@ -84,8 +85,11 @@ const CarouselComponent = () => {
               >
           
 
-   <div className="border-[2px] border-dashed border-cyan-500 rounded-2xl p-2 bg-white/30">
-   <div className="  rounded-2xl  flex flex-col items-center  w-[400px]">
+   <motion.div
+   whileHover={{ y: -20, scale: 1.02 }}
+   transition={{ type: "spring", stiffness: 150, damping: 12 }}
+   className=" border-cyan-500 rounded-2xl  bg-white">
+   <div className="  rounded-2xl  flex flex-col items-center  w-[350px] shadow-[0_0_30px_0_#ffffff]">
       {/* Contenedor del ícono */}
       <Image
 
@@ -99,26 +103,26 @@ const CarouselComponent = () => {
 
       {/* Contenido del testimonio */}
       <div className=" p-4 w-full ">
-        <div className="flex text-cyan-400 text-base justify-between mb-4">
+        <div className="flex text-black text-base justify-between mb-4">
         <div className="flex gap-1 items-center">
-        <FaUserAlt />
+        <FaUserAlt className="text-yellowIngenia"/>
         <h1 className="text-sm">500 Integrantes</h1>
         </div>
-        <span className="text-cyan-400">|</span>
+        <span className="text-yellowIngenia">|</span>
         <div className="flex gap-1 items-center">
-        <AiFillLike  />
+        <AiFillLike className="text-yellowIngenia" />
         <h1 className="text-sm">50% (250)</h1>
         </div>
-        <span className="text-cyan-400">|</span>
+        <span className="text-yellowIngenia">|</span>
         <div className="flex gap-1 items-center">
-        <MdOutlineAccessTimeFilled  />
+        <MdOutlineAccessTimeFilled className="text-yellowIngenia" />
         <h1 className="text-sm leading-[1] ">5 horas <br /> Academicas</h1>
         </div>
         </div>
-        <button  className="w-full p-4 rounded-2xl bg-[#167F99] text-white">MAS INFORMACIÓN</button>
+        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white">MAS INFORMACIÓN</button>
       </div>
     </div>
-   </div>
+   </motion.div>
  
 
               </div>
@@ -138,12 +142,12 @@ const CustomNextArrow = ({
 }) => (
   <>
     <button
-      className="absolute top-1/2 -right-16 max-sm:right-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
+      className="absolute top-1/2 -right-20 max-sm:right-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
       onClick={onClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-white"
+        className="h-6 w-6 text-yellowIngenia"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -156,14 +160,14 @@ const CustomNextArrow = ({
         />
       </svg>
     </button>
-    <div className="absolute top-[42.5%] right-[21px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
+    <div className="absolute top-[42.5%] right-[36px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
         className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none"
         onClick={onClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 text-[#167F99] "
+          className="h-8 w-8 text-yellowIngenia "
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -192,7 +196,7 @@ const CustomPrevArrow = ({
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10"
+        className="h-10 w-10 text-yellowIngenia"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -205,14 +209,14 @@ const CustomPrevArrow = ({
         />
       </svg>
     </button>
-    <div className="absolute top-[42.5%] left-6 transform -translate-y-1/2 z-10  to-white/30 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
+    <div className="absolute top-[42.5%] left-[26px] transform -translate-y-1/2 z-10  to-white/30 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
         className="absolute top-1/2 -left-[3rem] transform -translate-y-1/2  p-2 rounded-full focus:outline-none"
         onClick={onClick}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-[#167F99]"
+          className="h-10 w-10 text-yellowIngenia"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
