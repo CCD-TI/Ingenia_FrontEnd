@@ -14,7 +14,7 @@ const Grado = () => {
     <div className="flex flex-col  w-full h-full    ">
       
       <div className="pt-28 bg-[url('/img/niños.jpg')] bg-cover bg-center relative">
-      <div className="absolute inset-0 bg-gradient-to-t from-[#179EC1] to-black/30
+      <div className="absolute inset-0 bg-gradient-to-t from-[#179EC1]/40 to-black/30
        w-full h-full"></div>
       
 

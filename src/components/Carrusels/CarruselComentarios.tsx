@@ -298,27 +298,7 @@ export default function PartnersShowcase() {
           </div>
         </div>
 
-        {/* <div className="mt-12 w-full  flex   justify-between px-12 max-xl:grid max-xl:grid-cols-4 max-xl:justify-items-center  max-xl:gap-y-8  max-md:grid-cols-3 max-sm:grid-cols-2 max-sm:p-0">
-          {companies.map((company, index) => (
-            <button
-              key={company.id}
-              onClick={() => setActivePartner(index)}
-              className={cn(
-                " max-xl:w-28 max-md:hidden  rounded-2xl shadow-md hover:scale-105 transform transition duration-300 bg-gradient-to-br from-[rgba(0,96,254,0.4)] hover:from-[rgba(0,96,254,0.7)] via-[rgba(22,46,84,0.5)] hover:via-[rgba(22,46,84,0.7)]  to-[rgba(0,96,254,0.4)] hover:to-[rgba(0,96,254,0.7)] border-2 border-[rgba(22,46,84,0.7)] p-6",
-                index === activePartner
-                  ? "opacity-100 scale-110"
-                  : "opacity-50 hover:opacity-75"
-              )}
-            >
-              <Image
-                src={company.logo}
-                alt={company.name}
-                width={60}
-                height={60}
-              />
-            </button>
-          ))}
-        </div> */}
+      
       </div>
     </div>
   );
