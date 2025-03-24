@@ -12,7 +12,7 @@ import { TbDeviceLandlinePhone } from 'react-icons/tb'
 
 export default function footer() {
   return (
-    <footer className="w-full bg-[#00A9E0] text-white py-6">
+    <footer className="w-full bg-gradient-to-t from-[#179EC1] to-black text-white py-6">
       <div className="max-w-[100rem] w-full  px-5 flex flex-wrap gap-28 justify-center max-sm:gap-10 max-sm:mx-auto">
 
         {/* Información de contacto */}

@@ -4,28 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-// import { useSession } from "next-auth/react";
 import { IoIosArrowForward, IoMdCloseCircle } from "react-icons/io";
-// import CountdownTimerTopBar from "./countdowntimertopbar";
+
 import { FaRegStar, FaUser } from "react-icons/fa6";
-// import { Modal } from "@mui/material";
-// import PacksSectionModalCasiV2 from "./packsectionmodal-CASI-V2";
+
 import { MdArrowBackIosNew, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Vega from "@/components/Contador";
 
-// import DropdownComponent from "../dropdown/dropdown";
-// import NewModalLogeoComponent from "./modal/newmodallogeo";
 
-// import {
-//   Dropdown,
-//   DropdownTrigger,
-//   DropdownMenu,
-//   DropdownItem,
-//   Button,
-// } from "@nextui-org/react";
-// import CarritoE from "@/components/ui/bruno/carritodeEpopover";
-// import ModalPromo from "./ModalPromo";
 const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL || "";
 const img = {
   logo: {
@@ -375,13 +362,7 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
-                              {/* <Image
-                                src={images.gestion}
-                                alt="Icono Gestión"
-                                className="text-white text-[2px] p-[5px] -translate-y-[2.5px]"
-                                width={800}
-                                height={800}
-                              /> */}
+                            
                             </div>
                             Primaria
                           </Link>
@@ -430,13 +411,7 @@ const Navbar = () => {
                             className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
                           >
                             <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                              {/* <Image
-                                src={images.ingenieria}
-                                alt="Icono Ingeniería"
-                                className="text-white text-[2px] p-[5px]"
-                                width={800}
-                                height={800}
-                              /> */}
+                            
                             </div>
                             Secundaria
                           </Link>
@@ -472,58 +447,7 @@ const Navbar = () => {
                         )}
                       </li>
 
-                      {/* <li
-                        className="relative group"
-                        onMouseEnter={() => handleSubMouseEnter("mineria", 3)}
-                        onMouseLeave={handleSubMouseLeave}
-                      >
-                        <div className="px-4">
-                          <Link
-                            href="/mineria"
-                            className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
-                          >
-                            <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-orange-500">
-                              <Image
-                                src={images.mineria}
-                                alt="Icono Minería"
-                                className="text-white text-[2px] p-[5px]"
-                                width={800}
-                                height={800}
-                              />
-                            </div>
-                            Pre universitario
-                          </Link>
-                        </div>
-                        {activeSubCategory === "mineria" && (
-                          <ul className="flex flex-col gap-2 absolute w-80 top-0 left-full bg-colors-night-blue-ccd2 bg-opacity-60 p-4 rounded-2xl shadow-lg backdrop-blur-md">
-                            {especializaciones[3]?.map(
-                              (
-                                especializacion,
-                                idx // Aquí usamos el schoolId 2 como ejemplo
-                              ) => (
-                                <li
-                                  key={idx}
-                                  className="flex items-start gap-2"
-                                >
-                                  <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                                  <Link
-                                    href={{
-                                      pathname: "/mineria", // La ruta donde quieres que se apliquen los filtros
-                                      query: {
-                                        especializacion:
-                                          especializacion.IdEspecializacion,
-                                      }, // Pasar el nombre de la especialización como parámetro en la URL
-                                    }}
-                                    passHref
-                                  >
-                                    {especializacion.Especializacion}
-                                  </Link>
-                                </li> // Mostrar cada especialización en una lista
-                              )
-                            )}
-                          </ul>
-                        )}
-                      </li> */}
+                  
                       {/* Linea Separadora */}
                       <hr className="border-t-2 border-cyanIngenia w-full p-0 m-0" />
                       {/* Rutas */}
@@ -532,84 +456,8 @@ const Navbar = () => {
                         // onMouseEnter={() => handleSubMouseEnter("rutas")}
                         onMouseLeave={handleSubMouseLeave}
                       >
-                        {/* <div className="px-4">
-                          <Link
-                            href="/"
-                            className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-1  rounded-xl bor flex items-center gap-3"
-                          >
-                            <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
-                              <Image
-                                alt="Rutas"
-                                src={images.rutas}
-                                className="text-white text-[2px] p-[5px]"
-                                width={800}
-                                height={800}
-                              />{" "}
-                           
-                            </div>
-                            Rutas
-                          
-                          </Link>
-                        </div> */}
-                        {/* {activeSubCategory === "rutas" && (
-                        <ul className="flex flex-col gap-2 absolute w-80 top-0 left-full bg-colors-night-blue-ccd2 bg-opacity-60 p-4 rounded-2xl shadow-lg backdrop-blur-md">
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Contrataciones y Compras Públicas
-                            </Link>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Planeamiento Estratégico y Gestión de Desarrollo
-                            </Link>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Gestión Financiera y Administrativa
-                            </Link>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Administración Documentaría y Atención al
-                              Ciudadano
-                            </Link>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Gestión de Recursos Humanos en el Sector Público
-                            </Link>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
-                            <Link
-                              href="/"
-                              className="block hover:text-cyanIngenia"
-                            >
-                              Tecnología en el Sector Público
-                            </Link>
-                          </li>
-                        </ul>
-                      )} */}
+                      
+                      
                       </li>
                     </ul>
                   </div>
@@ -626,30 +474,7 @@ const Navbar = () => {
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-            {/* <li>
-              <Link
-                href="/corporativo"
-                className="relative group md:text-xs xl:text-base text-white  transition-all duration-300"
-              >
-                CORPORATIVO
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li> */}
-            {/*
-            <li>
-
-             
-              <Link
-                onClick={(e) => handleScroll(e, "promociones")}
-                href="#promociones"
-                className="relative group md:text-xs xl:text-base text-white  hover:text-colors-cyan-ccd transition-all duration-300 flex items-center font-bold"
-              >
-                Promociones
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
-                <FaRegStar className="text-colors-cyan-ccd text-xl -mt-1 ml-1" />
-              </Link>
-            </li>
-            */}
+           
             <li className="">
               <Link
                 // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
@@ -679,22 +504,6 @@ const Navbar = () => {
             {/* Ícono de usuario */}
             <FaUser className="text-3xl text-[#05abdd] flex-shrink-0" />
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
 
@@ -1011,12 +820,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* Modal usando Material-UI */}
-      {/* <Modal open={isModalOpen} onClose={toggleModal}>
-        <div className="flex justify-center items-center h-screen">
-          <PacksSectionModalCasiV2 onClose={toggleModal} />
-        </div>
-      </Modal> */}
+  
     </>
   );
 };
