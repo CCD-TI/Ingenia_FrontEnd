@@ -37,6 +37,8 @@ const config: Config = {
         // PALETA OFICIAL CCD
         yellowIngenia: "#F9B233", // RGB(249, 178, 51)
         cyanIngenia: "#3185F7", // RGB(49, 133, 247)
+        IngeniaYellowDark: "#F9B233",
+        IngeniaCyan: "#179EC1",
       },
       animation: {
         'bounce-soft': 'bounceSoft 1.2s infinite',

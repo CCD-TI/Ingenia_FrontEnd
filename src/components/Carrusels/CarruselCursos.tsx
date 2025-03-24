@@ -26,7 +26,7 @@ const CarouselComponent = () => {
     dots: false,
     infinite: true,
     speed: 600,
-    slidesToShow: 5.5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
@@ -37,19 +37,26 @@ const CarouselComponent = () => {
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 4,
           slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 645,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -70,7 +77,7 @@ const CarouselComponent = () => {
 
   return (
     <div
-      className="flex flex-col carousel-container py-8 w-full max-[1440px]:w-[70%]  max-xl:w-[80%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
+      className="flex flex-col carousel-container  w-full   max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
       data-aos="zoom-out-right"
       data-aos-delay="200"
     >
@@ -96,7 +103,7 @@ const CarouselComponent = () => {
                   width={500}
                   height={300}
                   layout="intrinsic"
-                  className="rounded-lg !h-[8rem] w-full object-cover "
+                  className="rounded-lg h-[8rem] max-sm:h-full w-full object-cover "
                 />
  
 
@@ -119,7 +126,7 @@ const CustomNextArrow = ({
     
     
       <button
-        className="absolute -top-5 right-0 max-sm:left-[1rem] transform -translate-y-1/2  bg-white/30  p-2 rounded-full z-10 focus:outline-none border border-slate-400"
+        className="absolute top-[50%] right-0  transform -translate-y-1/2  bg-white/30  p-2 rounded-full z-10 focus:outline-none border border-slate-400"
         onClick={onClick}
       >
         <svg
@@ -168,7 +175,7 @@ const CustomPrevArrow = ({
     </button> */}
 
       <button
-        className="absolute -top-5 right-16 transform -translate-y-1/2  bg-white/30 p-2 rounded-full focus:outline-none border border-slate-400"
+        className="absolute top-[50%] left-0 z-10 transform -translate-y-1/2  bg-white/30 p-2 rounded-full focus:outline-none border border-slate-400"
         onClick={onClick}
       >
         <svg
