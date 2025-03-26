@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
+import { MdOutlineStarPurple500 } from "react-icons/md";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -80,25 +81,42 @@ const CarouselComponent = () => {
                     : " scale-80 max-[1440px]:scale-90 mx-auto"
                 }`}
               >
-          
 
-    <div className="bg-white/30 p-6 rounded-2xl shadow-lg flex items-center space-x-6 w-[500px]">
+
+          
+<div className="bg-gradient-to-b from-[#1E293B]  to-[#1E293B] p-6 rounded-[45px]">
+<div className="bg-gradient-to-t  from-[#179EC1] to-[#0369a1]  p-6 rounded-[45px] shadow-lg flex flex-col gap-2 h-[600px] w-[400px]
+border-2 border-white drop-shadow-[0_0_4px_rgba(255,255,255,2)]">
       {/* Contenedor del ícono */}
-      <div className="bg-white rounded-full p-4 flex items-center justify-center">
-        <FaRegUserCircle className="text-6xl text-gray-600" />
-      </div>
+       <Image
+                  alt="crown"
+                  src="/img/corona.png"
+                  width={1000}
+                  height={1000}
+                  className=" w-30 h-30 object-cover mx-auto  mt-2 "
+                />
+      
 
       {/* Contenido del testimonio */}
       <div>
-        <h3 className="text-gray-800 font-bold text-lg">Pedro Castillo</h3>
-        <div className="flex text-yellow-400 text-lg">
-          ★★★★★
+        <h3 className="text-white font-bold font-poppins text-4xl text-center drop-shadow-[0_0_10px_rgba(255,255,255,2)]">Pedro Castillo</h3>
+        <h3 className="text-center text-white font-light text-2xl">Padre de familia</h3>
+        <div className="flex text-yellow-400 text-lg justify-center ">
+        <MdOutlineStarPurple500 className="w-6 h-6"/>
+        <MdOutlineStarPurple500 className="w-6 h-6"/>
+        <MdOutlineStarPurple500 className="w-6 h-6"/>
+        <MdOutlineStarPurple500 className="w-6 h-6"/>
+        <MdOutlineStarPurple500 className="w-6 h-6"/>
         </div>
-        <p className="text-gray-600 text-sm mt-2">
-          “Mis hijos mejoraron mucho con su primer módulo”.
+        <p className="text-white text-lg mt-2 text-center">
+        “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati blanditiis laborum alias excepturi 
+         e voluptas reprehenderit“.
         </p>
       </div>
     </div>
+
+</div>
+   
  
 
               </div>
@@ -123,7 +141,7 @@ const CustomNextArrow = ({
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-white"
+        className="h-16 w-16 text-white"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -143,7 +161,7 @@ const CustomNextArrow = ({
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 text-white"
+          className="h-16 w-16 text-white"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

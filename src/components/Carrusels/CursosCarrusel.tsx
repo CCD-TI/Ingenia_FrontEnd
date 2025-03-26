@@ -119,7 +119,7 @@ const CarouselComponent = () => {
         <h1 className="text-sm leading-[1] ">5 horas <br /> Academicas</h1>
         </div>
         </div>
-        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white hover:text-black hover:bg-white">MAS INFORMACIÓN</button>
+        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white hover:text-black">MAS INFORMACIÓN</button>
       </div>
     </div>
    </motion.div>

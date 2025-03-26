@@ -217,14 +217,14 @@ export default function PartnersShowcase() {
   }, [activePartner]);
 
   return (
-    <div className="relative py-12">
+    <div className="relative py-12 ">
       {/* <img
         src="/Multimedia/Imagen/ccdcorp/FONDO/Group 609.png"
         alt="Trabaja con nosotros"
         className="absolute right-0 top-0 w-full h-full object-cover opacity-80"
       /> */}
 
-      <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-10">
+      <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-10 ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="relative max-xl:w-[20rem] w-[30rem] h-[468px]">
             <button

@@ -4,6 +4,7 @@ import CursosCarrusel from "@/components/Carrusels/CursosCarrusel";
 import DropdownList from "@/components/Desplegables/DropdownList";
 import Beneficios from "@/components/Modulos/Beneficio";
 import SectionCursos from "@/components/Modulos/CursoDetalleComponet/SectionCursos";
+import Testimonios from "@/components/Modulos/CursoDetalleComponet/Testimonios";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -108,7 +109,7 @@ const Grado = () => {
       </div>
 
       <Beneficios/>
-      <CarruselComentarios/>
+  <Testimonios></Testimonios>
       <SectionCursos/>
       
     </div>

@@ -12,8 +12,8 @@ import { TbDeviceLandlinePhone } from 'react-icons/tb'
 
 export default function footer() {
   return (
-    <footer className="w-full bg-gradient-to-t from-[#179EC1] to-black text-white py-6">
-      <div className="max-w-[100rem] w-full  px-5 flex flex-wrap gap-28 justify-center max-sm:gap-10 max-sm:mx-auto">
+    <footer className="w-full bg-gradient-to-t from-[#179EC1] to-black text-white py-14 pl-52">
+      <div className="max-w-[100rem] w-full  px-5 flex  gap-60 item-center    max-sm:gap-10 max-sm:mx-auto">
 
         {/* Información de contacto */}
         <div className=''>
@@ -44,9 +44,9 @@ export default function footer() {
           <div className='mb-4'>
             <h2 className='text-lg font-bold  pb-1 text-white font-poppins uppercase'>Niveles</h2>
             <ul className="mt-2 space-y-1">
-              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Primaria</li>
-              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Secundaria</li>
-              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Pre Universitaria</li>
+              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Primaria</li>
+              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Secundaria</li>
+              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Pre Universitaria</li>
 
             </ul>
 
@@ -71,16 +71,30 @@ export default function footer() {
 
         {/* Corporativo */}
 
-        <div>
+        <div className=''>
+        <div className='mb-4'>
           <h2 className="text-lg font-bold  pb-2 text-white font-poppins">SOBRE INGENIA COLLEGE</h2>
           <ul>
-            <li className='flex items-center mt-2'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Especialistas en vivo</li>
-            <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Especializaciones asíncronas</li>
-            <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E]' /> Cursos asincronos</li>
+            <li className='flex items-center mt-2'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Especialistas en vivo</li>
+            <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Especializaciones asíncronas</li>
+            <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8' /> Cursos asincronos</li>
 
           </ul>
 
         </div>
+
+        <div className=''>
+            <h2 className='text-lg font-bold  pb-1 text-white font-poppins uppercase'>¿POR QUÉ ELEGIRNOS?</h2>
+            <ul className="mt-2 space-y-1">
+              <li className='flex items-center'><MdKeyboardArrowRight className='text-[#F1B23E] h-8 w-8'/> Conoce tus beneficios</li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+       
 
 
         <div>
