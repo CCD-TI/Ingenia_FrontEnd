@@ -14,13 +14,13 @@ const NivelesEducacion: React.FC = () => {
             <div className="">
          
             <div className="  h-[18rem] w-[15rem] border-gray-300 rounded-lg drop-shadow-[0_0_10px_rgba(2,132,199,1)]
-            flex items-end overflow-hidden ">
+            flex items-end overflow-hidden shadow-[0_0_20px_rgba(2,132,199,1)]">
                       <Image
                                      alt="crown"
                                      src="/img/niño1.png"
                                      width={1000}
                                      height={1000}
-                                     className=" w-full h-full object-cover"
+                                     className=" w-full h-full object-cover opacity-50"
                                    />
          
                         
@@ -36,13 +36,14 @@ const NivelesEducacion: React.FC = () => {
             </div>
             <div className="">
               
-                <div className="  h-[18rem] w-[15rem] border-gray-300 rounded-lg flex items-end overflow-hidden drop-shadow-[0_0_10px_rgba(255,140,0,1)] ">
+                <div className="  h-[18rem] w-[15rem] border-gray-300 rounded-lg flex items-end overflow-hidden 
+                shadow-[0_0_20px_rgba(234,88,12,1)] drop-shadow-[0_0_10px_rgba(255,140,0,1)] ">
                       <Image
                                      alt="crown"
-                                     src="/img/niño1.png"
+                                     src="/img/niño2.png"
                                      width={1000}
                                      height={1000}
-                                     className=" w-full h-full object-cover"
+                                     className=" w-full h-full object-cover opacity-50"
                                    />
                         
                
@@ -57,13 +58,14 @@ const NivelesEducacion: React.FC = () => {
             </div>
             <div className="">
             <div className="  h-[18rem] w-[15rem] border-gray-300 drop-shadow-[0_0_10px_rgba(249,178,51,1)] rounded-lg flex items-end 
-            overflow-hidden bg-gradient-to-b from-transparent to-[#179EC1] ">
+            overflow-hidden  shadow-[0_0_20px_rgba(234,179,8,1)]">
                       <Image
                                      alt="crown"
-                                     src="/img/niño1.png"
+                                     src="/img/niño3.png"
                                      width={1000}
                                      height={1000}
-                                     className=" w-full h-full object-cover"
+                                     className=" w-full h-full object-cover 
+                                     opacity-50  "
                                    />
                         
                
