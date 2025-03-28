@@ -15,10 +15,10 @@ const NivelesEducacion: React.FC = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-14">
 
-          <motion.div className="bg-gradient-to-t from-[#05ABDD]/30 to-[#035D78]/30 drop-shadow-[0_0_20px_rgba(2,132,199,1)] p-8 rounded-[50px]" 
-            whileHover={{ y: -40, scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 150, damping: 12 }}>
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-sky-600 drop-shadow-[0_0_20px_rgba(2,132,199,1)]">
+            <motion.div className="bg-gradient-to-t from-[#05ABDD]/30 to-[#035D78]/30 drop-shadow-[0_0_20px_rgba(2,132,199,1)] p-8 rounded-[50px] group"
+              whileHover={{ y: -40, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 150, damping: 12 }}>
+              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-sky-600 drop-shadow-[0_0_20px_rgba(2,132,199,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño1.png"
@@ -27,26 +27,42 @@ const NivelesEducacion: React.FC = () => {
                   className="w-full h-full object-cover "
                 />
                 <div className="absolute  text-white text-xl font-bold text-center   ">
-                  <p className="mt-[500px] w-full   text-5xl font-poppins font-black text-white uppercase">
+                  <p className="mt-[450px] w-full   text-5xl font-poppins font-black text-white uppercase">
                     INICIAL  <br />
                   </p>
-                  <p className="text-white  pl-4 font-poppins font-medium uppercase">
+                  <p className="text-white mt-2  font-poppins font-medium uppercase">
                     Conoce aqui los años
                   </p>
-                  <p className="text-white text-base pl-4 font-poppins font-medium bg-transparent border-2 mt-2 rounded-full
-                   border-white">Haz click aquí</p>
-                  
+                  <p className="text-white text-md px-6 py-2 font-poppins font-medium bg-transparent border-2 rounded-full mt-3
+   border-white text-center">
+  Haz click aquí
+</p>
                 </div>
+              </div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
+                  Matemática
+                </button>
+                <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
+                  Comunicación 
+                </button>
+                <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
+                  Historia
+                </button>
+
               </div>
 
 
             </motion.div>
 
 
-            <motion.div className="bg-gradient-to-t from-[#f9B233]/30 to-[#f9B233]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(204,88,21,1)]"
-               whileHover={{ y: -40, scale: 1.03 }}
-               transition={{ type: "spring", stiffness: 150, damping: 12 }}>
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-yellow-600 drop-shadow-[0_0_20px_rgba(204,88,21,1)]">
+            <motion.div className="bg-gradient-to-t from-[#f9B233]/30 to-[#f9B233]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(204,88,21,1)] group"
+              whileHover={{ y: -40, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 150, damping: 12 }}>
+              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-yellow-600 drop-shadow-[0_0_20px_rgba(204,88,21,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño2.png"
@@ -63,24 +79,39 @@ const NivelesEducacion: React.FC = () => {
                   </p>
                   <p className="text-white text-base pl-4 font-poppins font-medium bg-transparent border-2 mt-2 rounded-full
                    border-white">Haz click aquí</p>
-                  
+
                 </div>
+              </div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
+                  Matemática
+                </button>
+                <button className="bg-yellow-600 text-white px-12 py-4 text-2xl  rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
+                  Comunicación 
+                </button>
+                <button className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
+                  Historia
+                </button>
+
               </div>
 
 
             </motion.div>
 
 
-            <motion.div className="bg-gradient-to-t from-[#f78018]/30 to-[#d46300]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(234,88,12,1)]"
-               whileHover={{ y: -40, scale: 1.03 }}
-               transition={{ type: "spring", stiffness: 150, damping: 12 }}>
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-orange-600 drop-shadow-[0_0_20px_rgba(234,88,12,1)]  ">
+            <motion.div className="bg-gradient-to-t from-[#f78018]/30 to-[#d46300]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(234,88,12,1)] group"
+              whileHover={{ y: -40, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 150, damping: 12 }}>
+              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-orange-600 drop-shadow-[0_0_20px_rgba(234,88,12,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño3.png"
                   width={1000}
                   height={1000}
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover  "
                 />
                 <div className="absolute  text-white text-xl font-bold text-center   ">
                   <p className="mt-[500px] w-full   text-5xl font-poppins font-black text-white uppercase">
@@ -91,8 +122,25 @@ const NivelesEducacion: React.FC = () => {
                   </p>
                   <p className="text-white text-base pl-4 font-poppins font-medium bg-transparent border-2 mt-2 rounded-full
                    border-white">Haz click aquí</p>
-                  
+
                 </div>
+
+              </div>
+
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
+                  Matemática
+                </button>
+                <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
+                  Comunicación 
+                </button>
+                <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
+                  Historia
+                </button>
+
               </div>
             </motion.div>
 
