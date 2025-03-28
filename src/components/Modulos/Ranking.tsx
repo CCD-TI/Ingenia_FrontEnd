@@ -1,6 +1,9 @@
+"use client";
 import { Space_Mono } from "next/font/google";
 import Image from "next/image";
 import { MdOutlineStarPurple500 } from "react-icons/md";
+import TabsRanking from "../landingPage/TabsRanking";
+
 
 export default function StudentRanking() {
 
@@ -271,7 +274,7 @@ export default function StudentRanking() {
           <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]"></div>
 
 
-          <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] mt-5">
+           <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] mt-5">
             <table className="w-full">
               <thead className="">
                 <tr className="text-left border-b-2 border-[#05abdd] w-full">
@@ -318,6 +321,7 @@ export default function StudentRanking() {
               </tbody>
             </table>
           </div>
+          <TabsRanking/>
         </div>
       </div>
     </div>
