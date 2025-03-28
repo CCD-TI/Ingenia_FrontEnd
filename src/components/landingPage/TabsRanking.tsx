@@ -1,13 +1,15 @@
 import React from "react";
 import { Tabs, Tab, Card, CardBody, Switch } from "@heroui/react";
+import Tabla from "./Tabla";
+import Tablaa from "./Tablaa";
 
 export default function App() {
     const [isVertical, setIsVertical] = React.useState(true);
 
     return (
-        <div className="flex flex-col px-4">
+        <div className="flex flex-col px-4 ">
 
-            <div className="flex w-full flex-col">
+            <div className="flex w-full flex-col ">
                 <Tabs aria-label="Options"
                     isVertical={true}
 
@@ -19,19 +21,19 @@ export default function App() {
 
                     }}
                 >
-                    <Tab key="photos" title={<h1 className="-rotate-90 text-2xl text-white  ">GRADO</h1>} className="">
+                    <Tab key="photos" title={<h1 className="-rotate-90 text-2xl text-white  ">GRADO</h1>} className="mb-8">
                         <Card className="">
                             <CardBody>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat alias totam rerum illo, repellat suscipit
-
+                               <Tabla/>
+                               
                             </CardBody>
                         </Card>
                     </Tab>
                     <Tab key="music" title={<h1 className="-rotate-90 text-white text-2xl">NIVELES</h1>}>
                         <Card>
                             <CardBody className="">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusantium aperiam ea assumenda rem delectus
-
+                                
+                            <Tablaa/>
                             </CardBody>
                         </Card>
                     </Tab>

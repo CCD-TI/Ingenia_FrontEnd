@@ -6,7 +6,7 @@ import TabsRanking from "../landingPage/TabsRanking";
 
 
 export default function StudentRanking() {
-
+{/*
   const datos = [
 
     {
@@ -72,6 +72,17 @@ export default function StudentRanking() {
     },
     {
       avatar:"/img/casco.png",
+      nombre: "chamo",
+      grado: "2do",
+      textColor: "text-black",
+      nota: "20",
+      TiempoE: "1 hora",
+      puntos: "100",
+      bg: "bg-white",
+    
+    },
+    {
+      avatar:"/img/casco.png",
       nombre: "Santi",
       grado: "2do",
       nota: "20",
@@ -83,6 +94,7 @@ export default function StudentRanking() {
 
     }
   ]
+  */}
   return (
     <div id="ranking" className="bg-black p-4 md:p-8">
 
@@ -259,7 +271,7 @@ export default function StudentRanking() {
                     </div>
 
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-20 text-white text-lg font-bold bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700
-     py-1 px-3 rounded-t-xl  drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]">
+                      py-1 px-3 rounded-t-xl  drop-shadow-[0_0_12px_rgba(255,215,0,0.9)]">
                       <p className="flex items-center gap-1">TOP<MdOutlineStarPurple500 /></p>
                     </div>
                   </div>
@@ -271,11 +283,17 @@ export default function StudentRanking() {
             </div>
 
           </div>
-          <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]"></div>
+          {/* 
+          <div className="w-full h-[5px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_10px_cyan]">
 
+          </div>
+           <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] mt-5"></div>
+          */}
 
-           <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] mt-5">
+ 
+         
             <table className="w-full">
+              {/*
               <thead className="">
                 <tr className="text-left border-b-2 border-[#05abdd] w-full">
                   <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Avatar</th>
@@ -288,7 +306,11 @@ export default function StudentRanking() {
                   
                 </tr>
               </thead>
+
+
+              {/*
               <tbody>
+                
                 {datos.map((data, index) => (
                   <tr key={index} className="">
                     <td className={`py-2 px-4 max-sm:hidden ${data.bg} `}>
@@ -319,11 +341,15 @@ export default function StudentRanking() {
                   </tr>
                 ))}
               </tbody>
+              */}
             </table>
           </div>
-          <TabsRanking/>
+          
+         
+          <TabsRanking />
         </div>
+
       </div>
-    </div>
+    
   );
 }
