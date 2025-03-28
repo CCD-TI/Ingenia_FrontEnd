@@ -20,6 +20,8 @@ const img = {
   },
 };
 import { environment } from "../environments/environment";
+import { FaStar } from "react-icons/fa";
+import { IoCart } from "react-icons/io5";
 // import ModalFormJobCCD from "./ModalFormJobCCD";
 
 interface Especializacion {
@@ -227,61 +229,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      {showTopBar && (
-        <div
-          className={
 
-            " w-full bg-gradient-to-l from-[#F78018] via-[#05ABDD]  to-[#F78018] text-white flex items-center justify-center  py-2 max-sm:py-1 z-20 transition-all fixed top-0 shadow-md duration-1000"
-
-
-          }
-        >
-          <div
-            className="  flex flex-row md:items-center md:justify-center 
-          md:space-x-4 text-sm md:text-base font-bold"
-          >
-            <div className=" text-white ">
-              <div className="flex gap-6 max-sm:gap-2 w-full items-center justify-center">
-                <div className="flex max-xl:flex-col items-center gap-2 max-sm:gap-0">
-                  <div className="text-xs md:text-sm font-bold flex gap-16 max-sm:gap-10 items-center">
-                    <div className="max-sm:flex flex-col">
-                      ¡Aprovecha nuestra{" "}
-                      <span className="text-white">
-                        {" "}
-                        <strong className="px-1"> PROMOCIÓN </strong>de verano!{" "}
-                      </span>
-                    </div>
-                    <div className="text-white text-4xl ml-1 font-extrabold drop-shadow-lg flex items-center">
-                      80
-                      <div>
-                        <h1 className="text-xs leading-[1] ">%</h1>
-                        <p className="text-xs leading-[1]">Dscto</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className=" flex gap-6 items-center max-sm:gap-2">
-                    <Vega targetDate="04/28/2025 23:59:59" />
-
-                    <button className="border border-white h-fit text-white font-bold px-4 py-1 max-sm:leading-[1] rounded-xl max-sm:text-[9px] hover:bg-white hover:text-blue-700 transition-all">
-                      ¡Compra Ahora!
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className=" mt-0 md:ml-auto md:flex justify-center md:justify-end max-sm:absolute max-sm:right-6">
-              <button
-                className="text-white text-lg hover:text-cyanIngenia transition-all"
-                onClick={() => setShowTopBar(false)}
-              >
-                <IoMdCloseCircle />
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Navbar */}
 
@@ -329,7 +277,7 @@ const Navbar = () => {
                 href="#inicio"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                <span className="text-[#05abdd] font-poppins text-[20px]">Inicio</span>
+                <span className="text-white font-poppins text-[20px]">Inicio</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -344,8 +292,8 @@ const Navbar = () => {
                   className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold"
                   onClick={(e) => handleScroll(e, 'niveles')}
                 >
-                  <span className="text-[#05abdd] font-poppins text-[20px]">Niveles</span>
-                  <MdKeyboardArrowDown className="text-2xl transition-transform duration-300 ease-in-out group-hover:rotate-180 text-[#05abdd]" />
+                  <span className="text-[#05abdd] font-poppins text-[20px] drop-shadow-[0_0_20px_rgba(2,132,199,9)]">Niveles</span>
+                  <MdKeyboardArrowDown className="text-2xl drop-shadow-[0_0_20px_rgba(2,132,199,9)] transition-transform duration-300 ease-in-out group-hover:rotate-180 text-[#05abdd]" />
                 </Link>
                 {activeCategory === "escuelas" && (
                   <div className="absolute top-full left-0 bg-colors-night-blue-ccd2 bg-opacity-60 rounded-2xl py-4 shadow-lg backdrop-blur-md">
@@ -470,7 +418,7 @@ const Navbar = () => {
                 onClick={(e) => handleScroll(e, "nosotros")}
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                <span className="text-[#05abdd] font-poppins text-[20px]">Embajadores</span>
+                <span className="text-white font-poppins text-[20px]">Embajadores</span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
@@ -482,7 +430,33 @@ const Navbar = () => {
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                <span className="text-[#05abdd] font-poppins text-[20px]">Ranking</span>
+                <span className="text-white font-poppins text-[20px]">Ranking</span>
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+            <li className="">
+              <Link
+                // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
+                onClick={(e) => handleScroll(e, "ranking")}
+                href="#ranking"
+                className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
+              >
+                <span className="text-white font-poppins text-[20px]">Premios</span>
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+            <li className="">
+              <Link
+                // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
+                onClick={(e) => handleScroll(e, "ranking")}
+                href="#ranking"
+                className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
+              >
+               
+                <span className="text-yellow-400 font-poppins text-[20px] flex gap-1 justify-center
+                 drop-shadow-[0_0_20px_rgba(234,179,8,0.9)] ">Promociones<FaStar className="text-yellow-400 drop-shadow-[0_0_50px_rgba(234,179,8,0.9)] " /></span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
                  bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
@@ -495,14 +469,16 @@ const Navbar = () => {
             <Link
               href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
               target="_blank"
-              className="relative group text-base py-2 px-6 bg-yellow-500 text-white font-bold border-4 border-transparent hover:border-black transition-all 
-    duration-300 rounded-full flex items-center justify-center whitespace-nowrap max-sm:hidden"
+              className="relative text-lg border-[3px] border-white group py-3 px-7 bg-white/30 text-white font-bold  hover:border-black transition-all 
+    duration-300 rounded-2xl flex items-center justify-center whitespace-nowrap max-sm:hidden"
             >
               Aula Virtual
             </Link>
 
             {/* Ícono de usuario */}
-            <FaUser className="text-3xl text-[#05abdd] flex-shrink-0" />
+            <IoCart className="text-4xl text-white flex-shrink-0" />
+            <FaUser className="text-3xl text-white flex-shrink-0" />
+          
           </div>
 
         </div>
@@ -546,6 +522,16 @@ const Navbar = () => {
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent  via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
+                <li className="w-full">
+                  <Link
+                    onClick={toggleMenu}
+                    href="/"
+                    className="relative group md:text-xs xl:text-base  transition-all duration-300 flex justify-between text-[#05abdd]"
+                  >
+                    NIVELES <IoIosArrowForward />
+                    <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent  via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                </li>
 
                 <li>
                   <div
@@ -555,7 +541,7 @@ const Navbar = () => {
                     onClick={toggleSubMenu}
                   >
                     <button className="    md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia justify-between w-full text-[#05abdd]">
-                      ESCUELAS
+                      EMABAJADORES
                       <IoIosArrowForward />
                     </button>
                   </div>
@@ -566,7 +552,7 @@ const Navbar = () => {
                     href="/nosotros"
                     className="relative group md:text-xs xl:text-base text-[#05abdd] transition-all duration-300 flex justify-between"
                   >
-                    NOSOTROS <IoIosArrowForward />
+                    RANKING <IoIosArrowForward />
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
@@ -576,7 +562,7 @@ const Navbar = () => {
                     href="/corporativo"
                     className="relative group md:text-xs xl:text-base text-[#05abdd] transition-all duration-300 flex justify-between"
                   >
-                    CORPORATIVO
+                    PREMIOS
                     <IoIosArrowForward />
                     <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
                   </Link>

@@ -27,8 +27,8 @@ export default function Inicio() {
         <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5">
          <div className="bg-sky-600 rotate-[-2deg] shadow-[0_0_20px_rgba(2,132,199,1)] drop-shadow-[0_0_10px_rgba(2,132,199,1)] py-1">
            <h1 className=" text-white ">
-            <span className="text-8xl pr-10 pl-10 max-2xl:text-7xl max-md:text-4xl font-extrabold  drop-shadow-[0_0_10px_rgba(255,255,255,2)]
-            max-md:leading-[0.1]  ">CONSTRUYE</span></h1>
+            <span className="text-8xl pr-10 pl-10 max-2xl:text-7xl max-md:text-7xl font-extrabold  drop-shadow-[0_0_10px_rgba(255,255,255,2)]
+            ">CONSTRUYE</span></h1>
             </div>
            
             <div className="bg-yellowIngenia rotate-[-2deg] drop-shadow-[0_0_10px_rgba(249,178,51,1)] shadow-[0_0_20px_rgba(234,179,8,1)] mb-6 py-1">
@@ -42,7 +42,7 @@ export default function Inicio() {
           Educación accesible y de calidad para todos los estudiantes de la costa, sierra y selva del Perú.
           </h1>
           <div className="flex max-sm:flex-col gap-20">
-            <button className="bg-transparent border-[3px] border-white rounded-xl p-3 py-4  text-base font-bold text-white
+            <button className="bg-transparent border-[3px] rounded-xl border-white  p-3 py-4  text-base font-bold text-white
             flex items-center gap-2 size-fit">
             <h1 className="text-2xl"> ¡Comienza ahora! </h1><IoIosArrowForward className="size-[20px] " />
             </button>
