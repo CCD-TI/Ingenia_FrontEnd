@@ -235,12 +235,13 @@ const Navbar = () => {
 
       <nav
         className={`${showTopBar
-            ? "mt-[55.5px] max-xl:mt-[6rem] max-md:mt-[4.4rem] z-20"
+            ? ""
             : ""
           } w-full   text-black`}
       >
+        {/* nav cuando baja */}
         <div
-          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-3  gap-4 px-6 lg:px-14 py-3 fixed  z-50 transition-all duration-300 ${isScrolled ? "bg-white " : ""
+          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-3  gap-4 px-6 lg:px-14 py-5 fixed  z-50 transition-all duration-300 ${isScrolled ? "bg-gray-800 " : ""
             }`}
         >
           {/* Logo */}
