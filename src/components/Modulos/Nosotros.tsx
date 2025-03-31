@@ -10,7 +10,7 @@ import { IoEyeSharp } from "react-icons/io5";
 export const Nosotros = () => {
   return (
     <>
-      <div id="nosotros" className="bg-black p-9   text-center z-50 py-16 max-sm:px-3">
+      <div id="nosotros" className="bg-black p-9   text-center z-50 py-32 max-sm:px-3">
 
 
         {/* Contenedor de Visión y Misión (Dos Columnas) */}
@@ -113,7 +113,7 @@ export const Nosotros = () => {
                 <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] ">
 
                 <div className=" flex flex-col  w-[600px] pl-7">
-                  <div className="bg-gradient-to-r from-[#f9b233] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233]
+                  <div className="bg-gradient-to-b from-[#f9b233] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233]
                   drop-shadow-[0_0_30px_#f9b233]"> 
                   </div>
 
