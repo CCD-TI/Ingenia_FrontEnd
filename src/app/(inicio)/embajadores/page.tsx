@@ -1,40 +1,83 @@
 import { ChevronDownIcon } from 'lucide-react';
 import React from 'react';
 import { FaCheck } from 'react-icons/fa';
-import { FaRegEnvelope } from 'react-icons/fa6';
+import { BsEnvelope } from "react-icons/bs";
 import { MdOutlineWhatsapp } from 'react-icons/md';
+import Image from "next/image";
 
 function Page() {
     return (
         <>
 
-            <div className="bg-[url('/img/estudio.jpg')] bg-cover bg-center w-full h-[800px]  relative">
-            
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 w-full h-[800px]"></div>
+            <div className="bg-[url('/img/estudio.jpg')] bg-cover bg-center w-full h-[1000px]  relative">           
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 w-full h-[1000px] "></div>
 
-                <div className='text-center z-50 absolute inset-0 mt-48 px-6 max-sm:mt-40 max-sm:px-3'>
-                    <h1 className='text-white text-6xl font-poppins font-semibold max-sm:text-4xl'>AUMENTA EL POTENCIAL</h1>
-                    <h1 className='text-white text-6xl font-poppins font-semibold  max-sm:text-4xl'>DE LA FUTURA GENERACIÓN</h1>
-                    <h2 className='text-white mt-3'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione laudantium facilis magnam
-                        quasi? <br /> Praesentium ullam eum voluptatem sunt, tenetur nulla non similique explicabo eaque quasi optio iure animi <br /> aliquam  facilis?
-                        tenetur nulla non similique explicabo eaque quasi Ratione laudantium facilis magnam</h2>
-                    <p className='text-white mt-7 text-lg font-poppins font-semibold'>¡Únete ahora y forma parte de nuestro equipo de Embajadores!</p>
 
-                    <div className='mt-4 flex items-center justify-center gap-16 max-[400px]:flex-col max-[400px]:gap-4'>
-                        <button className=' px-4 py-1 max-sm:mr-4  bg-white rounded-md  font-poppins font-semibold flex items-center gap-1 text-gray-600'><FaRegEnvelope className='text-gray-600
-            w-6 h-6'/>Contáctanos</button>
-                        <button className='text-gray-600 px-4 py-1 bg-white rounded-md  font-poppins font-semibold flex items-center gap-1'><MdOutlineWhatsapp className='text-gray-600
-           w-6 h-6'/> Whatsapp</button>
+                <div className='  flex gap-96  z-50 absolute inset-0 px-6 max-sm:mt-40 max-sm:px-3 mt-40 max-sm:flex-col max-sm:gap-20 '>
+                    <div className=' flex flex-col gap-1 text-white text-9xl font-poppins font-black max-sm:text-4xl pl-36 leading-[0.6] '>
+                        <h1 className='drop-shadow-[0_0_15px_rgba(255,255,255,1)] '>AUMENTA EL</h1> 
+                         <div className=' text-white text-9xl font-poppins font-black max-sm:text-4xl drop-shadow-[0_0_15px_rgba(255,255,255,1)]'>POTENCIAL</div> 
+                    <div className='flex flex-col gap-1 text-yellowIngenia text-8xl font-poppins font-black max-sm:text-4xl  '>DE LA FUTURA 
+                    <div className='text-yellowIngenia text-8xl font-poppins font-black   max-sm:text-4xl leading-[0.9]'>GENERACIÓN
 
+                   
+                    </div>
+                       
+                    </div>
+                    
                     </div>
 
 
+
+
+                    <div className=' bg-[#a3a3a3] bg-opacity-60 rounded-[50px] w-[800px] h-[450px] backdrop-blur-sm max-sm:w-96'>
+
+                  
+                  
+                    <div className='  flex flex-col gap-4 max-[400px]:flex-col max-[400px]:gap-4 mt-[490px]'>
+                        <h1 className='text-white text-4xl text-center'>¡Forma parte de nuestros embajadores!</h1>
+<div className='flex  gap-48 justify-center max-sm:flex-col max-sm:gap-10'>
+
+
+                        <button className=' text-2xl px-6 py-4 max-sm:mr-4  bg-white rounded-xl  font-poppins font-semibold flex items-center gap-1
+                         text-gray-600'>
+                            <BsEnvelope className='text-gray-600 w-10 h-10'/>Contáctanos</button>
+                        <button className='text-gray-600 px-6 py-4 bg-white rounded-xl   font-poppins font-semibold flex items-center text-2xl 
+                         gap-1'><MdOutlineWhatsapp className='text-gray-600 w-10 h-10'/> Whatsapp</button>
+           </div>
+
+                       
+          
+
+                    </div>
+                       
+
+                    </div>
+                    </div>
+
+
+
+
+                 
                 </div>
 
+               
+               
+            
+            
+      
 
-            </div>
 
-            <div className="bg-[url('/img/black.jpg')] bg-cover bg-center w-full  h-[1000px]  ">
+
+
+
+
+
+
+
+
+
+            <div className="bg-black ">
 
                 <div className='flex items-start gap-80  max-[900px]:flex-col max-[900px]:gap-2 sm:gap-3 lg:gap-75 max-w-[100rem] mx-auto w-[85%] '>
                     <h1 className=" text-7xl font-bold m-28 max-sm:mx-4 max-sm:mt-12 sm:mt-12 max-lg:m-4 md:m-20  max-md:m-20 lg:m-20  lg:mt-52 p-6 font-poppins text-cyan-700 

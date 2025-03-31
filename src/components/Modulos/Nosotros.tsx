@@ -40,8 +40,8 @@ export const Nosotros = () => {
                 SOMOS TU
               </span>
 
-              <span className="block  max-sm:text-5xl sm:text-6xl md:text-[80px] lg:text-[95px] font-poppins font-black text-[#05abdd]
-              leading-[1] ">
+              <span className="block  max-sm:text-5xl sm:text-6xl md:text-[80px] lg:text-[95px] font-poppins font-black text-[#ffffff]
+              leading-[1] drop-shadow-[0_0_10px_rgba(255,255,255,2)]">
                 MEJOR OPCIÓN!
               </span>
             </div>
@@ -68,7 +68,7 @@ export const Nosotros = () => {
                       <h1 className="text-4xl font-poppins font-extrabold text-center text-white flex items-center justify-center mt-6 w-full gap-3 drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] 
                  [text-shadow:_-2px_-2px_0_#facc15,_2px_-2px_0_#facc15,_-2px_2px_0_#facc15,_2px_2px_0_#facc15] tracking-[0.2em] ">
                    
-                        MISIÓN
+                       
                       </h1>
 
                       <Image
@@ -101,7 +101,7 @@ export const Nosotros = () => {
                   <div className="flex flex-col justify-center items-start">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
                     <div className="">
-                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-white  pr-24 mb-1">
+                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia  pr-24 mb-3">
                         Misión
                       </h3>
                       <h3 className="flex items-center text-white max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">
@@ -158,7 +158,7 @@ modal={
                   <div className="flex flex-col justify-center items-start">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
                     <div className="">
-                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-white   pr-24 mb-1">
+                      <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-white   pr-24 mb-3">
                         Visión
                       </h3>
                       <h3 className="flex items-center text-white max-md:text-xs font-poppins font-normal border-2 border-[#05abdd] px-3 py-1 rounded-lg min-w-[150px] whitespace-nowrap">

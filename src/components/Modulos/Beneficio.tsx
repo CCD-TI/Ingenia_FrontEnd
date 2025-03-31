@@ -58,7 +58,8 @@ const Tabs = () => {
                   
                 </div>
               <motion.div
-                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700 p-2 border-3 border-white "
+                className="w-[22rem] h-[30rem] max-sm:w-[20rem] rounded-3xl bg-gradient-to-b from-amber-400 via-amber-500 to-amber-700 p-2 
+                border-3 border-white "
                 whileHover={{ y: -20, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 150, damping: 12 }}
               >

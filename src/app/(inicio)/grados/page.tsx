@@ -4,6 +4,7 @@ import CursosCarrusel from "@/components/Carrusels/CursosCarrusel";
 import DropdownList from "@/components/Desplegables/DropdownList";
 import Beneficios from "@/components/Modulos/Beneficio";
 import SectionCursos from "@/components/Modulos/CursoDetalleComponet/SectionCursos";
+import Testimonios from "@/components/Modulos/CursoDetalleComponet/Testimonios";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -14,7 +15,7 @@ const Grado = () => {
     <div className="flex flex-col  w-full h-full    ">
       
       <div className="pt-28 bg-[url('/img/niños.jpg')] bg-cover bg-center relative">
-      <div className="absolute inset-0 
+      <div className="absolute inset-0 bg-gradient-to-t from-[#179EC1]/40 to-black/30
        w-full h-full"></div>
       
 
@@ -108,7 +109,7 @@ const Grado = () => {
       </div>
 
       <Beneficios/>
-      <CarruselComentarios/>
+  <Testimonios></Testimonios>
       <SectionCursos/>
       
     </div>

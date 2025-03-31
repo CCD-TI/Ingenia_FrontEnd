@@ -89,7 +89,7 @@ const CarouselComponent = () => {
    whileHover={{ y: -20, scale: 1.02 }}
    transition={{ type: "spring", stiffness: 150, damping: 12 }}
    className=" border-cyan-500 rounded-2xl  bg-white">
-   <div className="  rounded-2xl  flex flex-col items-center  w-[350px] shadow-[0_0_30px_0_#ffffff]">
+   <div className="  rounded-2xl  flex flex-col items-center  w-[360px] shadow-[0_0_30px_0_#ffffff]">
       {/* Contenedor del ícono */}
       <Image
 
@@ -119,7 +119,7 @@ const CarouselComponent = () => {
         <h1 className="text-sm leading-[1] ">5 horas <br /> Academicas</h1>
         </div>
         </div>
-        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white">MAS INFORMACIÓN</button>
+        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white hover:text-black">MAS INFORMACIÓN</button>
       </div>
     </div>
    </motion.div>
