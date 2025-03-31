@@ -22,7 +22,7 @@ const config: Config = {
         3: '3px', // Grosor del contorno: 3px
       },
       webkitTextStrokeColor: {
-        white: 'whitee', // Colosr del contorno: blanco
+        white: 'white', // Colosr del contorno: blanco
         black: 'black', // Color del contorno: negro
         blue: 'blue',   // Color del contorno: azul
         // Agrega más colores según necesites
