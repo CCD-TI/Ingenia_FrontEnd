@@ -28,7 +28,7 @@ interface Propstext{
       <>
         <button className="!bg-transparent !size-fit !px-0 !rounded-none " onClick={onOpen}>{button} </button>
         <Modal  
-        size="2xl"
+        size="5xl"
           isOpen={isOpen} onOpenChange={onOpenChange}
           classNames={
 

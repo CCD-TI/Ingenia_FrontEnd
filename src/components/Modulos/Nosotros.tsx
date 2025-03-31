@@ -49,9 +49,8 @@ export const Nosotros = () => {
 
             <div className="text-center md:text-left w-full max-w-[600px] px-4 md:px-6 lg:px-8 xl:px-12 mr-auto max-lg:mx-auto">
               <p className="text-grayIngenia text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins text-white font-normal max-lg:text-center  ">
-                Somos una Institución Educativa que bajo
-                nuestro sistema vamos a reforzar la
-                educación de calidad.
+                <p> Somos una Institución Educativa que bajo nuestro sistema vamos a reforzar la educación de calidad.</p>  
+              
               </p>
             </div>
 
@@ -61,37 +60,31 @@ export const Nosotros = () => {
               <ModalText
 
                 modal={
-                  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-[url('/img/yellow.jpeg')] ">
+                  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-gradient-to-r from-[#05ABDD] to-[#000000] ">
 
-                    <div className=" flex flex-col gap-1 items-center  w-[480px]">
+                    <div className=" flex flex-col  w-[600px] pl-7">
+                      <div className="bg-gradient-to-b from-[#05ABDD] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#05ABDD]
+                      drop-shadow-[0_0_30px_#05ABDD]"> 
+                      </div>
 
-                      <h1 className="text-4xl font-poppins font-extrabold text-center text-white flex items-center justify-center mt-6 w-full gap-3 drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] 
-                 [text-shadow:_-2px_-2px_0_#facc15,_2px_-2px_0_#facc15,_-2px_2px_0_#facc15,_2px_2px_0_#facc15] tracking-[0.2em] ">
-                   
-                       
-                      </h1>
+                     
 
-                      <Image
-                        src="/img/student.png"
-                        alt="Primer lugar"
-                        className=" object-cover animate-jump  "
-                        width={200}
-                        height={200}
-                      />
+                     
                     </div>
 
                              
 
-                    <div className="px-6 py-5 w-full">     
-                      <div className=" bg-white/50 shadow-2xl  border-2 border-yellow-500  p-2 rounded-xl">
-                      <p className="font-poppins  text-center text-black text-sm leading-relaxed ">
+                    <div className="pl-9 pr-20 py-5 w-full flex flex-col gap-1" > 
+                      <h1 className="text-justify text-[#05ABDD] font-poppins font-bold text-5xl drop-shadow-[0_0_30px_#05ABDD]
+                      mt-7">Misión</h1>                       
+                      <p className="font-poppins  mt-7 text-justify text-white text-[15px] leading-relaxed mb-8">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
                         Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque in provident enim aperiam saepe quaerat! Alias,
-                        m, consequuntur amet, natus omnis quidem suscipit inventore enim esse recusandae quis maiores obcaecati!
+                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
+                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore 
                        
                       </p>
-                        </div>               
+                                  
                       
                     </div>
                   </div>
@@ -116,42 +109,36 @@ export const Nosotros = () => {
 
               <ModalText
 
-modal={
-  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-[url('/img/turquesa.jpg')] ">
+                modal={
+                <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] ">
 
-    <div className=" flex flex-col gap-9  w-[480px]">
+                <div className=" flex flex-col  w-[600px] pl-7">
+                  <div className="bg-gradient-to-r from-[#f9b233] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233]
+                  drop-shadow-[0_0_30px_#f9b233]"> 
+                  </div>
 
-      <h1 className="text-4xl font-poppins font-extrabold text-center text-white flex items-center justify-center mt-6 w-full gap-3 drop-shadow-[0_0_25px_rgba(255,255,255,0.9)] 
-[text-shadow:_-2px_-2px_0_#05abdd,_2px_-2px_0_#05abdd,_-2px_2px_0_#05abdd,_2px_2px_0_#05abdd] tracking-[0.2em]  ">
-   
-        VISIÓN
-      </h1>
+                
 
-      <Image
-        src="/img/blue.png"
-        alt="Primer lugar"
-        className=" object-contain ml-10 mb-6 animate-jump "
-        width={160}
-        height={130}
-      />
-    </div>
+                
+                </div>
 
-             
+                        
 
-    <div className="px-4 py-5 w-full">     
-      <div className=" bg-white/50 shadow-2xl  border-2 border-[#05abdd] p-2 rounded-xl">
-      <p className="font-poppins  text-center text-black text-sm leading-relaxed ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
-        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque in provident enim aperiam saepe quaerat! Alias,
-        m, consequuntur amet, natus omnis quidem suscipit inventore enim esse recusandae quis maiores obcaecati!
-       
-      </p>
-        </div>               
-      
-    </div>
-  </div>
-}
+                <div className="pl-9 pr-20 py-5 w-full flex flex-col gap-1" > 
+                  <h1 className="text-justify text-[#f9b233] font-poppins font-bold text-5xl drop-shadow-[0_0_30px_#f9b233]
+                  mt-7">Visión</h1>                       
+                  <p className="font-poppins  mt-7 text-justify text-white text-[15px] leading-relaxed mb-8">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
+                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
+                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
+                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore 
+                  
+                  </p>
+                              
+                  
+                </div>
+                </div>
+                }
 
 
                 button={
