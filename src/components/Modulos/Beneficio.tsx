@@ -373,18 +373,24 @@ const Tabs = () => {
           )}
         </div>
 
-        <div className="flex gap-4 items-center mt-7">
-        <MdKeyboardDoubleArrowRight className="text-white text-6xl drop-shadow-[0_0_40px_#ffffff] brightness-200 transition-transform duration-300 hover:scale-110" />
-        <h1 className="text-white font-poppins font-semibold text-3xl drop-shadow-[0_0_40px_#ffffff] brightness-200 transition-transform duration-300 hover:scale-110">
-            ¡Aprovecha Ahora !
-          </h1>
-        <div className=" border-2 rounded-2xl w-fit p-2 px-5 drop-shadow-[0_0_40px_#ffffff] brightness-200 transition-transform duration-300 hover:scale-110 ml-2">
-        
-         
-         <Conta targetDate="06/30/2025 23:59:59 " />
-        </div>
-        <MdKeyboardDoubleArrowLeft  className="text-white text-6xl drop-shadow-[0_0_40px_#ffffff] brightness-200 transition-transform duration-300 hover:scale-110"/>
-        </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mt-5 md:mt-7 px-4">
+  {/* Grupo flechas + texto - siempre en línea desde 500px */}
+  <div className="flex items-center gap-3 md:gap-4">
+    <MdKeyboardDoubleArrowRight className="text-white text-5xl md:text-6xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 min-w-[36px]" />
+    
+    <h1 className="text-white font-poppins font-semibold text-3xl md:text-4xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 whitespace-nowrap">
+      ¡Aprovecha Ahora!
+    </h1>
+    
+    
+  </div>
+
+  {/* Contador - se mueve abajo en <768px */}
+  <div className="border-2 border-white rounded-2xl w-fit p-2 md:p-3 px-4 md:px-5 drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 mt-3 md:mt-0">
+    <Conta targetDate="06/30/2025 23:59:59" />
+  </div>
+  <MdKeyboardDoubleArrowLeft className="text-white text-5xl md:text-6xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 min-w-[36px]" />
+</div>
 
       </div>
     </div>
