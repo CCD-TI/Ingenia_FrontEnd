@@ -58,38 +58,28 @@ export const Nosotros = () => {
             <div className="flex  max-[470px]:flex-col items-start max-[470px]:items-center   w-full max-w-[1200px] max-lg:justify-center  
             px-4 md:px-6 lg:px-8 xl:px-12 gap-6 md:gap-12 ">
               <ModalText
+modal={
+  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#05ABDD] to-[#000000] p-4 lg:p-0">
+    {/* Recuadro gradiente - arriba en móvil/tablet, izquierda en desktop */}
+    <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
+      <div className="bg-gradient-to-b from-[#05ABDD] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#05ABDD] drop-shadow-[0_0_30px_#05ABDD] mx-auto">
+      </div>
+    </div>
 
-                modal={
-                  <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-gradient-to-r from-[#05ABDD] to-[#000000] ">
-
-                    <div className=" flex flex-col  w-[600px] pl-7">
-                      <div className="bg-gradient-to-b from-[#05ABDD] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#05ABDD]
-                      drop-shadow-[0_0_30px_#05ABDD]"> 
-                      </div>
-
-                     
-
-                     
-                    </div>
-
-                             
-
-                    <div className="pl-9 pr-20 py-5 w-full flex flex-col gap-1" > 
-                      <h1 className="text-justify text-[#05ABDD] font-poppins font-bold text-5xl drop-shadow-[0_0_30px_#05ABDD]
-                      mt-7">Misión</h1>                       
-                      <p className="font-poppins  mt-7 text-justify text-white text-[15px] leading-relaxed mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
-                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-                        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore 
-                       
-                      </p>
-                                  
-                      
-                    </div>
-                  </div>
-                }
-
+    {/* Contenido de Misión - abajo en móvil/tablet, derecha en desktop */}
+    <div className="px-4 lg:pl-9 lg:pr-20 py-5 w-full flex flex-col gap-1 order-2 lg:order-none"> 
+      <h1 className="text-justify text-[#05ABDD] font-poppins font-bold text-3xl lg:text-5xl drop-shadow-[0_0_30px_#05ABDD] mt-0 lg:mt-7">
+        Misión
+      </h1>                       
+      <p className="font-poppins mt-4 lg:mt-7 text-justify text-white text-sm lg:text-[15px] leading-relaxed mb-4 lg:mb-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore a?
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore a?
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore 
+      </p>
+    </div>
+  </div>
+}
                 button={
                   <div className="flex flex-col justify-center items-start">
                     {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
@@ -109,36 +99,28 @@ export const Nosotros = () => {
 
               <ModalText
 
-                modal={
-                <div className=" shadow-xl shadow-gray-700/20 flex items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] ">
+modal={
+  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] p-4 lg:p-0">
+    {/* Recuadro gradiente - arriba en móvil/tablet, izquierda en desktop */}
+    <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
+      <div className="bg-gradient-to-b from-[#f9b233] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233] drop-shadow-[0_0_30px_#f9b233] mx-auto">
+      </div>
+    </div>
 
-                <div className=" flex flex-col  w-[600px] pl-7">
-                  <div className="bg-gradient-to-b from-[#f9b233] to-[#000000] h-[350px] w-[500px] pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233]
-                  drop-shadow-[0_0_30px_#f9b233]"> 
-                  </div>
-
-                
-
-                
-                </div>
-
-                        
-
-                <div className="pl-9 pr-20 py-5 w-full flex flex-col gap-1" > 
-                  <h1 className="text-justify text-[#f9b233] font-poppins font-bold text-5xl drop-shadow-[0_0_30px_#f9b233]
-                  mt-7">Visión</h1>                       
-                  <p className="font-poppins  mt-7 text-justify text-white text-[15px] leading-relaxed mb-8">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
-                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore a?
-                    Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium,  molestias excepturi ducimus rem tempore 
-                  
-                  </p>
-                              
-                  
-                </div>
-                </div>
-                }
+    {/* Contenido de Visión - abajo en móvil/tablet, derecha en desktop */}
+    <div className="px-4 lg:pl-9 lg:pr-20 py-5 w-full flex flex-col gap-1 order-2 lg:order-none"> 
+      <h1 className="text-justify text-[#f9b233] font-poppins font-bold text-3xl lg:text-5xl drop-shadow-[0_0_30px_#f9b233] mt-0 lg:mt-7">
+        Visión
+      </h1>                       
+      <p className="font-poppins mt-4 lg:mt-7 text-justify text-white text-sm lg:text-[15px] leading-relaxed mb-4 lg:mb-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur laborum debitis doloremque explicabo.
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore a?
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore a?
+        Magni, similique quam. Maxime, error asperiores. Culpa dolorem atque laudantium, molestias excepturi ducimus rem tempore 
+      </p>
+    </div>
+  </div>
+}
 
 
                 button={
