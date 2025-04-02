@@ -25,19 +25,14 @@ export default function Inicio() {
     
   
     <div id="inicio" className="h-full pt-48 max-lg:h-full w-full flex flex-col justify-center items-center bg-[url('/img/fondo.jpg')] bg-cover bg-center">
-      <Image 
-        width={1000}
-        height={1000}
-       src="/img/titulo.png" 
-       alt="Construye tu futuroooo" 
-       className="absolute right-10 bottom-0 max-w-[40%]" /> 
+     
 
        <Image 
         width={1000}
         height={1000}
        src="/img/niñosss.png" 
        alt="Construye tu futuro" 
-       className="absolute right-10 bottom-0 max-w-[40%]" />
+       className="" />
 
       <div className="my-32 flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
         {/* Primera columna texto */}
