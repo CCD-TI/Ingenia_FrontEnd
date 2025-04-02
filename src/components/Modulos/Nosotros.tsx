@@ -13,9 +13,9 @@ export const Nosotros = () => {
       <div id="nosotros" className="bg-black p-9   text-center z-50 py-32 max-sm:px-3">
 
 
-        {/* Contenedor de Visión y Misión (Dos Columnas) */}
+   
         <div className="grid grid-cols-1 lg:grid-cols-2 px-[10px] max-lg:px-3 gap-0 max-w-[120rem] mx-auto items-center  ">
-          {/* Columna 1: Visión */}
+     
 
           <div className="w-[450px] max-sm:w-full  max-sm:text-3xl mx-auto flex justify-center items-center">
             <video
@@ -29,7 +29,6 @@ export const Nosotros = () => {
             />
           </div>
 
-          {/* Columna 2: Misión */}
           <div className=" text-left flex flex-col justify-center gap-4 items-center w-full">
 
 
@@ -60,13 +59,12 @@ export const Nosotros = () => {
               <ModalText
 modal={
   <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#05ABDD] to-[#000000] p-4 lg:p-0">
-    {/* Recuadro gradiente - arriba en móvil/tablet, izquierda en desktop */}
+ 
     <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
       <div className="bg-gradient-to-b from-[#05ABDD] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#05ABDD] drop-shadow-[0_0_30px_#05ABDD] mx-auto">
       </div>
     </div>
 
-    {/* Contenido de Misión - abajo en móvil/tablet, derecha en desktop */}
     <div className="px-4 lg:pl-9 lg:pr-20 py-5 w-full flex flex-col gap-1 order-2 lg:order-none"> 
       <h1 className="text-justify text-[#05ABDD] font-poppins font-bold text-3xl lg:text-5xl drop-shadow-[0_0_30px_#05ABDD] mt-0 lg:mt-7">
         Misión
@@ -82,7 +80,7 @@ modal={
 }
                 button={
                   <div className="flex flex-col justify-center items-start">
-                    {/* <span className="rounded-lg py-4 px-5 bg-yellowIngenia"></span> */}
+                
                     <div className="">
                       <h3 className="text-grayIngenia text-3xl max-md:text-xl font-poppins font-black text-yellowIngenia  pr-24 mb-3">
                         Misión
@@ -101,13 +99,13 @@ modal={
 
 modal={
   <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] p-4 lg:p-0">
-    {/* Recuadro gradiente - arriba en móvil/tablet, izquierda en desktop */}
+
     <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
       <div className="bg-gradient-to-b from-[#f9b233] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233] drop-shadow-[0_0_30px_#f9b233] mx-auto">
       </div>
     </div>
 
-    {/* Contenido de Visión - abajo en móvil/tablet, derecha en desktop */}
+
     <div className="px-4 lg:pl-9 lg:pr-20 py-5 w-full flex flex-col gap-1 order-2 lg:order-none"> 
       <h1 className="text-justify text-[#f9b233] font-poppins font-bold text-3xl lg:text-5xl drop-shadow-[0_0_30px_#f9b233] mt-0 lg:mt-7">
         Visión

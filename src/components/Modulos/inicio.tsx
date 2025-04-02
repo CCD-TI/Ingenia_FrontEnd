@@ -65,22 +65,26 @@ export default function Inicio() {
       </div>
 
 
-      <div className="flex gap-4 items-center  bg-gradient-to-r from-[#D93D04] via-[#A66B16] to-[#048CD9] w-full mt-14 justify-center py-9 drop-shadow-[0_0_15px_rgba(255,255,255,2)]">
-       <div className="flex "> </div>
-       <h1 className="text-white font-poppins font-semibold text-4xl">¡Aprovecha</h1>
-       <h1 className="text-white font-poppins font-semibold text-4xl">el </h1>
-       <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,2)] text-white font-poppins font-semibold text-8xl">80%</h1>
-       <h1 className="text-white font-poppins font-semibold text-4xl">Dscto !</h1>
-        
-        <div className=" border-2 rounded-2xl w-fit p-6 px-5  drop-shadow-[0_0_10px_rgba(255,255,255,2)]
-         brightness-200 transition-transform duration-300 hover:scale-110 ml-7">
-        
-         
-         <Conta targetDate="06/30/2025 23:59:59 " />
-        </div>
-        <button className="ml-4 rounded-full py-6 px-10 border-2 border-white text-white font-poppins font-semibold text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,2)]">¡Comprar Ahora!</button>
-       
-        </div>
+      <div className="flex flex-col lg:flex-row gap-4 items-center bg-gradient-to-r from-[#D93D04] via-[#A66B16] to-[#048CD9] w-full mt-14 justify-center py-6 lg:py-9 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] px-4 sm:px-6">
+  {/* Texto del descuento - siempre en su propia línea hasta lg */}
+  <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-4">
+    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">¡Aprovecha</h1>
+    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">el</h1>
+    <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] text-white font-poppins font-semibold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">80%</h1>
+    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">Dscto!</h1>
+  </div>
+
+  {/* Contador y botón - se mantienen juntos en todas las vistas */}
+  <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 mt-0 lg:mt-0">
+    <div className="border-2 rounded-2xl w-fit p-4 sm:p-5 lg:p-6 px-4 sm:px-5 lg:px-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] brightness-200 transition-transform duration-300 hover:scale-110">
+      <Conta targetDate="06/30/2025 23:59:59" />
+    </div>
+    
+    <button className="rounded-full py-4 sm:py-5 lg:py-6 px-6 sm:px-8 lg:px-10 border-2 border-white text-white font-poppins font-semibold text-xl sm:text-2xl lg:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] hover:bg-white hover:text-[#D93D04] transition-colors duration-300">
+      ¡Comprar Ahora!
+    </button>
+  </div>
+</div>
       
     </div>
     
