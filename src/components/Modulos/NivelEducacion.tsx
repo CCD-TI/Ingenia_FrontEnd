@@ -10,9 +10,13 @@ const NivelesEducacion: React.FC = () => {
     <div id="niveles" className="w-full flex  justify-center items-center pb-7 bg-black">
       <div className="max-w-[100rem] w-[90%] mx-auto flex flex-col justify-center  m-6 ">
         <div className="w-fit mx-auto flex flex-col justify-center items-center gap-10 ">
-          <h2 className="text-7xl font-semibold mb-8 w-full text-center uppercase text-white">
-            Niveles de Educación <br /><span className="text-yellowIngenia drop-shadow-[0_0_10px_rgba(249,178,51,1)]">en Ingenia College</span>
-          </h2>
+        <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-semibold mb-3 xs:mb-4 sm:mb-6 md:mb-8 w-full text-center uppercase text-white px-2 xs:px-4">
+  <span className="block xs:inline">Niveles de Educación</span>
+  <span className="text-yellowIngenia drop-shadow-[0_0_8px_rgba(249,178,51,0.8)] xs:drop-shadow-[0_0_10px_rgba(249,178,51,1)]">
+    en Ingenia
+    <span className="block xs:inline sm:block md:inline"> College</span>
+  </span>
+</h2>
           <div className="flex flex-wrap justify-center gap-14">
 
             <motion.div className="bg-gradient-to-t from-[#05ABDD]/30 to-[#035D78]/30 drop-shadow-[0_0_20px_rgba(2,132,199,1)] p-8 rounded-[50px] group"

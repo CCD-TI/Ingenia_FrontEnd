@@ -70,7 +70,8 @@ export default function Inicio() {
   <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-4">
     <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">¡Aprovecha</h1>
     <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">el</h1>
-    <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] text-white font-poppins font-semibold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">80%</h1>
+    <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] text-white font-poppins 
+     font-semibold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">80%</h1>
     <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">Dscto!</h1>
   </div>
 
