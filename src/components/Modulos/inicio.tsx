@@ -28,9 +28,9 @@ export default function Inicio() {
      
 
        <Image 
-        width={1000}
-        height={1000}
-       src="/img/niñosss.png" 
+        width={500}
+        height={500}
+       src="/img/xdd.png" 
        alt="Construye tu futuro" 
        className="" />
 
