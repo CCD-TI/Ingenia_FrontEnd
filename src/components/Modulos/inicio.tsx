@@ -26,17 +26,9 @@ export default function Inicio() {
   
     <div id="inicio" className="h-full pt-48 max-lg:h-full w-full flex flex-col justify-center items-center bg-[url('/img/fondo.jpg')] bg-cover bg-center">
      
-
-       <Image 
-        width={500}
-        height={500}
-       src="/img/xdd.png" 
-       alt="Construye tu futuro" 
-       className="" />
-
-      <div className="my-32 flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
-        {/* Primera columna texto */}
-        <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5">
+   
+<div className="flex items-center">
+   <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5">
 
 
          <div className="bg-sky-600 rotate-[-2deg] shadow-[0_0_20px_rgba(2,132,199,1)] drop-shadow-[0_0_10px_rgba(2,132,199,1)] py-1">
@@ -69,35 +61,51 @@ export default function Inicio() {
       
 
         </div>
+        <div className="  ">
+  <Image 
+    width={1000} 
+    height={500} 
+    src="/img/xdd.png" 
+    alt="Construye tu futuro" 
+    className="w-[900px] h-[500px] "
+  />
+</div>
+
+</div>
+
 
       
-        <div className="lg:w-auto ml-auto w-full h-fit">
-       
-        </div>
+
+    
+{/* desde aca */}
+<div className="relative flex flex-col lg:flex-row gap-4 items-center w-full mt-14 justify-center py-6 lg:py-9 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] px-4 sm:px-6">
+  {/* Imagen de fondo - ubicada abajo */}
+  <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/img/banner.png')] bg-cover bg-center z-0" />
+
+  {/* Contenido encima de la imagen */}
+  <div className="relative z-10 flex flex-col lg:flex-row gap-4 items-center w-full justify-center">
+    {/* Texto del descuento - siempre en su propia línea hasta lg */}
+    <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-4">
+      <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">¡Aprovecha</h1>
+      <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">el</h1>
+      <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] text-white font-poppins 
+        font-semibold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">80% </h1>
+      <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">Dscto!</h1>
+    </div>
+
+    {/* Contador y botón - se mantienen juntos en todas las vistas */}
+    <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 mt-0 lg:mt-0">
+      <div className="border-2 rounded-2xl w-fit p-4 sm:p-5 lg:p-6 px-4 sm:px-5 lg:px-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] brightness-200 transition-transform duration-300 hover:scale-110">
+        <Conta targetDate="06/30/2025 23:59:59" />
       </div>
 
-
-      <div className="flex flex-col lg:flex-row gap-4 items-center bg-gradient-to-r from-[#D93D04] via-[#A66B16] to-[#048CD9] w-full mt-14 justify-center py-6 lg:py-9 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] px-4 sm:px-6">
-  {/* Texto del descuento - siempre en su propia línea hasta lg */}
-  <div className="flex flex-wrap justify-center items-center gap-2 lg:gap-4">
-    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">¡Aprovecha</h1>
-    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">el</h1>
-    <h1 className="drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] text-white font-poppins 
-     font-semibold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">80%</h1>
-    <h1 className="text-white font-poppins font-semibold text-2xl sm:text-3xl lg:text-4xl">Dscto!</h1>
-  </div>
-
-  {/* Contador y botón - se mantienen juntos en todas las vistas */}
-  <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 mt-0 lg:mt-0">
-    <div className="border-2 rounded-2xl w-fit p-4 sm:p-5 lg:p-6 px-4 sm:px-5 lg:px-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] brightness-200 transition-transform duration-300 hover:scale-110">
-      <Conta targetDate="06/30/2025 23:59:59" />
+      <button className="rounded-full py-4 sm:py-5 lg:py-6 px-6 sm:px-8 lg:px-10 border-2 border-white text-white font-poppins font-semibold text-xl sm:text-2xl lg:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] hover:bg-white hover:text-[#D93D04] transition-colors duration-300">
+        ¡Comprar Ahora!
+      </button>
     </div>
-    
-    <button className="rounded-full py-4 sm:py-5 lg:py-6 px-6 sm:px-8 lg:px-10 border-2 border-white text-white font-poppins font-semibold text-xl sm:text-2xl lg:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] hover:bg-white hover:text-[#D93D04] transition-colors duration-300">
-      ¡Comprar Ahora!
-    </button>
   </div>
 </div>
+
       
     </div>
     

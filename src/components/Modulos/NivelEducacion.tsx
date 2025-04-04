@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 const NivelesEducacion: React.FC = () => {
   return (
-    <div id="niveles" className="w-full flex  justify-center items-center pb-7 bg-black">
-      <div className="max-w-[100rem] w-[90%] mx-auto flex flex-col justify-center  m-6 ">
+    <div id="niveles" className="w-full flex  justify-center items-center pb-7 bg-[url('/img/nivelesFondo.jpg')]">
+      <div className="max-w-[100rem] w-[90%]  flex flex-col justify-center  m-24 ">
         <div className="w-fit mx-auto flex flex-col justify-center items-center gap-10 ">
         <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-semibold mb-3 xs:mb-4 sm:mb-6 md:mb-8 w-full text-center uppercase text-white px-2 xs:px-4">
   <span className="block xs:inline">Niveles de Educación</span>

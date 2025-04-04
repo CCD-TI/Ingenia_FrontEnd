@@ -96,7 +96,7 @@ export default function StudentRanking() {
   ]
   */}
   return (
-    <div id="ranking" className="bg-black p-4 md:p-8">
+    <div id="ranking" className="bg-[url('/img/ranking.jpg')] bg-cover bg-center p-4 md:p-8">
 
 
       <div className="relative flex items-center justify-center w-full max-w-[1300px] px-4 mx-auto mt-12">

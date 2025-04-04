@@ -58,7 +58,8 @@ export const Nosotros = () => {
             px-4 md:px-6 lg:px-8 xl:px-12 gap-6 md:gap-12 ">
               <ModalText
 modal={
-  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#05ABDD] to-[#000000] p-4 lg:p-0">
+  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-[url('/img/mision.png')] bg-cover bg-center
+   p-4 lg:p-0">
  
     <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
       <div className="bg-gradient-to-b from-[#05ABDD] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#05ABDD] drop-shadow-[0_0_30px_#05ABDD] mx-auto">
@@ -98,7 +99,7 @@ modal={
               <ModalText
 
 modal={
-  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-gradient-to-r from-[#f9b233] to-[#000000] p-4 lg:p-0">
+  <div className="shadow-xl shadow-gray-700/20 flex flex-col lg:flex-row items-center w-full bg-[url('/img/vision.png')] bg-cover bg-center p-4 lg:p-0">
 
     <div className="flex flex-col w-full lg:w-[600px] px-4 lg:pl-7 order-1 lg:order-none mb-4 lg:mb-0">
       <div className="bg-gradient-to-b from-[#f9b233] to-[#000000] h-[250px] lg:h-[350px] w-full lg:w-[500px] px-4 lg:pl-4 rounded-xl shadow-[inset_0_-8px_20px_#f9b233] drop-shadow-[0_0_30px_#f9b233] mx-auto">

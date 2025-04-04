@@ -4,7 +4,7 @@ import CarruselHome from '../Carrusels/CarruselHome'
 
 const Comentarios = () => {
   return (
-    <div className='bg-black py-16 px-10 max-sm:px-2'>
+    <div className='bg-[url("/img/testimonios.jpg")] bg-cover bg-center py-16 px-10 max-sm:px-2'>
        <div className="relative flex items-center justify-center w-full max-w-[1300px] px-4 mx-auto ">
         {/* Línea */}
         <div className="w-full h-[2px] bg-[#ffffff] "></div>
@@ -18,6 +18,7 @@ const Comentarios = () => {
         <p className="text-center text-7xl max-lg:text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
   ¿QUIÉNES SON NUESTROS ESTUDIANTES?
 </p>
+<div className=''></div>
 
             <CarruselHome/>
         </div>
