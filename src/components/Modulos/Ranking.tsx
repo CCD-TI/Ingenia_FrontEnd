@@ -108,11 +108,11 @@ export default function StudentRanking() {
         <div className="absolute right-0 w-3 h-3 bg-[#1b5a79] rounded-full"></div>
       </div>
 
-      <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10  max-lg:w-[10rem] max-sm:w-[5rem]">
+      <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10  ">
         <h1 className="text-center text-[#05abdd] text-6xl max-sm:text-4xl font-poppins font-bold mb-12">
           RANKING <span className=" text-yellowIngenia">DE ESTUDIANTES</span>
         </h1>
-        <div className=" justify-center gap-32 items-center max-xl:flex-col">
+        <div className=" justify-center gap-32 items-center max-xl:flex-col w-full mx-auto">
           <div className="flex justify-center items-end gap-6 max-sm:gap-1 max-lg:gap-3 mb-12 ">
 
             {/* Quinto lugar */}
