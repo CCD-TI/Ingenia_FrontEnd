@@ -12,11 +12,11 @@ import { TbDeviceLandlinePhone } from 'react-icons/tb'
 
 export default function footer() {
   return (
-<footer className="w-full bg-[url('/img/footerBlack.jpg')] bg-cover bg-center relative text-white py-14 px-4 sm:pl-12 md:pl-24 lg:pl-52 max-sm:pl-12">
+<footer className="w-full bg-[url('/img/footerBlack.jpg')] bg-cover bg-center relative text-white py-14 px-4 sm:pl-12 md:pl-24 lg:pl-40 max-sm:pl-12">
 <div className="absolute inset-0 bg-[url('/img/Footer_fondo_azul.png')] bg-cover bg-center  "></div>
   <div className="max-w-[100rem] w-full mx-auto px-5 flex flex-col">
     {/* Primera fila - Siempre visible */}
-    <div className="flex flex-col lg:flex-row gap-10 md:gap-20 lg:gap-60 items-start">
+    <div className="flex flex-col lg:flex-row gap-10 md:gap-20 lg:gap-48 items-start z-30">
       {/* Información de contacto */}
       <div className='w-full md:w-auto'>
         <h2 className='text-lg font-bold pb-1 text-white font-poppins'>Ingenia College</h2>
@@ -27,7 +27,7 @@ export default function footer() {
         </ul>
 
         {/* ICONOS - Corregido el error de <p> anidado */}
-        <div className="flex items-center gap-2 text-white mt-4">
+        <div className="flex items-center gap-2 text-white mt-4 z-40">
           <span className="text-2xl font-bold font-poppins">SÍGUENOS</span>
           <FaInstagram className="text-2xl hover:translate-y-[-5px] transition-transform duration-300" />
           <FaFacebookF className="text-2xl hover:translate-y-[-5px] transition-transform duration-300" />
@@ -81,7 +81,7 @@ export default function footer() {
       </div>
     </div>
 
-    {/* Segunda fila - Solo visible en pantallas menores a lg (1000px) */}
+   
     <div className="lg:hidden flex flex-col md:flex-row gap-10 md:gap-20 items-start mt-10">
       <div className='w-full md:w-auto'>
         <div className='mb-4'>
@@ -106,13 +106,14 @@ export default function footer() {
         <div className='flex items-center mt-2'><PiBookOpenText className='text-white w-[50px] h-[41px] mr-2' />Libro de reclamaciones</div>
       </div>
     </div>
-  </div>
-  
-  <div className="mt-10 md:mt-20 pt-4 font-normal font-poppins">
-    <h2 className='px-4 md:pl-60'>
+    <div className="mt-10 md:mt-20 pt-4 font-normal font-poppins z-50 ">
+    <h2 className='px-4 md:pl-60 '>
       Copyright 2025 - Empresa: Ingenia College - RUC: 20587487152
     </h2>
   </div>
+  </div>
+  
+ 
 </footer>
    
   )
