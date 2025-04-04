@@ -64,17 +64,17 @@ export default function StudentRanking() {
 
             
 
-            <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center   max-lg:w-[10rem] max-sm:w-[5rem]">
-                    <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] ">
+            <div className=" h-full max-w-[100rem] mx-auto w-full flex flex-col items-center   ">
+                    <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-full mx-auto border-[3px] border-[#05abdd] ">
                         <table className="w-full">
                             <thead className="">
                                 <tr className="text-left border-b-2 border-[#05abdd] w-full">
-                                    <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Avatar</th>
-                                    <th className="py-2 px-4 max-sm:px-2 text-[#05abdd]">Nombre</th>
-                                    <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Grado</th>
-                                    <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Nota</th>
-                                    <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Tiempo Exámen</th>
-                                    <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Puntos</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Avatar</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd]">Nombre</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">Grado</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">Nota</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">Tiempo Exámen</th>
+                                    <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">Puntos</th>
 
 
                                 </tr>

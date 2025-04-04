@@ -16,10 +16,11 @@ export default function App() {
 
                     classNames={{
                         base: "bg-slate-400 !h-fit !p-0 !m-0  !rounded-2xl ",
-                        tab: "text-[22px] font-bold p-10 bg-slate-400  w-[50px] !h-fit !m-0 !rounded-md   ",
-                        tabList: "! bg-transparent !m-0  !gap-0 !rounded-2xl !p-0 w-full",
-                        panel: "",
+                        tab: "text-[22px] font-bold p-10 bg-slate-400  w-[40px] !h-fit !m-0 !rounded-md   ",
+                        tabList: "! bg-transparent !m-0  !gap-0 !rounded-2xl !p-0 !w-full",
+                        panel: "!w-[60rem] max-xl:w-full",
                         cursor: "!rounded-[0.4rem] ",
+                        tabWrapper: "mx-auto",
                     
 
                     }}

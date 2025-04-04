@@ -45,12 +45,12 @@ export default function App({ Content, button,sizesModal }: Propstext) {
 
   return (
     <>
-      <button
+      <div
         className="!bg-transparent !size-fit !px-0 !rounded-none"
         onClick={onOpen}
       >
         {button}{" "}
-      </button>
+      </div>
       <Modal
         isOpen={isOpen}
         size={sizeRes}

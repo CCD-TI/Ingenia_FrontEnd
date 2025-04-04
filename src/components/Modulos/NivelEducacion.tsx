@@ -11,7 +11,7 @@ const NivelesEducacion: React.FC = () => {
       className="w-full flex  justify-center items-center pb-7 bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/fondos/SECCION%203_Home_DGC.jpg')] bg-cover bg-center"
     >
       <div className="max-w-[100rem] w-[90%] mx-auto flex flex-col justify-center  m-6 ">
-        <div className="w-fit h-[1250px] mx-auto flex flex-col justify-center items-center gap-10 ">
+        <div className="w-fit h-[1250px] max-2xl:h-full mx-auto flex flex-col justify-center items-center gap-10 ">
           <h2 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-semibold mb-3 xs:mb-4 sm:mb-6 md:mb-8 w-full text-center uppercase text-white px-2 xs:px-4">
             <span className="block xs:inline">Niveles de Educación</span>
             <span className="text-yellowIngenia drop-shadow-[0_0_8px_rgba(249,178,51,0.8)] xs:drop-shadow-[0_0_10px_rgba(249,178,51,1)]">
@@ -22,13 +22,13 @@ const NivelesEducacion: React.FC = () => {
               </span>
             </span>
           </h2>
-          <div className="flex flex-wrap justify-center gap-14">
+          <div className="flex flex-wrap justify-center items-center gap-14">
             <motion.div
-              className="bg-gradient-to-t from-[#05ABDD]/30 to-[#035D78]/30 drop-shadow-[0_0_20px_rgba(2,132,199,1)] p-8 rounded-[50px] group"
+              className="bg-gradient-to-t from-[#05ABDD]/30 to-[#035D78]/30 drop-shadow-[0_0_20px_rgba(2,132,199,1)] p-8 rounded-[50px] group h-fit"
               whileHover={{ y: -40, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
             >
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-sky-600 drop-shadow-[0_0_20px_rgba(2,132,199,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
+              <div className="relative h-[35rem] w-[22rem] max-[470px]:w-[17rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-sky-600 drop-shadow-[0_0_20px_rgba(2,132,199,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño1.png"
@@ -37,15 +37,15 @@ const NivelesEducacion: React.FC = () => {
                   className="w-full h-full object-cover "
                 />
                 <div className="absolute  text-white text-xl font-bold text-center   ">
-                  <p className="mt-[450px] w-full   text-5xl font-poppins font-black text-white uppercase">
+                  <p className="mt-[400px] w-full   text-5xl font-poppins font-black text-white uppercase">
                     INICIAL <br />
                   </p>
                   <p className="text-white mt-2  font-poppins font-medium uppercase">
-                    Conoce aqui los años
+                    Conoce aqui los grados
                   </p>
                   <p
-                    className="text-white text-md px-6 py-2 font-poppins font-medium bg-transparent border-2 rounded-full mt-3
-   border-white text-center"
+                    className="text-white text-base max-sm:text-xs max-sm:w-[80%] mx-auto pl-4 font-poppins font-medium  bg-transparent border-2 mt-2 rounded-full
+                   border-white"
                   >
                     Haz click aquí
                   </p>
@@ -78,7 +78,7 @@ const NivelesEducacion: React.FC = () => {
               whileHover={{ y: -40, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
             >
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-yellow-600 drop-shadow-[0_0_20px_rgba(204,88,21,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
+              <div className="relative h-[40rem] w-[22rem] max-[470px]:w-[17rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-yellow-600 drop-shadow-[0_0_20px_rgba(204,88,21,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño2.png"
@@ -87,14 +87,14 @@ const NivelesEducacion: React.FC = () => {
                   className="w-full h-full object-cover "
                 />
                 <div className="absolute  text-white text-xl font-bold text-center   ">
-                  <p className="mt-[500px] w-full   text-5xl font-poppins font-black text-white uppercase">
+                  <p className="mt-[500px] w-full   max-sm:text-3xl  text-5xl font-poppins font-black text-white uppercase">
                     PRIMARIA <br />
                   </p>
                   <p className="text-white  pl-4 font-poppins font-medium uppercase">
-                    Conoce aqui los años
+                    Conoce aqui los grados
                   </p>
                   <p
-                    className="text-white text-base pl-4 font-poppins font-medium bg-transparent border-2 mt-2 rounded-full
+                    className="text-white text-base pl-4 font-poppins max-sm:text-xs max-sm:w-[80%] mx-auto font-medium bg-transparent border-2 mt-2 rounded-full
                    border-white"
                   >
                     Haz click aquí
@@ -124,11 +124,11 @@ const NivelesEducacion: React.FC = () => {
             </motion.div>
 
             <motion.div
-              className="bg-gradient-to-t from-[#f78018]/30 to-[#d46300]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(234,88,12,1)] group"
+              className="bg-gradient-to-t from-[#f78018]/30 to-[#d46300]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(234,88,12,1)] group h-fit"
               whileHover={{ y: -40, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
             >
-              <div className="relative h-[40rem] w-[22rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-orange-600 drop-shadow-[0_0_20px_rgba(234,88,12,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
+              <div className="relative h-[35rem] w-[22rem] max-[470px]:w-[17rem]  rounded-[30px] flex justify-center  overflow-hidden border-4 border-orange-600 drop-shadow-[0_0_20px_rgba(234,88,12,1)] group-hover:brightness-[0.15] group-hover:contrast-5 transition duration-300">
                 <Image
                   alt="crown"
                   src="/img/niño3.png"
@@ -137,14 +137,14 @@ const NivelesEducacion: React.FC = () => {
                   className="w-full h-full object-cover  "
                 />
                 <div className="absolute  text-white text-xl font-bold text-center   ">
-                  <p className="mt-[500px] w-full   text-5xl font-poppins font-black text-white uppercase">
+                  <p className="mt-[400px] w-full   text-5xl max-sm:text-3xl font-poppins font-black text-white uppercase">
                     SECUNDARIA <br />
                   </p>
                   <p className="text-white  pl-4 font-poppins font-medium uppercase">
-                    Conoce aqui los años
+                    Conoce aqui los grados
                   </p>
                   <p
-                    className="text-white text-base pl-4 font-poppins font-medium bg-transparent border-2 mt-2 rounded-full
+                    className="text-white text-base pl-4 font-poppins max-sm:text-xs max-sm:w-[80%] mx-auto font-medium bg-transparent border-2 mt-2 rounded-full
                    border-white"
                   >
                     Haz click aquí

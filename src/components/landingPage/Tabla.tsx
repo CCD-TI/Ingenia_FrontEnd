@@ -85,21 +85,21 @@ export default function StudentRanking() {
   ];
   return (
     <div id="ranking" className="bg-red-600 ">
-      <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center   max-lg:w-[10rem] max-sm:w-[5rem]">
-        <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] ">
+      <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center w-full  ">
+        <div className="bg-white w-full  rounded-xl py-6 max-sm:p-2  border-[3px] border-[#05abdd] ">
           <table className="w-full">
             <thead className="">
               <tr className="text-left border-b-2 border-[#05abdd] w-full">
-                <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">
+                <th className="py-2 text-center px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">
                   Avatar
                 </th>
-                <th className="py-2 px-4 max-sm:px-2 text-[#05abdd]">Nombre</th>
-                <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Grado</th>
-                <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">Nota</th>
-                <th className="py-2 px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">
+                <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd]">Nombre</th>
+                <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">Grado</th>
+                <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">Nota</th>
+                <th className="py-2 text-center px-4 max-sm:px-2 max-sm:hidden text-[#05abdd]">
                   Tiempo Exámen
                 </th>
-                <th className="py-2 px-4 max-sm:px-2 text-[#05abdd] ">
+                <th className="py-2 text-center px-4 max-sm:px-2 text-[#05abdd] ">
                   Puntos
                 </th>
               </tr>
@@ -108,11 +108,11 @@ export default function StudentRanking() {
               {datos.map((data, index) => (
                 <tr key={index} className="">
                   <td className={`py-2 px-4 max-sm:hidden ${data.bg} `}>
-                    <div className=" border-2 rounded-full p-2">
+                    <div className=" border-2 w-fit mx-auto rounded-full p-2">
                       <Image
                         src={data.avatar}
                         alt={`Estudiante ${index + 1}`}
-                        className="w-7 h-7  max-sm:hidden "
+                        className="w-10 h-10  max-sm:hidden "
                         width={800}
                         height={800}
                       />
