@@ -65,11 +65,6 @@ export default function StudentRanking() {
             
 
             <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center   max-lg:w-[10rem] max-sm:w-[5rem]">
-                
-             
-     
-
-
                     <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] ">
                         <table className="w-full">
                             <thead className="">

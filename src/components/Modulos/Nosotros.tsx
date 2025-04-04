@@ -10,7 +10,7 @@ import { IoEyeSharp } from "react-icons/io5";
 export const Nosotros = () => {
   return (
     <>
-      <div id="nosotros" className="bg-black p-9   text-center z-50 py-32 max-sm:px-3">
+      <div id="nosotros" className="h-[960px] p-9   text-center z-50 py-32 max-sm:px-3 bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/fondos/SECCION%202_Home_DGC.jpg')] bg-cover bg-center">
 
 
    
@@ -48,7 +48,7 @@ export const Nosotros = () => {
 
             <div className="text-center md:text-left w-full max-w-[600px] px-4 md:px-6 lg:px-8 xl:px-12 mr-auto max-lg:mx-auto">
               <p className="text-grayIngenia text-lg sm:text-xl md:text-2xl lg:text-3xl font-poppins text-white font-normal max-lg:text-center  ">
-                <p> Somos una Institución Educativa que bajo nuestro sistema vamos a reforzar la educación de calidad.</p>  
+                <span> Somos una Institución Educativa que bajo nuestro sistema vamos a reforzar la educación de calidad.</span>  
               
               </p>
             </div>

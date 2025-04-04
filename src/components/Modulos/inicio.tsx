@@ -25,18 +25,23 @@ export default function Inicio() {
     
   
     <div id="inicio" className="h-full pt-48 max-lg:h-full w-full flex flex-col justify-center items-center bg-[url('/img/fondo.jpg')] bg-cover bg-center">
-     
+      {/* <Image 
+        width={1000}
+        height={1000}
+       src="/img/titulo.png" 
+       alt="Construye tu futuroooo" 
+       className="absolute right-10 bottom-0 max-w-[40%]" />  */}
 
        <Image 
-        width={500}
-        height={500}
-       src="/img/xdd.png" 
+        width={1500}
+        height={2000}
+       src="/img/niñosss.png" 
        alt="Construye tu futuro" 
-       className="" />
+       className="absolute right-10 top-[20%] rounded-xl " />
 
       <div className="my-32 flex flex-col w-full justify-between mx-auto max-w-[100rem] lg:flex-row px-10">
         {/* Primera columna texto */}
-        <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5">
+        <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5 z-30">
 
 
          <div className="bg-sky-600 rotate-[-2deg] shadow-[0_0_20px_rgba(2,132,199,1)] drop-shadow-[0_0_10px_rgba(2,132,199,1)] py-1">
