@@ -59,18 +59,18 @@ export default function StudentRanking() {
         }
     ]
     return (
-        <div id="ranking" className="bg-black p-4 md:p-8">
+        <div id="ranking" className="bg-black ">
 
 
             
 
-            <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center p-10  max-lg:w-[10rem] max-sm:w-[5rem]">
+            <div className=" h-full max-w-[100rem] mx-auto flex flex-col items-center   max-lg:w-[10rem] max-sm:w-[5rem]">
                 
              
      
 
 
-                    <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] mt-5">
+                    <div className="bg-white  rounded-xl py-6 max-sm:p-2 w-fit mx-auto border-[3px] border-[#05abdd] ">
                         <table className="w-full">
                             <thead className="">
                                 <tr className="text-left border-b-2 border-[#05abdd] w-full">
