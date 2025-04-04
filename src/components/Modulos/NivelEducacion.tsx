@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+
 const NivelesEducacion: React.FC = () => {
   return (
     <div
@@ -52,29 +53,26 @@ const NivelesEducacion: React.FC = () => {
                 </div>
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button
-                  className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700"
-                >
+              <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
                   Matemática
                 </button>
-                <button
-                  className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700"
-                >
-                  Comunicación
+                <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
+                  Comunicación 
                 </button>
-                <button
-                  className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700"
-                >
+                <button className="bg-sky-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-sky-700">
                   Historia
                 </button>
+
               </div>
+
+
             </motion.div>
 
-            <motion.div
-              className="bg-gradient-to-t from-[#f9B233]/30 to-[#f9B233]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(204,88,21,1)] group"
+
+            <motion.div className="bg-gradient-to-t from-[#f9B233]/30 to-[#f9B233]/30 p-8 rounded-[50px] drop-shadow-[0_0_20px_rgba(204,88,21,1)] group"
               whileHover={{ y: -40, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 150, damping: 12 }}
             >
@@ -102,25 +100,22 @@ const NivelesEducacion: React.FC = () => {
                 </div>
               </div>
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button
-                  className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700"
-                >
+              <button className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
                   Matemática
                 </button>
-                <button
-                  className="bg-yellow-600 text-white px-12 py-4 text-2xl  rounded-lg font-bold transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700"
-                >
-                  Comunicación
+                <button className="bg-yellow-600 text-white px-12 py-4 text-2xl  rounded-lg font-bold transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
+                  Comunicación 
                 </button>
-                <button
-                  className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700"
-                >
+                <button className="bg-yellow-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-yellow-700">
                   Historia
                 </button>
+
               </div>
+
+
             </motion.div>
 
             <motion.div
@@ -150,29 +145,27 @@ const NivelesEducacion: React.FC = () => {
                     Haz click aquí
                   </p>
                 </div>
+
               </div>
 
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button
-                  className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700"
-                >
+              <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
                   Matemática
                 </button>
-                <button
-                  className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700"
-                >
-                  Comunicación
+                <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
+                  Comunicación 
                 </button>
-                <button
-                  className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
-                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700"
-                >
+                <button className="bg-orange-600 text-white px-12 py-4 text-2xl rounded-lg font-bold  transition-all duration-300 
+                transform hover:scale-105 hover:shadow-lg active:scale-95 hover:bg-orange-700">
                   Historia
                 </button>
+
               </div>
             </motion.div>
+
+
           </div>
         </div>
       </div>

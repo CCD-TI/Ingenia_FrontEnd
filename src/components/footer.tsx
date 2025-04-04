@@ -12,7 +12,8 @@ import { TbDeviceLandlinePhone } from 'react-icons/tb'
 
 export default function footer() {
   return (
-<footer className="w-full bg-gradient-to-t from-[#179EC1] to-black text-white py-14 px-4 sm:pl-12 md:pl-24 lg:pl-52 max-sm:pl-12">
+<footer className="w-full bg-[url('/img/footerBlack.jpg')] bg-cover bg-center relative text-white py-14 px-4 sm:pl-12 md:pl-24 lg:pl-52 max-sm:pl-12">
+<div className="absolute inset-0 bg-[url('/img/Footer_fondo_azul.png')] bg-cover bg-center  "></div>
   <div className="max-w-[100rem] w-full mx-auto px-5 flex flex-col">
     {/* Primera fila - Siempre visible */}
     <div className="flex flex-col lg:flex-row gap-10 md:gap-20 lg:gap-60 items-start">

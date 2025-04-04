@@ -25,6 +25,7 @@ const img = {
 
 export default function Inicio() {
   return (
+<<<<<<< HEAD
     <div
       id="inicio"
       className="h-full pt-24 max-lg:h-full w-full flex flex-col justify-center items-center bg-[url('/img/fondo.jpg')] bg-cover bg-center"
@@ -50,6 +51,24 @@ export default function Inicio() {
                   CONSTRUYE
                 </span>
               </h1>
+=======
+   
+    
+
+    
+  
+    <div id="inicio" className="h-full pt-48 max-lg:h-full w-full flex flex-col justify-center items-center bg-[url('/img/fondo.jpg')] bg-cover bg-center">
+     
+   
+<div className="flex items-center">
+   <div className="w-[50%] max-2xl:w-[60%] max-lg:w-full flex flex-col justify-start items-start gap-4 max-sm:gap-5">
+
+
+         <div className="bg-sky-600 rotate-[-2deg] shadow-[0_0_20px_rgba(2,132,199,1)] drop-shadow-[0_0_10px_rgba(2,132,199,1)] py-1">
+           <h1 className=" text-white ">
+            <span className="text-8xl pr-10 pl-10 max-2xl:text-7xl max-md:text-7xl font-extrabold  drop-shadow-[0_0_10px_rgba(255,255,255,2)]
+            ">CONSTRUYE</span></h1>
+>>>>>>> f1ffd128e03143b889e34a5fbbae97173a311902
             </div>
 
             <div className="bg-yellowIngenia rotate-[-2deg] drop-shadow-[0_0_10px_rgba(249,178,51,1)] shadow-[0_0_20px_rgba(234,179,8,1)] mb-8 py-1">
@@ -117,6 +136,7 @@ export default function Inicio() {
           </h1>
         </div>
 
+<<<<<<< HEAD
         {/* Contador y botón - se mantienen juntos en todas las vistas */}
         <div className="flex flex-col sm:flex-row items-center gap-3 lg:gap-4 mt-0 lg:mt-0">
           <div className="border-2 rounded-2xl w-fit p-4 sm:p-5 lg:p-6 px-4 sm:px-5 lg:px-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] brightness-200 ">
@@ -135,5 +155,19 @@ export default function Inicio() {
         </div>
       </div>
     </div>
+=======
+      <button className="rounded-full py-4 sm:py-5 lg:py-6 px-6 sm:px-8 lg:px-10 border-2 border-white text-white font-poppins font-semibold text-xl sm:text-2xl lg:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] hover:bg-white hover:text-[#D93D04] transition-colors duration-300">
+        ¡Comprar Ahora!
+      </button>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+    
+    
+ 
+>>>>>>> f1ffd128e03143b889e34a5fbbae97173a311902
   );
 }
