@@ -13,8 +13,8 @@ const Tabs = () => {
     <div
       id="promociones"
       className={`${selectedTab === "Mensual"
-        ? "bg-gradient-to-b from-[#03B6FB] via-[#8ABDAE] to-[#F88119] "
-        : "bg-[linear-gradient(342.43deg,#F9B233_-4.91%,#167F99_56.07%)]"
+        ? "bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/fondos/Mensual_fondo_v1.jpg')] bg-center bg-cover"
+        : "bg-[url('https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/fondos/Anual_fondo_v1.jpg')] bg-center bg-cover"
         }`}
     >
       <div className="max-w-[100rem] h-full mx-auto flex flex-col justify-center items-center gap-6 py-24">

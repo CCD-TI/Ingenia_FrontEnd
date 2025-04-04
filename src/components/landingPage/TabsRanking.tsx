@@ -4,10 +4,9 @@ import Tabla from "./Tabla";
 import Tablaa from "./Tablaa";
 
 export default function App() {
-    const [isVertical, setIsVertical] = React.useState(true);
 
     return (
-        <div className="flex flex-col px-4 ">
+        <div className="flex flex-col px-4  w-full">
 
             <div className="flex w-full flex-col ">
                 <Tabs aria-label="Options"
@@ -16,8 +15,12 @@ export default function App() {
 
 
                     classNames={{
-                        tab: "text-[22px] font-bold p-10 bg-slate-400  w-[50px] !h-fit  ",
-                        tabList: "! bg-transparent gap-0 "
+                        base: "bg-slate-400 !h-fit !p-0 !m-0  !rounded-2xl ",
+                        tab: "text-[22px] font-bold p-10 bg-slate-400  w-[50px] !h-fit !m-0 !rounded-md   ",
+                        tabList: "! bg-transparent !m-0  !gap-0 !rounded-2xl !p-0 w-full",
+                        panel: "",
+                        cursor: "!rounded-[0.4rem] ",
+                    
 
                     }}
                 >
