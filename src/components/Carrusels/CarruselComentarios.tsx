@@ -223,13 +223,13 @@ export default function PartnersShowcase() {
   <div className="relative z-10 max-w-[100rem] h-full mx-auto px-10">
     <div className="flex flex-col md:flex-row items-center gap-20">
       {/* Columna izquierda - Partners scrollable */}
-      <div className="relative max-xl:w-[20rem]  h-[468px]">
+      <div className="relative max-xl:w-[20rem]  h-[468px] ">
         <div 
           ref={scrollContainerRef}
-          className="h-full overflow-y-auto scrollbar-hide"
+          className="h-full overflow-y-auto scrollbar-hide "
         >
           <div className="flex">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center max-sm:flex-row sm:flex-row lg:flex-col">
               {partners.map((partner, index) => (
                 <div
                   key={partner.id}
@@ -258,7 +258,7 @@ export default function PartnersShowcase() {
       </div>
 
       {/* Columna central - Imagen grande */}
-      <div className="flex-1 flex ">
+      <div className="flex-1 flex max-sm:flex-col">
         <div className="relative w-full  h-[500px] ">
           {partners.map((partner, index) => (
             <Image
