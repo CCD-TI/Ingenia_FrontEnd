@@ -252,13 +252,13 @@ export default function PartnersShowcase() {
                     )}
                   >
                     <div onClick={scrollUp}
-                     className="   p-4">
+                     className="  p-4">
                       <Image
                         src={partner.logo}
                         alt="user"
                         width={5000}
                         height={5000}
-                        className="my-2 size-[5rem]  object-cover "
+                        className="my-2 size-[5rem]  object-cover border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]  "
                       />
  {/* Aquí va el carrusel de testimonios 
                       <div>
@@ -298,7 +298,7 @@ export default function PartnersShowcase() {
               >
                 <h1 className="">ccccccc</h1>
                 <div className="w-full relative flex flex-col gap-14 items-center ">  
-                  <h1 className="text-yellowIngenia font-poppins font-black text-6xl ">Testimonios</h1>
+                  <h1 className="text-yellowIngenia font-poppins font-black text-6xl   ">Testimonios</h1>
                   <FaQuoteLeft className=" text-5xl absolute text-white left-0 mt-28" />
                   <h1 className="text-4xl text-start p-4  text-white font-poppins font-medium leading-[1.5] pt-14 ">{partner.description}</h1>                
                 </div>

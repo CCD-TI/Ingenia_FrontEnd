@@ -53,7 +53,7 @@ const CarouselComponent = () => {
     ],
     appendDots: (dots: React.ReactNode) => (
       <div>
-        <ul className="flex justify-center mt-4 space-x-3">{dots}</ul>
+        <ul className="flex justify-center mt-4 ">{dots}</ul>
       </div>
     ),
     customPaging: (i: number) => (
@@ -65,7 +65,7 @@ const CarouselComponent = () => {
 
   return (
     <div
-      className="flex flex-col carousel-container mx-auto py-8 w-[90%]  max-[1440px]:w-[70%]  max-xl:w-[80%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
+      className="flex flex-col carousel-container mx-auto py-8 w-[92%]  max-[1440px]:w-[70%]  max-xl:w-[80%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
       data-aos="zoom-out-right"
       data-aos-delay="200"
     >
@@ -75,7 +75,7 @@ const CarouselComponent = () => {
           const isMiddleImage =
             index === (currentSlide + 1) % imageItems.length; // El índice medio es el actual + 1 en un carrusel de 3
           return (
-            <div key={index} className="p-6 max-sm:p-0 ">
+            <div key={index} className="py-6 max-sm:p-0 ">
               <div
                 className={`flex justify-center items-center rounded-lg ${
                   isMiddleImage
@@ -89,7 +89,7 @@ const CarouselComponent = () => {
    whileHover={{ y: -20, scale: 1.02 }}
    transition={{ type: "spring", stiffness: 150, damping: 12 }}
    className=" border-cyan-500 rounded-2xl  bg-white">
-   <div className="  rounded-2xl  flex flex-col items-center  w-[360px] shadow-[0_0_30px_0_#ffffff]">
+   <div className="  rounded-2xl  flex flex-col items-center  w-[400px] shadow-[0_0_30px_0_#ffffff]">
       {/* Contenedor del ícono */}
       <Image
 
