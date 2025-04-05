@@ -105,7 +105,7 @@ const Grado = () => {
       </div>
 
 
-      <div className="bg-white w-full   ">
+      <div className="bg-[url('/img/testimonios.jpg')] w-full   ">
         <div className="max-w-[100rem]  px-12 py-10 mx-auto mt-9 ">
 
           <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellow-500 text-7xl  tracking-[3px]  drop-shadow-[0_0_10px_rgba(249,178,51,1)]">VIDEO EDUCATIVO</h1>

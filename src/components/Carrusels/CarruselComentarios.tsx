@@ -5,6 +5,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { div } from "framer-motion/client";
 
 interface Partner {
   id: number;
@@ -23,70 +24,71 @@ export default function PartnersShowcase() {
     {
       id: 1,
       name: "Universidad Nacional Mayor de San Marcos",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Niña_Testimonio.jpeg",
       image: "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/Group-LA-LIBERTAD.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adipisici, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 2,
       name: "Universidad Nacional De Ingeniería",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Niña_Testimonio.jpeg",
       image:
         "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTOS-CAPACITACION-FORMATOS_2.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing a, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 3,
       name: "Universidad Nacional Agraria la Molina",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Niño_Testimonio.jpeg",
       image:
         "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTOS-SILSA-FORMATOS.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adip laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
+   
     {
       id: 4,
       name: "Universidad 4",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Niño_Testimonio.jpeg",
       image: "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTO UNI.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet c. Excepturi blanditiis, explicabo debitiaboriosam r! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 5,
       name: "Universidad 5",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Madre_Testimonio.jpeg",
       image: "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTOS-agraria.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor s explicnissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 6,
       name: "Universidad 6",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Madre_Testimonio.jpeg",
       image:
         "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTO Universidad Nacional de Educación Enrique Guzmás y Valle.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, expigendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 7,
       name: "Universidad 6",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Madre_Testimonio.jpeg",
       image:
         "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTOS-ministerio-de-economia-y-finanzas.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exceenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
     {
       id: 8,
       name: "Universidad 6",
-      logo: "https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/CursoEjem.jpeg",
+      logo: "/img/Madre_Testimonio.jpeg",
       image: "/Multimedia/Imagen/ccdcorp/FOTOS EMPRESAS/FOTOS-SAN-MARCOS.png",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis, explicabo debitis cum qui praesentium rem, dignissimos est laboriosam reprehenderit minima, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exceppraema, fuga eligendi eaque! Eveniet soluta sed odio pariatur rerum!",
     },
   ];
 
@@ -217,28 +219,28 @@ export default function PartnersShowcase() {
   }, [activePartner]);
 
   return (
-    <div className="relative py-12 ">
-      {/* <img
-        src="/Multimedia/Imagen/ccdcorp/FONDO/Group 609.png"
-        alt="Trabaja con nosotros"
-        className="absolute right-0 top-0 w-full h-full object-cover opacity-80"
-      /> */}
+    <>
+    
+    <div className="  relative py-12 ">
+      
 
       <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-10 ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="relative max-xl:w-[20rem] w-[30rem] h-[468px]">
+             {/* 
             <button
               onClick={scrollUp}
               className="absolute -top-20 left-1/2 -translate-x-1/2 z-10  bg-opacity-75 p-2 rounded-full "
               aria-label="Scroll up and select previous partner"
             >
-              <ChevronUp className="w-20 h-20 text-amber-400" />
+              <ChevronUp className="w-20 h-20 text-amber-400 " />
             </button>
+               */}
             <div
               ref={scrollContainerRef}
               className="h-full overflow-y-auto scrollbar-hide "
             >
-              <div className="flex flex-col gap-6 p-4">
+              <div className="flex flex-col gap-6 ">
                 {partners.map((partner, index) => (
                   <div
                     key={partner.id}
@@ -249,25 +251,30 @@ export default function PartnersShowcase() {
                         : "opacity-50"
                     )}
                   >
-                    <div className="bg-slate-100 shadow-2xl border-2 rounded-xl flex w-full items-center gap-4 p-4">
+                    <div onClick={scrollUp}
+                     className="   p-4">
                       <Image
                         src={partner.logo}
                         alt="user"
                         width={5000}
                         height={5000}
-                        className="my-2 size-[5rem] rounded-full object-cover border-2 border-white"
+                        className="my-2 size-[5rem]  object-cover "
                       />
-
+ {/* Aquí va el carrusel de testimonios 
                       <div>
                         <h1 className="font-bold text-2xl">Bruno carranza</h1>
                         <h2>4to Grado de primaria </h2>
                       </div>
+                      */}
+                    
                     </div>
-                    <span className="sr-only text-white">{partner.name}</span>
+                   
+                  
                   </div>
                 ))}
               </div>
             </div>
+             {/*  
             <button
               onClick={scrollDown}
               className="absolute  left-[51%] -translate-x-1/2 z-10  bg-opacity-75 p-2 rounded-full "
@@ -275,6 +282,7 @@ export default function PartnersShowcase() {
             >
               <ChevronDown className="w-20 h-20 text-amber-400 " />
             </button>
+            */}
           </div>
 
           <div className="flex-1 relative w-full h-[500px] overflow-hidden">
@@ -288,11 +296,18 @@ export default function PartnersShowcase() {
                     : "opacity-0 left-full"
                 )}
               >
-                <div className="w-full relative">  
-                  <FaQuoteLeft className=" text-5xl absolute left-0" />
-                  <h1 className="text-4xl p-4 text-center text-black font-bold font-poppins leading-[1.5] pt-14 ">{partner.description}</h1>
-                  <FaQuoteRight className=" text-5xl absolute right-0" />
+                <h1 className="">ccccccc</h1>
+                <div className="w-full relative flex flex-col gap-14 items-center ">  
+                  <h1 className="text-yellowIngenia font-poppins font-black text-6xl ">Testimonios</h1>
+                  <FaQuoteLeft className=" text-5xl absolute text-white left-0 mt-28" />
+                  <h1 className="text-4xl text-start p-4  text-white font-poppins font-medium leading-[1.5] pt-14 ">{partner.description}</h1>                
                 </div>
+                <div className=" relative flex flex-col gap-2 items-start  ">
+                  <h1 className="text-yellowIngenia font-poppins font-black text-3xl ">Angel Plasencia</h1>
+                  <h1 className="text-[25px] text-white font-extralight">Padre de Adriano Passaro</h1>
+
+                </div>
+
               </div>
             ))}
           </div>
@@ -301,5 +316,6 @@ export default function PartnersShowcase() {
       
       </div>
     </div>
+    </>
   );
 }
