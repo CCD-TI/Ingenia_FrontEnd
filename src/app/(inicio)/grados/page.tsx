@@ -29,7 +29,8 @@ const Grado = () => {
 
 
         <div className="max-w-[100rem] mx-auto ">
-          <div className="flex  justify-center items-center lg:gap-[14rem] w-full mt-[4rem] max-sm:flex-col max-sm:gap-3 md:gap-12 mb-16">
+          <div className="flex  justify-center items-center lg:gap-[14rem] w-full mt-[4rem] max-sm:flex-col max-sm:gap-3 max-lg:flex-col max-lg:gap-3
+          md:gap-12 mb-16 sm:flex-col sm:gap-3 lg:flex-row">
 
             <motion.div
               className="flex flex-col items-center justify-center bg-gradient-to-t from-yellow-600 via-[#21212151] to-[#21212100] p-4

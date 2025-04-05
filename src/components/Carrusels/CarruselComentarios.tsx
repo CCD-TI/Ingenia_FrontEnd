@@ -3,8 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { ChevronUp, ChevronDown } from "lucide-react";
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { div } from "framer-motion/client";
 
 interface Partner {
@@ -221,30 +219,28 @@ export default function PartnersShowcase() {
   return (
     <>
     
-    <div className="  relative py-12 ">
-      
-
-      <div className=" relative z-10 max-w-[100rem] h-full mx-auto px-10 ">
-        <div className="flex flex-col md:flex-row items-center  gap-20">
-          <div className="relative max-xl:w-[20rem] w-[30rem] h-[468px]">
-        
-            <div
-              ref={scrollContainerRef}
-              className="h-full overflow-y-auto scrollbar-hide "
-            >
-              <div className="flex gap-3 "> 
-              <div className="flex flex-col  ">
-                {partners.map((partner, index) => (
-                  <div
-                    key={partner.id}
-                    className={cn(
-                      "transition-all duration-300 transform",
-                      index === activePartner
-                        ? "opacity-100 scale-110 pl-6"
-                        : "opacity-50"
-                    )}
-                  >
-                    <div onClick={scrollUp}
+    <div className="relative py-12">
+  <div className="relative z-10 max-w-[100rem] h-full mx-auto px-10">
+    <div className="flex flex-col md:flex-row items-center gap-20">
+      {/* Columna izquierda - Partners scrollable */}
+      <div className="relative max-xl:w-[20rem]  h-[468px]">
+        <div 
+          ref={scrollContainerRef}
+          className="h-full overflow-y-auto scrollbar-hide"
+        >
+          <div className="flex">
+            <div className="flex flex-col items-center">
+              {partners.map((partner, index) => (
+                <div
+                  key={partner.id}
+                  className={cn(
+                    "transition-all duration-300 transform",
+                    index === activePartner
+                      ? "opacity-100 scale-110 px-6 pt-2"
+                      : "opacity-50"
+                  )}
+                >
+                <div onClick={scrollUp}
                      className="  ">
                       <Image
                         src={partner.logo}
@@ -253,61 +249,70 @@ export default function PartnersShowcase() {
                         height={5000}
                         className="my-2 size-[5rem]  object-cover border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]  "
                       />
-
-                    
-                    </div>
-                   
-                  
                   </div>
-                ))}
-              </div>
-             
-              </div>
+                </div>
+              ))}
             </div>
-     
-          </div>
-
-          <div className="flex-1 relative w-full h-[500px] overflow-hidden">
-            {partners.map((partner, index) => (
-              <div
-                key={partner.id}
-                className={cn(
-                  "absolute inset-0 transition-all duration-500 ",
-                  index === activePartner
-                    ? "opacity-100 left-0"
-                    : "opacity-0 left-full"
-                )}
-              >
-                
-                <div className="w-full relative flex flex-col gap-7 items-start">  
-                  <h1 className="text-yellowIngenia font-poppins font-black text-6xl  mx-auto">Testimonios</h1>
-                  <div className="">
-                  <Image
-                            alt="nnnnn"
-                            src="/img/Apostrofe.png"
-                            width={1000}
-                            height={1000}
-                            className="w-20 h-20 "
-                          />
-                    
-                  </div>
-                
-                  <h1 className="text-xl text-justify text-white font-poppins font-medium leading-[1.5]  pb-4 pl-32 ">{partner.description}</h1>                
-                </div>
-                <div className=" relative flex flex-col gap-2 items-start pl-32  ">
-                  <h1 className="text-yellowIngenia font-poppins font-black text-3xl ">Angel Plasencia</h1>
-                  <h1 className="text-[25px] text-white font-extralight">Padre de Adriano Passaro</h1>
-
-                </div>
-
-              </div>
-            ))}
           </div>
         </div>
+      </div>
 
-      
+      {/* Columna central - Imagen grande */}
+      <div className="flex-1 flex ">
+        <div className="relative w-full  h-[500px] ">
+          {partners.map((partner, index) => (
+            <Image
+              key={partner.id}
+              src={partner.logo}
+              alt="Featured"
+              width={800}
+              height={800}
+              className={cn(
+                "absolute  w-full h-full object-cover rounded-xl border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]",
+                index === activePartner ? "opacity-100" : "opacity-0"
+              )}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Columna derecha - Testimonio */}
+      <div className="flex-1 relative w-full h-[500px]">
+        {partners.map((partner, index) => (
+          <div
+            key={partner.id}
+            className={cn(
+              "absolute inset-0 transition-all duration-500 flex flex-col justify-center",
+              index === activePartner
+                ? "opacity-100"
+                : "opacity-0"
+            )}
+          >
+            <div className="w-full relative flex flex-col gap-7 items-start ">
+              <h1 className="text-yellowIngenia font-poppins font-black text-6xl">Testimonios</h1>
+              <div>
+                <Image
+                  alt="Apostrofe"
+                  src="/img/Apostrofe.png"
+                  width={1000}
+                  height={1000}
+                  className="w-20 h-20"
+                />
+              </div>
+              <h1 className="text-xl text-justify text-white font-poppins font-medium leading-[1.5] pb-4">
+                {partner.description}
+              </h1>
+            </div>
+            <div className="relative flex flex-col gap-2 items-start mt-8">
+              <h1 className="text-yellowIngenia font-poppins font-black text-3xl">Angel Plasencia</h1>
+              <h1 className="text-[25px] text-white font-extralight">Padre de Adriano Passaro</h1>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
+  </div>
+</div>
     </>
   );
 }
