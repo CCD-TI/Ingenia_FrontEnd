@@ -3,8 +3,8 @@ import React from 'react'
 
 const SectionCursos = () => {
   return (
-    <div className='py-10 px-1 mx-auto w-full bg-gradient-to-t from-[#179EC1] to-black'>
-        <h1 className='font-bold text-5xl text-center  text-white '>
+    <div className='py-10 px-1 mx-auto w-full bg-[url("/img/testimonios.jpg")]'>
+        <h1 className='font-bold text-5xl text-center  text-white mt-10'>
             Continua Potenciando <br />
             <span className='text-5xl  font-extrabold text-white mt-3 inline-block drop-shadow-[0_0_10px_rgba(255,255,255,2)]'> TU HABILIDAD</span>
         </h1>

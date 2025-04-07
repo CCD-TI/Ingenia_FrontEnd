@@ -3,11 +3,16 @@ import React from 'react'
 
 const Comentarios = () => {
   return (
-    <div className=" rounded-[90px] py-10 h-[750px]  border-dashed border-2 mx-14 mt-24 border-yellowIngenia  
-    shadow-[0_0_25px_5px_rgba(168,123,4,0.7)]">
- 
-      <CarruselComentarios />
-    </div>
+    <>
+  <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-[900px] bg-cover bg-center flex items-center justify-center'>
+  <div className='bg-[url("/img/fondo_testimonios.png")] bg-center bg-no-repeat bg-contain w-[1100px] h-[900px] max-sm:w-96 px-10 lg:py-40 sm:py-9 '>
+    <CarruselComentarios />
+  </div>
+</div>
+
+
+   
+    </>
   )
 }
 
