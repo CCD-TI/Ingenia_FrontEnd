@@ -215,104 +215,142 @@ export default function PartnersShowcase() {
       });
     }
   }, [activePartner]);
-
   return (
     <>
-    
-    <div className="relative py-12">
-  <div className="relative z-10 max-w-[100rem] h-full mx-auto px-10">
-    <div className="flex flex-col md:flex-row items-center gap-20">
-      {/* Columna izquierda - Partners scrollable */}
-      <div className="relative max-xl:w-[20rem]  h-[468px] ">
-        <div 
-          ref={scrollContainerRef}
-          className="h-full overflow-y-auto scrollbar-hide "
-        >
-          <div className="flex">
-            <div className="flex flex-col items-center max-sm:flex-row sm:flex-row lg:flex-col">
+      <div className="relative">
+        <div className="relative z-10 max-w-[100rem] h-full mx-auto px-10">
+          <div className="flex flex-col md:flex-row items-center gap-25 md:gap-10 md:py-18">
+            {/* Columna izquierda - Partners scrollable (solo visible en pantallas grandes) */}
+            <div className="relative max-xl:w-[20rem] h-[468px] hidden md:block">
+              <div
+                ref={scrollContainerRef}
+                className="h-full overflow-y-auto scrollbar-hide"
+              >
+                <div className="flex flex-col">
+                  <div className="flex flex-col items-center sm:flex-row lg:flex-col md:flex-col">
+                    {partners.map((partner, index) => (
+                      <div
+                        key={partner.id}
+                        className={cn(
+                          "transition-all duration-300 transform",
+                          index === activePartner
+                            ? "opacity-100 scale-110 px-6 pt-2"
+                            : "opacity-50"
+                        )}
+                      >
+                        <div onClick={scrollUp}>
+                          <Image
+                            src={partner.logo}
+                            alt="user"
+                            width={5000}
+                            height={5000}
+                            className="my-2 size-[5rem] object-cover border-2 border-yellowIngenia rounded-xl
+                            shadow-[0_0_30px_rgba(234,179,8,0.8)]"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              {/* Columna central - Imagen grande */}
+              <div className="flex-1 hidden md:hidden lg:block">
+                <div className="relative w-full h-[500px]">
+                  {partners.map((partner, index) => (
+                    <Image
+                      key={partner.id}
+                      src={partner.logo}
+                      alt="Featured"
+                      width={800}
+                      height={800}
+                      className={cn(
+                        "absolute w-full h-full object-cover rounded-[50px] border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]",
+                        index === activePartner ? "opacity-100" : "opacity-0"
+                      )}
+                    />
+                  ))}
+                </div>
+              </div>
+
+            {/* Columna derecha - Testimonio */}
+            <div className="flex-1 relative w-full h-[500px] flex flex-col items-center md:flex-row md:items-start">
               {partners.map((partner, index) => (
                 <div
                   key={partner.id}
                   className={cn(
-                    "transition-all duration-300 transform",
+                    "absolute inset-0 transition-all duration-500 flex flex-col justify-center",
                     index === activePartner
-                      ? "opacity-100 scale-110 px-6 pt-2"
-                      : "opacity-50"
+                      ? "opacity-100"
+                      : "opacity-0"
                   )}
                 >
-                <div onClick={scrollUp}
-                     className="  ">
+                  <div className="w-full relative flex flex-col gap-7 items-center md:items-start">
+                    <h1 className="text-yellowIngenia font-poppins font-black text-6xl text-center md:text-left drop-shadow-[0_0_10px_rgba(234,179,8,1)]">Testimonios</h1>
+                    <div>
                       <Image
-                        src={partner.logo}
-                        alt="user"
-                        width={5000}
-                        height={5000}
-                        className="my-2 size-[5rem]  object-cover border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]  "
+                        alt="Apostrofe"
+                        src="/img/Apostrofe.png"
+                        width={1000}
+                        height={1000}
+                        className="w-20 h-20 drop-shadow-[0_0_20px_rgba(234,179,8,1)]"
                       />
+                    </div>
+                    <h1 className="text-justify text-white font-poppins font-medium leading-[1.5] pb-4 text-sm md:text-xl  md:text-left">
+                      {partner.description}
+                    </h1>
+                  </div>
+                  <div className="relative flex flex-col gap-2 items-center md:items-start mt-8">
+                    <h1 className="text-yellowIngenia font-poppins font-black text-3xl text-center md:text-left">
+                      Angel Plasencia
+                    </h1>
+                    <h1 className="text-[18px] text-white font-extralight text-center md:text-left">
+                      Padre de Adriano Passaro
+                    </h1>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Columna central - Imagen grande */}
-      <div className="flex-1 flex max-sm:flex-col">
-        <div className="relative w-full  h-[500px] ">
-          {partners.map((partner, index) => (
-            <Image
-              key={partner.id}
-              src={partner.logo}
-              alt="Featured"
-              width={800}
-              height={800}
-              className={cn(
-                "absolute  w-full h-full object-cover rounded-xl border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]",
-                index === activePartner ? "opacity-100" : "opacity-0"
-              )}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Columna derecha - Testimonio */}
-      <div className="flex-1 relative w-full h-[500px]">
-        {partners.map((partner, index) => (
-          <div
-            key={partner.id}
-            className={cn(
-              "absolute inset-0 transition-all duration-500 flex flex-col justify-center",
-              index === activePartner
-                ? "opacity-100"
-                : "opacity-0"
-            )}
-          >
-            <div className="w-full relative flex flex-col gap-7 items-start ">
-              <h1 className="text-yellowIngenia font-poppins font-black text-6xl">Testimonios</h1>
-              <div>
-                <Image
-                  alt="Apostrofe"
-                  src="/img/Apostrofe.png"
-                  width={1000}
-                  height={1000}
-                  className="w-20 h-20"
-                />
+            {/* Columna para pantallas pequeñas */}
+            <div className="flex-2 block md:hidden mt-8 w-full">
+              <div
+                ref={scrollContainerRef}
+                className="h-[90px] w-[360px] overflow-x-auto scrollbar-hide"
+              >
+                <div className="flex flex-col">
+                  <div className="flex flex-row items-center">
+                    {partners.map((partner, index) => (
+                      <div
+                        key={partner.id}
+                        className={cn(
+                          "transition-all duration-300 transform",
+                          index === activePartner
+                            ? "opacity-100 scale-100 px-2 pt-1"
+                            : "opacity-50"
+                        )}
+                      >
+                        <div onClick={scrollUp} className="cursor-pointer">
+                          <Image
+                            src={partner.logo}
+                            alt="user"
+                            width={5000}
+                            height={5000}
+                            className="my-2 size-[3rem] object-cover border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h1 className="text-xl text-justify text-white font-poppins font-medium leading-[1.5] pb-4">
-                {partner.description}
-              </h1>
             </div>
-            <div className="relative flex flex-col gap-2 items-start mt-8">
-              <h1 className="text-yellowIngenia font-poppins font-black text-3xl">Angel Plasencia</h1>
-              <h1 className="text-[25px] text-white font-extralight">Padre de Adriano Passaro</h1>
-            </div>
+  
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  </div>
-</div>
     </>
   );
+  
 }

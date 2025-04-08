@@ -29,8 +29,8 @@ const Grado = () => {
 
 
         <div className="max-w-[100rem] mx-auto ">
-          <div className="flex  justify-center items-center lg:gap-[14rem] w-full mt-[4rem] max-sm:flex-col max-sm:gap-3 max-lg:flex-col max-lg:gap-3
-          md:gap-12 mb-16 sm:flex-col sm:gap-3 lg:flex-row">
+          <div className="flex  justify-center items-center lg:gap-[9rem] w-full mt-[4rem] max-sm:flex-col max-sm:gap-12 max-lg:flex-col max-lg:gap-3 
+          md:gap-12 mb-16 sm:flex-col sm:gap-3 min-[1430px]:flex-row max-[1026px]:flex-col ">
 
             <motion.div
               className="flex flex-col items-center justify-center bg-gradient-to-t from-yellow-600 via-[#21212151] to-[#21212100] p-4
@@ -109,13 +109,14 @@ const Grado = () => {
       <div className="bg-[url('/img/testimonios.jpg')] w-full   ">
         <div className="max-w-[100rem]  px-12 py-10 mx-auto mt-9 ">
 
-          <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellow-500 text-7xl  tracking-[3px]  drop-shadow-[0_0_10px_rgba(249,178,51,1)]">VIDEO EDUCATIVO</h1>
+          <h1 className="px-3 py-5 text-center font-poppins font-bold text-yellow-500 text-[100px] tracking-[3px] max-sm:text-5xl sm:text-7xl
+           drop-shadow-[0_0_10px_rgba(249,178,51,1)]">VIDEO EDUCATIVO</h1>
           <Image
             alt="un video introductorio"
             src="/img/profe.jpeg"
             width={1000}
             height={1000}
-            className=" w-[950px]   object-cover mx-auto rounded-3xl shadow-[0_0_50px_0_#F9B233] mt-10"
+            className=" w-[952px]   object-cover mx-auto rounded-3xl shadow-[0_0_50px_0_#F9B233] mt-10"
           />
         </div>
       </div>

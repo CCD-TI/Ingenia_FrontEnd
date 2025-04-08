@@ -37,14 +37,14 @@ const CarouselComponent = () => {
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1044,
         settings: {
           slidesToShow: 1.5,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 898,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -59,13 +59,13 @@ const CarouselComponent = () => {
     customPaging: (i: number) => (
       <button className="w-3 h-3 rounded-full border-2 border-transparent bg-white/10 hover:bg-white focus:outline-none  active:border-blue-500" />
     ),
-    nextArrow: <CustomNextArrow  />,
+    nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
 
   return (
     <div
-      className="flex flex-col carousel-container mx-auto py-8 w-[92%]  max-[1440px]:w-[70%]  max-xl:w-[80%] max-sm:w-full px-[6rem] max-sm:px-0 min-[500px]:px-0 lg:px-0"
+      className="flex flex-col carousel-container mx-auto py-6 px-2 w-[92%] max-[1440px]:w-[70%] max-xl:w-[80%] max-sm:w-full max-sm:px-0 min-[500px]:px-0 lg:px-0"
       data-aos="zoom-out-right"
       data-aos-delay="200"
     >
@@ -74,57 +74,59 @@ const CarouselComponent = () => {
           // Determinamos el índice de la imagen central
           const isMiddleImage =
             index === (currentSlide + 1) % imageItems.length; // El índice medio es el actual + 1 en un carrusel de 3
+          const isLeftImage = index === (currentSlide) % imageItems.length; // Imagen izquierda
+          const isRightImage = index === (currentSlide + 2) % imageItems.length; // Imagen derecha
+
           return (
-            <div key={index} className="py-6 max-sm:p-0 ">
-              <div
-                className={`flex justify-center items-center rounded-lg ${
-                  isMiddleImage
-                    ? "scale-100 max-[1440px]:scale-90  mx-auto  "
-                    : " scale-80 max-[1440px]:scale-90 mx-auto"
-                }`}
-              >
-          
+      <div key={index} className="py-6 max-sm:p-0">
+        <div
+          className={`flex justify-center items-center rounded-lg ${
+            isMiddleImage
+              ? "scale-100 max-[1440px]:scale-90  mx-auto"
+              : " scale-80 max-[1440px]:scale-90 mx-auto"
+          }`}
+        >
+                <motion.div
+                  whileHover={{ y: -20, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 150, damping: 12 }}
+                  className="border-cyan-500 rounded-2xl bg-white"
+                > 
+                  <div className="rounded-2xl flex flex-col items-center max-w-[460px] shadow-[0_0_30px_0_#ffffff]">{/*Aqui tamaño de la caja*/}
+                    {/* Contenedor del ícono */}
+                    <Image
+                      alt="niña agarrando un laptop"
+                      src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/gradoejmNi%C3%B1a.jpeg"
+                      width={400}
+                      height={400}
+                      className="w-full h-auto aspect-square object-cover rounded-t-2xl "//aqui el tamaño de la imagen size
+                    />
 
-   <motion.div
-   whileHover={{ y: -20, scale: 1.02 }}
-   transition={{ type: "spring", stiffness: 150, damping: 12 }}
-   className=" border-cyan-500 rounded-2xl  bg-white">
-   <div className="  rounded-2xl  flex flex-col items-center  w-[400px] shadow-[0_0_30px_0_#ffffff]">
-      {/* Contenedor del ícono */}
-      <Image
-
-        alt="niña agarrando un laptop " 
-        src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Ejemplos/gradoejmNi%C3%B1a.jpeg"
-        width={400}
-        height={400}
-        className="size-[400px] object-cover rounded-t-2xl "
-
-        />
-
-      {/* Contenido del testimonio */}
-      <div className=" p-4 w-full ">
-        <div className="flex text-black text-base justify-between mb-4">
-        <div className="flex gap-1 items-center">
-        <FaUserAlt className="text-yellowIngenia"/>
-        <h1 className="text-sm">500 Integrantes</h1>
-        </div>
-        <span className="text-yellowIngenia">|</span>
-        <div className="flex gap-1 items-center">
-        <AiFillLike className="text-yellowIngenia" />
-        <h1 className="text-sm">50% (250)</h1>
-        </div>
-        <span className="text-yellowIngenia">|</span>
-        <div className="flex gap-1 items-center">
-        <MdOutlineAccessTimeFilled className="text-yellowIngenia" />
-        <h1 className="text-sm leading-[1] ">5 horas <br /> Academicas</h1>
-        </div>
-        </div>
-        <button  className="w-full p-4 rounded-2xl bg-yellowIngenia text-white hover:text-black">MAS INFORMACIÓN</button>
-      </div>
-    </div>
-   </motion.div>
- 
-
+                    {/* Contenido del testimonio */}
+                    <div className="py-4 px-10 w-full ">
+                      <div className="flex text-black text-base justify-between mb-4">
+                        <div className="flex gap-1 items-center">
+                          <FaUserAlt className="text-yellowIngenia" />
+                          <h1 className="text-sm">500 Integrantes</h1>
+                        </div>
+                        <span className="text-yellowIngenia ml-2">|</span>
+                        <div className="flex gap-1 items-center mr-2 ml-2">
+                          <AiFillLike className="text-yellowIngenia" />
+                          <h1 className="text-sm">50% (250)</h1>
+                        </div>
+                        <span className="text-yellowIngenia mr-2">|</span>
+                        <div className="flex gap-1 items-center">
+                          <MdOutlineAccessTimeFilled className="text-yellowIngenia" />
+                          <h1 className="text-sm leading-[1]">
+                            5 horas <br /> Academicas
+                          </h1>
+                        </div>
+                      </div>
+                      <button className="w-full p-4 rounded-2xl bg-yellowIngenia text-white hover:text-black">
+                        MAS INFORMACIÓN
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
           );
@@ -142,7 +144,7 @@ const CustomNextArrow = ({
 }) => (
   <>
     <button
-      className="absolute top-1/2 -right-20 max-sm:right-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
+      className="absolute top-1/2 -right-20 max-sm:right-[1rem] transform -translate-y-1/2 p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
       onClick={onClick}
     >
       <svg
@@ -162,7 +164,7 @@ const CustomNextArrow = ({
     </button>
     <div className="absolute top-[42.5%] right-[36px] transform -translate-y-1/2 h-[60%] w-[10%] rounded-lg block max-xl:hidden">
       <button
-        className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none"
+        className="relative top-1/2 left-[9rem] max-sm:left-[1rem] transform -translate-y-1/2 p-2 rounded-full z-10 focus:outline-none"
         onClick={onClick}
       >
         <svg
@@ -191,7 +193,7 @@ const CustomPrevArrow = ({
 }) => (
   <>
     <button
-      className="absolute top-1/2 -left-16 max-sm:left-4 transform -translate-y-1/2  p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
+      className="absolute top-1/2 -left-16 max-sm:left-4 transform -translate-y-1/2 p-2 rounded-full z-10 focus:outline-none hidden max-xl:block"
       onClick={onClick}
     >
       <svg
