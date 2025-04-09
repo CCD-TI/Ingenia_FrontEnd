@@ -124,7 +124,7 @@ export default function Inicio() {
           </div>
           <ModalContent
             Content={<BeneficioModal />}
-            button={
+            button={ 
               <button className="rounded-full py-4 sm:py-5 lg:py-6 px-6 sm:px-8 lg:px-10 border-2 border-white text-white font-poppins font-semibold text-xl sm:text-2xl lg:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] hover:bg-white hover:text-[#D93D04] transition-colors duration-300">
                 ¡Comprar Ahora!
               </button>

@@ -12,7 +12,6 @@ import { MdArrowBackIosNew, MdKeyboardArrowDown } from "react-icons/md";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Vega from "@/components/Contador";
 
-
 const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL || "";
 const img = {
   logo: {
@@ -150,14 +149,13 @@ const Navbar = () => {
     } catch (err) {
       setError(
         "Hubo un error al obtener la información: " +
-        ((err as Error)?.message || err)
+          ((err as Error)?.message || err)
       );
       console.error(err);
     } finally {
       setLoading(false);
     }
   };
-
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -194,8 +192,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
- 
-
   const handleMouseEnter = (category: React.SetStateAction<string | null>) =>
     setActiveCategory(category);
   const handleMouseLeave = () => setActiveCategory(null);
@@ -216,7 +212,7 @@ const Navbar = () => {
       const offset = targetElement.offsetTop - navbarHeight;
       window.scrollTo({
         top: offset,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -229,20 +225,12 @@ const Navbar = () => {
 
   return (
     <>
-
-
       {/* Navbar */}
 
-      <nav
-        className={`${showTopBar
-            ? ""
-            : ""
-          } w-full   text-black`}
-      >
+      <nav className={`${showTopBar ? "" : ""} w-full   text-black`}>
         {/* nav cuando baja */}
         <div
-          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-3  gap-4 px-6 lg:px-14 py-5 fixed  z-50 transition-all duration-300 ${isScrolled ? "bg-gray-800 " : ""
-            }`}
+          className={` w-full mx-auto grid grid-cols-7 max-sm:grid-cols-3  gap-4 px-6 lg:px-14 py-5 fixed  z-50 transition-all duration-300 bg-[#232323] rounded-b-[3rem] shadow-lg`}
         >
           {/* Logo */}
           <div className="col-span-2 flex gap-4 items-center">
@@ -260,7 +248,6 @@ const Navbar = () => {
             </div>
             <Link href="/">
               <Image
-
                 src="https://pub-3d37c601c64a44ff8ec0a62bc03016eb.r2.dev/Home/logoIngeniacolores.png"
                 alt="CCD Logo"
                 width={160}
@@ -278,26 +265,30 @@ const Navbar = () => {
                 href="#inicio"
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                <span className="text-white font-poppins text-[20px]">Inicio</span>
+                <span className="text-white font-poppins text-[20px]">
+                  Inicio
+                </span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
             <li>
               <div
                 className="relative group"
-                onMouseEnter={() => handleMouseEnter("escuelas")}
+                onMouseEnter={() => handleMouseEnter("niveles")}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
                   href="#niveles"
                   className="py-2 -mb-[1px] md:text-xs xl:text-base flex items-center gap-2 hover:text-cyanIngenia font-bold"
-                  onClick={(e) => handleScroll(e, 'niveles')}
+                  onClick={(e) => handleScroll(e, "niveles")}
                 >
-                  <span className="text-[#05abdd] font-poppins text-[20px] drop-shadow-[0_0_20px_rgba(2,132,199,9)]">Niveles</span>
+                  <span className="text-[#05abdd] font-poppins text-[20px] drop-shadow-[0_0_20px_rgba(2,132,199,9)]">
+                    Niveles
+                  </span>
                   <MdKeyboardArrowDown className="text-2xl drop-shadow-[0_0_20px_rgba(2,132,199,9)] transition-transform duration-300 ease-in-out group-hover:rotate-180 text-[#05abdd]" />
                 </Link>
-                {activeCategory === "escuelas" && (
-                  <div className="absolute top-full left-0 bg-colors-night-blue-ccd2 bg-opacity-60 rounded-2xl py-4 shadow-lg backdrop-blur-md">
+                {activeCategory === "niveles" && (
+                  <div className="absolute top-full left-0   rounded-2xl py-4 shadow-lg backdrop-blur-md bg-[#059DCA] ">
                     {/* Subcategorías */}
                     <ul className="flex flex-col gap-2 ">
                       <li
@@ -308,17 +299,33 @@ const Navbar = () => {
                         <div className="px-4">
                           <Link
                             href="/grados"
-                            className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
+                            className="p-4 py-2 w-full text-2xl hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3 font-extrabold hover:bg-yellowIngenia 
+                            transition-all duration-400 "
                           >
-                            <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
+                            {/* <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-red-500">
                             
-                            </div>
+                            </div> */}
                             Primaria
                           </Link>
                         </div>
                         {activeSubCategory === "gestion" && (
-                          <ul className="flex flex-col gap-3 absolute w-80 top-0 left-full bg-colors-night-blue-ccd2 bg-opacity-60 p-4 rounded-2xl shadow-lg backdrop-blur-md">
-                            {especializaciones[2]?.map(
+                          <ul className="flex flex-col gap-3 absolute w-80 top-0 left-full bg-slate-400 p-4 rounded-2xl shadow-lg backdrop-blur-md">
+                             <li
+                                 
+                                  className="flex items-start gap-2"
+                                >
+                                  <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
+                                  <Link
+                                    href={{
+                                      pathname: "/gestion", // La ruta donde quieres que se apliquen los filtros
+                                      // Pasar el nombre de la especialización como parámetro en la URL
+                                    }}
+                                    passHref
+                                  >
+                                    4to Grado
+                                  </Link>
+                                </li>
+                            {/* {especializaciones[2]?.map(
                               (
                                 especializacion,
                                 idx // Aquí usamos el schoolId 2 como ejemplo
@@ -342,7 +349,7 @@ const Navbar = () => {
                                   </Link>
                                 </li>
                               )
-                            )}
+                            )} */}
                           </ul>
                         )}
                       </li>
@@ -357,11 +364,12 @@ const Navbar = () => {
                         <div className="px-4">
                           <Link
                             href="/ingenieria"
-                            className="p-4 w-44 hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3"
+                            className="p-4 w-full py-2 text-2xl font-extrabold hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3 hover:bg-yellowIngenia 
+                            transition-all duration-400"
                           >
-                            <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
+                            {/* <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
                             
-                            </div>
+                            </div> */}
                             Secundaria
                           </Link>
                         </div>
@@ -396,17 +404,54 @@ const Navbar = () => {
                         )}
                       </li>
 
-                  
-                      {/* Linea Separadora */}
-                      <hr className="border-t-2 border-cyanIngenia w-full p-0 m-0" />
-                      {/* Rutas */}
                       <li
                         className="relative group"
-                        // onMouseEnter={() => handleSubMouseEnter("rutas")}
+                        onMouseEnter={() =>
+                          handleSubMouseEnter("Pre universitario", 1)
+                        }
                         onMouseLeave={handleSubMouseLeave}
                       >
-                      
-                      
+                        <div className="px-4">
+                          <Link
+                            href="/ingenieria"
+                            className="p-4 w-60 py-2 font-extrabold hover:border-colors-sky-ccd border-transparent border-[1px] rounded-xl flex items-center gap-3 text-2xl hover:bg-yellowIngenia 
+                            transition-all duration-400"
+                          >
+                            {/* <div className="bg-gradient-to-t from-[rgba(40,58,137,1)] to-[rgba(0,0,0,1)] flex items-center justify-center w-10 h-10 rounded-full outline outline-[1.5px] outline-cyanIngenia">
+                            
+                            </div> */}
+                            Pre universitario
+                          </Link>
+                        </div>
+                        {activeSubCategory === "ingenieria" && (
+                          <ul className="flex flex-col gap-3 absolute w-80 top-0 left-full bg-colors-night-blue-ccd2 bg-opacity-60 p-4 rounded-2xl shadow-lg backdrop-blur-md">
+                            {especializaciones[1]?.map(
+                              (
+                                especializacion,
+                                idx // Aquí usamos el schoolId 2 como ejemplo
+                              ) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-start gap-2"
+                                >
+                                  <BiSolidRightArrow className="text-colors-cyan-ccd w-5 h-5 flex-shrink-0" />
+                                  <Link
+                                    href={{
+                                      pathname: "/ingenieria", // La ruta donde quieres que se apliquen los filtros
+                                      query: {
+                                        especializacion:
+                                          especializacion.IdEspecializacion,
+                                      }, // Pasar el nombre de la especialización como parámetro en la URL
+                                    }}
+                                    passHref
+                                  >
+                                    {especializacion.Especializacion}
+                                  </Link>
+                                </li> // Mostrar cada especialización en una lista
+                              )
+                            )}
+                          </ul>
+                        )}
                       </li>
                     </ul>
                   </div>
@@ -415,15 +460,17 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#nosotros"
-                onClick={(e) => handleScroll(e, "nosotros")}
+                href="/embajadores"
+                // onClick={(e) => handleScroll(e, "nosotros")}
                 className="relative group md:text-xs xl:text-base text-white transition-all duration-300 font-bold"
               >
-                <span className="text-white font-poppins text-[20px]">Embajadores</span>
+                <span className="text-white font-poppins text-[20px]">
+                  Embajadores
+                </span>
                 <span className="absolute left-0 bottom-[-4px] w-0 h-[3px] bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </li>
-           
+
             <li className="">
               <Link
                 // href="https://campus.ccdcapacitacion.edu.pe/mod/customcert/verify_certificate.php"
@@ -431,9 +478,13 @@ const Navbar = () => {
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                <span className="text-white font-poppins text-[20px]">Ranking</span>
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
-                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="text-white font-poppins text-[20px]">
+                  Ranking
+                </span>
+                <span
+                  className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"
+                ></span>
               </Link>
             </li>
             <li className="">
@@ -443,9 +494,13 @@ const Navbar = () => {
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                <span className="text-white font-poppins text-[20px]">Premios</span>
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
-                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="text-white font-poppins text-[20px]">
+                  Premios
+                </span>
+                <span
+                  className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"
+                ></span>
               </Link>
             </li>
             <li className="">
@@ -455,11 +510,17 @@ const Navbar = () => {
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-               
-                <span className="text-yellow-400 font-poppins text-[20px] flex gap-1 justify-center
-                 drop-shadow-[0_0_20px_rgba(234,179,8,0.9)] ">Promociones<FaStar className="text-yellow-400 drop-shadow-[0_0_50px_rgba(234,179,8,0.9)] " /></span>
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[3px]
-                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                <span
+                  className="text-yellow-400 font-poppins text-[20px] flex gap-1 justify-center
+                 drop-shadow-[0_0_20px_rgba(234,179,8,0.9)] "
+                >
+                  Promociones
+                  <FaStar className="text-yellow-400 drop-shadow-[0_0_50px_rgba(234,179,8,0.9)] " />
+                </span>
+                <span
+                  className="absolute left-0 bottom-[-4px] w-0 h-[3px]
+                 bg-gradient-to-r from-transparent via-yellow-500 to-yellow-600 transition-all duration-300 group-hover:w-full"
+                ></span>
               </Link>
             </li>
             <li>{/* <ModalFormJobCCD /> */}</li>
@@ -470,8 +531,9 @@ const Navbar = () => {
             <Link
               href="https://campus.ccdcapacitacion.edu.pe/login/index.php"
               target="_blank"
-              className="relative text-lg border-[3px] border-white group py-3 px-7 bg-white/30 text-white font-bold  hover:border-black transition-all 
-    duration-300 rounded-2xl flex items-center justify-center whitespace-nowrap max-sm:hidden"
+              className="relative text-lg border-[1px] border-white group py-3 px-7 bg-white/30 text-white font-bold  hover:border-none hover:bg-yellowIngenia
+                       hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,2)]transition-all duration-600 rounded-2xl flex items-center justify-center
+                         whitespace-nowrap max-sm:hidden shadow-[0_0_8px_rgba(255,255,255,1)]"
             >
               Aula Virtual
             </Link>
@@ -479,18 +541,16 @@ const Navbar = () => {
             {/* Ícono de usuario */}
             <IoCart className="text-4xl text-white flex-shrink-0" />
             <FaUser className="text-3xl text-white flex-shrink-0" />
-          
           </div>
-
         </div>
-
 
         {/* Menú desplegable para móvil */}
         <div className="inset-0 flex-1 relative ">
           {/* Capa de desenfoque detrás del contenido */}
           <div
-            className={`fixed inset-0 bg-black/50 z-[99999999999]  ${menuOpen ? "block" : "hidden"
-              }`}
+            className={`fixed inset-0 bg-black/50 z-[99999999999]  ${
+              menuOpen ? "block" : "hidden"
+            }`}
           >
             <div className="absolute inset-0 bg-transparent filter blur-lg"></div>
           </div>
@@ -498,8 +558,9 @@ const Navbar = () => {
           {/* Botón de cierre fuera del menú, visible solo cuando el menú está abierto */}
           <button
             onClick={toggleMenu}
-            className={`fixed top-4 left-[77%] text-black text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${menuOpen ? "block" : "hidden"
-              }
+            className={`fixed top-4 left-[77%] text-black text-3xl focus:outline-none z-[99999999999] transition-transform duration-500 ease-in-out ${
+              menuOpen ? "block" : "hidden"
+            }
             `}
           >
             <AiOutlineClose className="bg-white rounded-full p-2 w-10 h-10" />
@@ -507,8 +568,9 @@ const Navbar = () => {
 
           {/* Menú desplegable */}
           <div
-            className={`w-[75%] fixed z-[99999999999]   inset-0 bg-white text-white flex flex-col justify-start p-8 items-start  h-screen transform ${menuOpen ? "translate-x-0" : "-translate-x-full"
-              } transition-transform duration-500 ease-in-out`}
+            className={`w-[75%] fixed z-[99999999999]   inset-0 bg-white text-white flex flex-col justify-start p-8 items-start  h-screen transform ${
+              menuOpen ? "translate-x-0" : "-translate-x-full"
+            } transition-transform duration-500 ease-in-out`}
           >
             {/* Menú principal */}
             {!subMenuOpen && !secondMenuOpen ? (
@@ -589,9 +651,6 @@ const Navbar = () => {
                     AULA VIRTUAL
                   </Link>
                 </li>
-
-
-          
               </ul>
             ) : subMenuOpen &&
               !innerSubMenuOpen &&
@@ -807,7 +866,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-  
     </>
   );
 };
