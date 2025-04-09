@@ -20,7 +20,7 @@ const Grado = () => {
 
 
         <div className="flex items-start justify-center">
-          <p className="text-9xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)] max-sm:text-6xl sm:text-9xl">4</p>
+          <p className="text-9xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)] max-sm:text-6xl sm:text-9xl ">4</p>
           <p className="text-5xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)] max-sm:text-4xl sm:text-5xl">to</p>
           <h1 className="text-9xl text-white font-extrabold drop-shadow-[0_0_15px_rgba(255,255,255,1)] max-sm:text-6xl sm:text-9xl">GRADO</h1>
         </div>

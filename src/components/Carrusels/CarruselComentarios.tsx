@@ -215,19 +215,21 @@ export default function PartnersShowcase() {
       });
     }
   }, [activePartner]);
+
   return (
     <>
-      <div className="relative">
-        <div className="relative z-10 max-w-[100rem] h-full mx-auto px-10">
-          <div className="flex flex-col md:flex-row items-center gap-25 md:gap-10 md:py-18">
+      <div className="relative lg:pr-20 md:pr-10 sm:pr-0">
+        <div className="relative z-10 max-w-[100rem] h-full mx-auto px-1">
+          <div className="flex flex-col md:flex-row items-center lg:gap-20 sm:gap-0 md:gap-0">
+            
             {/* Columna izquierda - Partners scrollable (solo visible en pantallas grandes) */}
-            <div className="relative max-xl:w-[20rem] h-[468px] hidden md:block">
+            <div className="relative lg:w-[7rem] h-[450px] hidden md:block md:py-7 md:my-3 md:pt-10 md:w-[14rem] lg:py-0">
               <div
                 ref={scrollContainerRef}
                 className="h-full overflow-y-auto scrollbar-hide"
               >
                 <div className="flex flex-col">
-                  <div className="flex flex-col items-center sm:flex-row lg:flex-col md:flex-col">
+                  <div className="flex flex-col items-center lg:flex-col lg:w-[110px]">
                     {partners.map((partner, index) => (
                       <div
                         key={partner.id}
@@ -244,8 +246,7 @@ export default function PartnersShowcase() {
                             alt="user"
                             width={5000}
                             height={5000}
-                            className="my-2 size-[5rem] object-cover border-2 border-yellowIngenia rounded-xl
-                            shadow-[0_0_30px_rgba(234,179,8,0.8)]"
+                            className="my-2 size-[5rem] object-cover border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]"
                           />
                         </div>
                       </div>
@@ -254,28 +255,30 @@ export default function PartnersShowcase() {
                 </div>
               </div>
             </div>
+  
+          
+          {/* Columna central - Imagen grande */}
+          <div className="flex-1 hidden lg:block md:hidden">
+            <div className="relative w-full h-[480px]">
+              {partners.map((partner, index) => (
+                <Image
+                  key={partner.id}
+                  src={partner.logo}
+                  alt="Featured"
+                  width={800}
+                  height={800}
+                  className={cn(
+                    "transition-all duration-300 transform absolute w-full h-full object-cover rounded-xl border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]",
+                    index === activePartner ? "opacity-100" : "opacity-0"
+                  )}
+                />
+              ))}
+            </div>
+          </div>
 
-              {/* Columna central - Imagen grande */}
-              <div className="flex-1 hidden md:hidden lg:block">
-                <div className="relative w-full h-[500px]">
-                  {partners.map((partner, index) => (
-                    <Image
-                      key={partner.id}
-                      src={partner.logo}
-                      alt="Featured"
-                      width={800}
-                      height={800}
-                      className={cn(
-                        "absolute w-full h-full object-cover rounded-[50px] border-2 border-yellowIngenia shadow-[0_0_30px_rgba(234,179,8,0.8)]",
-                        index === activePartner ? "opacity-100" : "opacity-0"
-                      )}
-                    />
-                  ))}
-                </div>
-              </div>
-
+  
             {/* Columna derecha - Testimonio */}
-            <div className="flex-1 relative w-full h-[500px] flex flex-col items-center md:flex-row md:items-start">
+            <div className="flex-1 relative w-full h-[500px] flex flex-col items-center md:items-start">
               {partners.map((partner, index) => (
                 <div
                   key={partner.id}
@@ -286,48 +289,48 @@ export default function PartnersShowcase() {
                       : "opacity-0"
                   )}
                 >
-                  <div className="w-full relative flex flex-col gap-7 items-center md:items-start">
-                    <h1 className="text-yellowIngenia font-poppins font-black text-6xl text-center md:text-left drop-shadow-[0_0_10px_rgba(234,179,8,1)]">Testimonios</h1>
+                  <div className="w-full relative flex flex-col gap-7 items-center md:items-start md:gap-8">
+                    <h1 className="text-yellowIngenia font-poppins font-black lg:text-6xl md:text-6xl lg:text-center md:text-left sm:text-[20px]">Testimonios</h1>
                     <div>
-                      <Image
-                        alt="Apostrofe"
-                        src="/img/Apostrofe.png"
-                        width={1000}
-                        height={1000}
-                        className="w-20 h-20 drop-shadow-[0_0_20px_rgba(234,179,8,1)]"
-                      />
+                    <Image
+                      alt="Apostrofe"
+                      src="/img/Apostrofe.png"
+                      width={1000}
+                      height={1000}
+                      className="max-sm:w-4 max-sm:h-4 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-20 lg:h-20"
+                    />
                     </div>
-                    <h1 className="text-justify text-white font-poppins font-medium leading-[1.5] pb-4 text-sm md:text-xl  md:text-left">
+                    <h1 className=" text-white font-poppins font-medium leading-[1.0] lg:pb-2 lg:text-md md:text-xl text-center md:text-left lg:w-[300px] md:w-[400px] md:pb-0 sm:text-[13px] sm:w-[250px]">
                       {partner.description}
                     </h1>
                   </div>
                   <div className="relative flex flex-col gap-2 items-center md:items-start mt-8">
-                    <h1 className="text-yellowIngenia font-poppins font-black text-3xl text-center md:text-left">
+                    <h1 className="text-yellowIngenia font-poppins font-black md:text-3xl text-center lg:w-[250px] md:text-left ">
                       Angel Plasencia
                     </h1>
-                    <h1 className="text-[18px] text-white font-extralight text-center md:text-left">
+                    <h1 className="md:text-[18px] text-white font-extralight text-center md:text-left ">
                       Padre de Adriano Passaro
                     </h1>
                   </div>
                 </div>
               ))}
             </div>
-
+  
             {/* Columna para pantallas pequeñas */}
-            <div className="flex-2 block md:hidden mt-8 w-full">
+            <div className="relativo md:hidden mt-16 w-[350px]">
               <div
                 ref={scrollContainerRef}
-                className="h-[90px] w-[360px] overflow-x-auto scrollbar-hide"
+                className="h-full overflow-y-auto scrollbar-hide"
               >
-                <div className="flex flex-col">
-                  <div className="flex flex-row items-center">
+                <div className="flex flex-col items-center">
+                  <div className="flex flex-row items-center ">
                     {partners.map((partner, index) => (
                       <div
                         key={partner.id}
                         className={cn(
                           "transition-all duration-300 transform",
                           index === activePartner
-                            ? "opacity-100 scale-100 px-2 pt-1"
+                            ? "opacity-100 scale-110 px-2 pt-2"
                             : "opacity-50"
                         )}
                       >
@@ -352,5 +355,7 @@ export default function PartnersShowcase() {
       </div>
     </>
   );
+  
+  
   
 }
