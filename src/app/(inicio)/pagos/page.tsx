@@ -20,7 +20,22 @@ export default function Pagos() {
                     <span className="flex gap-3 items-center mt-3"><FaCheckSquare/>2 Item Seleccionado</span>
                     <div className="w-full h-[3px] bg-white drop-shadow-[0_0_10px_rgba(255,255,255,2)] mt-2 "></div>
                 </div>
-                <div className="max-h-[400px] overflow-y-auto pr-4 mt-4">
+                <div className="max-h-[400px] overflow-y-auto pr-4 mt-4 scroll-box">
+                <style jsx>{`
+    .scroll-box::-webkit-scrollbar {
+      width: 10px;
+    }
+      
+
+    .scroll-box::-webkit-scrollbar-thumb {
+      background-color: #06b6d4;
+      border-radius: 9999px;
+    }
+    .scroll-box {
+      scrollbar-color: #06b6d4 transparent;
+      scrollbar-width: thin;
+    }
+  `}</style>
                 <div className="flex items-center gap-4 pl-10 mt-6 ">
                     <span className="flex gap-4"><FaCheckSquare className="w-6 h-6"/></span>
                     <div className="h-[120px] w-[120px]">
@@ -81,8 +96,65 @@ export default function Pagos() {
                     
                     <span className="ml-40 font-poppins font-semibold text-xl">S/. 599.99</span>
                 </div>
+                <div className="flex items-center gap-4 pl-10 mt-4">
+                    <span className="flex gap-4"><FaCheckSquare className="w-6 h-6"/></span>
+                    <div className="h-[120px] w-[120px] ">
+                          <Image
+                                          alt="crown"
+                                          src="/img/ciencias1.jpeg"
+                                          width={1000}
+                                          height={1000}
+                                          className="w-full h-full object-cover rounded-xl"
+                                        />
+                    </div>
+                    <span className="flex flex-col "> 
+                        <p> <strong className="text-lg">4to grado Física</strong></p>
+                        <p className="font-poppins font-extralight">Marzo 14, 2025 - 13:00</p>
+                        <p className="font-poppins font-extralight">Periodo de validación: <strong>12 Julio 2025</strong>  </p>
+                    </span>
+                    
+                    <span className="ml-40 font-poppins font-semibold text-xl">S/. 599.99</span>
+                </div>
 
-               <span></span>
+                <div className="flex items-center gap-4 pl-10 mt-4">
+                    <span className="flex gap-4"><FaCheckSquare className="w-6 h-6"/></span>
+                    <div className="h-[120px] w-[120px] ">
+                          <Image
+                                          alt="crown"
+                                          src="/img/ciencias1.jpeg"
+                                          width={1000}
+                                          height={1000}
+                                          className="w-full h-full object-cover rounded-xl"
+                                        />
+                    </div>
+                    <span className="flex flex-col "> 
+                        <p> <strong className="text-lg">4to grado Física</strong></p>
+                        <p className="font-poppins font-extralight">Marzo 14, 2025 - 13:00</p>
+                        <p className="font-poppins font-extralight">Periodo de validación: <strong>12 Julio 2025</strong>  </p>
+                    </span>
+                    
+                    <span className="ml-40 font-poppins font-semibold text-xl">S/. 599.99</span>
+                </div>
+
+                <div className="flex items-center gap-4 pl-10 mt-4">
+                    <span className="flex gap-4"><FaCheckSquare className="w-6 h-6"/></span>
+                    <div className="h-[120px] w-[120px] ">
+                          <Image
+                                          alt="crown"
+                                          src="/img/ciencias1.jpeg"
+                                          width={1000}
+                                          height={1000}
+                                          className="w-full h-full object-cover rounded-xl"
+                                        />
+                    </div>
+                    <span className="flex flex-col "> 
+                        <p> <strong className="text-lg">4to grado Física</strong></p>
+                        <p className="font-poppins font-extralight">Marzo 14, 2025 - 13:00</p>
+                        <p className="font-poppins font-extralight">Periodo de validación: <strong>12 Julio 2025</strong>  </p>
+                    </span>
+                    
+                    <span className="ml-40 font-poppins font-semibold text-xl">S/. 599.99</span>
+                </div>
        
             
             </div>
