@@ -21,6 +21,7 @@ const img = {
 import { environment } from "../environments/environment";
 import { FaStar } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
+import AuthContainer from "./Auth/AuthContainer";
 // import ModalFormJobCCD from "./ModalFormJobCCD";
 
 interface Especializacion {
@@ -46,6 +47,8 @@ const Navbar = () => {
   const [activeSubCategory, setActiveSubCategory] = useState<string | null>(
     null
   );
+
+  const [showAuthModal, setShowAuthModal] = useState(false); // Controla la visibilidad del modal de autenticación
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false); // Controla el primer submenú
@@ -540,8 +543,31 @@ const Navbar = () => {
 
             {/* Ícono de usuario */}
             <IoCart className="text-4xl text-white flex-shrink-0" />
-            <FaUser className="text-3xl text-white flex-shrink-0" />
-          </div>
+
+            <button
+              onClick={() => setShowAuthModal(true)}
+              className="text-3xl text-white flex-shrink-0"
+            >
+              <FaUser />
+            </button>
+
+            {/* Modal para AuthContainer */}
+            {showAuthModal && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                <button
+                onClick={() => setShowAuthModal(false)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+                >
+                <IoMdCloseCircle className="text-2xl" />
+                </button>
+                <AuthContainer />
+              </div>
+              </div>
+            )}
+            </div>
+
+          
         </div>
 
         {/* Menú desplegable para móvil */}
