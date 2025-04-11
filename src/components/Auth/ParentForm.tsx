@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type ParentData = {
   firstName: string;
@@ -15,21 +15,42 @@ type ChildData = {
   dni: string;
 };
 
-export default function ParentForm({ dni, onBack }: { dni: string; onBack: () => void }) {
+type ParentFormProps = {
+  dni: string;
+  onBack: () => void;
+  userData?: {
+    nombres?: string;
+    apellidos?: string;
+    correo?: string;
+  };
+};
+
+export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
   const [parentData, setParentData] = useState<ParentData>({
-    firstName: 'Juan Carlos',
-    lastName: 'Mendoza López',
+    firstName: '',
+    lastName: '',
     dni: dni,
     relationship: 'Padre',
-    email: 'jcmendoza4790@example.com'
+    email: ''
   });
-  
+
   const [children, setChildren] = useState<ChildData[]>([]);
   const [newChild, setNewChild] = useState<ChildData>({
     firstName: '',
     lastName: '',
     dni: ''
   });
+
+  useEffect(() => {
+    if (userData) {
+      setParentData(prev => ({
+        ...prev,
+        firstName: userData.nombres || '',
+        lastName: userData.apellidos || '', 
+        email: userData.correo || '',
+      }));
+    }
+  }, [userData]);
 
   const handleAddChild = () => {
     if (newChild.firstName && newChild.lastName && newChild.dni) {
@@ -44,6 +65,16 @@ export default function ParentForm({ dni, onBack }: { dni: string; onBack: () =>
       children: skipChildren ? [] : children
     };
     console.log('Registering parent:', data);
+    // Aquí podrías hacer un fetch o axios para enviar los datos al backend
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, isChild: boolean = false) => {
+    const { name, value } = e.target;
+    if (isChild) {
+      setNewChild(prev => ({ ...prev, [name]: value }));
+    } else {
+      setParentData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   return (
