@@ -20,10 +20,10 @@ const Tabs = () => {
           : "bg-[url('/img/mision.png')] bg-center bg-cover"
       }`}
     >
-      <div className="max-w-[100rem] h-full mx-auto flex flex-col justify-center items-center gap-6 py-24">
+      <div className="max-w-[100rem] h-full mx-auto flex flex-col justify-center items-center gap-6">
         
 
-        <div className="text-5xl !text-white flex items-center gap-3 max-lg:flex-col">
+        <div className="text-5xl !text-white flex items-center gap-3 max-lg:flex-col mt-10">
           <span className="font-poppins font-normal "> Ofertas con un</span>
           <span className="text-7xl font-bold  text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
             50%
@@ -366,7 +366,7 @@ const Tabs = () => {
           <div className="flex items-center gap-3 md:gap-4">
             <MdKeyboardDoubleArrowRight className="text-white text-5xl md:text-6xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 min-w-[36px]" />
 
-            <h1 className="text-white font-poppins font-semibold text-3xl md:text-4xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 whitespace-nowrap">
+            <h1 className="text-white max-sm:text-sm font-poppins font-semibold text-3xl md:text-4xl drop-shadow-[0_0_25px_#ffffff] md:drop-shadow-[0_0_40px_#ffffff] brightness-200 hover:scale-110 transition-transform duration-300 whitespace-nowrap">
               ¡Aprovecha Ahora!
             </h1>
           </div>

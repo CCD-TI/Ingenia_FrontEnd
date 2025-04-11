@@ -1,18 +1,50 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function StudentForm({ dni, onBack }: { dni: string; onBack: () => void }) {
+type StudentFormProps = {
+  dni: string;
+  onBack: () => void;
+  userData?: {
+    nombres?: string;
+    apellidos?: string;
+    correo?: string;
+  };
+};
+
+export default function StudentForm({ dni, onBack, userData }: StudentFormProps) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     dni: dni,
-    email: '',
-    grade: '',
-    section: ''
+    correo: '',
+    grado: '',
+    seccion: ''
   });
 
+  useEffect(() => {
+    if (userData) {
+      setFormData(prev => ({
+        ...prev,
+        firstName: userData.nombres || '',  // Autocompletar con el campo "nombres"
+        lastName: userData.apellidos || '', // Autocompletar con el campo "apellidos"
+        correo: userData.correo || '',
+      }));
+    }
+  }, [userData]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = () => {
-    console.log('Registering student:', formData);
+    // Aquí puedes agregar validaciones antes de enviar el formulario
+    if (!formData.firstName || !formData.lastName || !formData.correo || !formData.grado || !formData.seccion) {
+      alert("Por favor, complete todos los campos");
+      return;
+    }
+    console.log('Estudiante Registrado:', formData);
+    // Aquí puedes hacer la lógica para enviar los datos al servidor
   };
 
   return (
@@ -53,8 +85,8 @@ export default function StudentForm({ dni, onBack }: { dni: string; onBack: () =
         <label className="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
         <input
           type="email"
-          value={formData.email}
-          onChange={(e) => setFormData({...formData, email: e.target.value})}
+          value={formData.correo}
+          onChange={(e) => setFormData({...formData, correo: e.target.value})}
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
@@ -64,8 +96,8 @@ export default function StudentForm({ dni, onBack }: { dni: string; onBack: () =
           <label className="block text-sm font-medium text-gray-700 mb-1">Grado</label>
           <input
             type="text"
-            value={formData.grade}
-            onChange={(e) => setFormData({...formData, grade: e.target.value})}
+            value={formData.grado}
+            onChange={(e) => setFormData({...formData, grado: e.target.value})}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
@@ -73,8 +105,8 @@ export default function StudentForm({ dni, onBack }: { dni: string; onBack: () =
           <label className="block text-sm font-medium text-gray-700 mb-1">Sección</label>
           <input
             type="text"
-            value={formData.section}
-            onChange={(e) => setFormData({...formData, section: e.target.value})}
+            value={formData.seccion}
+            onChange={(e) => setFormData({...formData, seccion: e.target.value})}
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
