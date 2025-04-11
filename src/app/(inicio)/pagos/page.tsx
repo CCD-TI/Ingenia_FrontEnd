@@ -7,7 +7,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 export default function Pagos() {
     return (
         <>
-            <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-[999px] bg-cover bg-center flex flex-col items-start m-3 
+            <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-[999px] bg-cover bg-center flex flex-col items-start  
             justify-center gap-1 '>
             <span className=" ml-16 flex gap-2 items-center"><MdKeyboardArrowLeft className="w-5 h-5" />Regresar</span>
             <div className="flex gap-10 items-start justify-center  mx-auto mt-4 max-sm:flex-col max-sm:gap-2  min-[1330px]:flex-row max-[1300px]:flex-col"> 
@@ -48,7 +48,7 @@ export default function Pagos() {
     }
   `}</style>
                 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -68,8 +68,8 @@ export default function Pagos() {
                     </span>
                     </div>
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-28 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/,. 599.99</span>
+                      <span className="lg:ml-40 md:ml-28 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
 
@@ -78,7 +78,7 @@ export default function Pagos() {
                 mt-3 ml-2"></div>
 
 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -98,8 +98,8 @@ export default function Pagos() {
                     </span>
                     </div>
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-36 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/. 599.99</span>
+                      <span className="lg:ml-40 md:ml-36 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
 
@@ -108,7 +108,7 @@ export default function Pagos() {
                 mt-3 ml-2"></div>
 
 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -128,8 +128,8 @@ export default function Pagos() {
                     </span>
                     </div>
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-36 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/. 599.99</span>
+                      <span className="lg:ml-40 md:ml-36 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
 
@@ -141,7 +141,7 @@ export default function Pagos() {
 
 
 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -163,8 +163,8 @@ export default function Pagos() {
                     </span>
                     </div>
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-36 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/. 599.99</span>
+                      <span className="lg:ml-40 md:ml-36 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
 
@@ -178,7 +178,7 @@ export default function Pagos() {
 
 
 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -198,8 +198,8 @@ export default function Pagos() {
                     </span>
                     </div>
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-36 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/. 599.99</span>
+                      <span className="lg:ml-40 md:ml-36 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
 
@@ -211,7 +211,7 @@ export default function Pagos() {
 
 
 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center">
-                  <div className="flex flex-row lg:gap-4 max-sm:gap-1 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
+                  <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4  lg:h-[120px] md:h-[120px] h-[180px] " >
                     <span className="flex gap-4 items-center"><FaCheckSquare className="w-6 h-6 max-sm:hidden sm:block md:block lg:block"/></span>
                     
                     <div className="h-[120px] w-[120px] ">
@@ -234,8 +234,8 @@ export default function Pagos() {
                     </div>
                     
                     <div className="flex lg:mt-0 md:mt-0 mt-[-40px] my-3  ">
-                      <span className="lg:ml-40 md:ml-36 ml-[260px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
-                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)]">S/. 599.99</span>
+                      <span className="lg:ml-40 md:ml-36 ml-[199px] font-poppins font-semibold text-2xl max-sm:bg-white/20 max-sm:p-4 max-sm:rounded-xl max-sm:border-2 max-sm:border-white
+                      max-sm:shadow-[0_0_15px_rgba(255,255,255,1)] transition-transform duration-300  hover:-translate-y-3">S/. 599.99</span>
                     </div>
 
                 </div>
@@ -250,23 +250,23 @@ export default function Pagos() {
 
 
 
-        <div className="w-[34rem] min-[1330px]:h-[39rem]  max-sm:h-[27rem] sm:h-[27rem] border-2 border-cyan-600 pt-8 px-16 rounded-[30px] sm:mx-auto
+        <div className="w-[34rem] min-[1330px]:h-[39rem]  max-sm:h-[27rem] max-sm:w-[19rem] sm:h-[27rem] border-2 border-cyan-600 pt-8 px-16 rounded-[30px] sm:mx-auto ml-3
          bg-white/10 shadow-[0_30px_50px_42px_rgba(8,145,178,0.3)]">
             <h1 className="font-poppins font-semibold text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,2)]">Subtotal</h1> 
-           <div className="flex gap-[259px] mt-10">
+           <div className="flex gap-[260px] max-sm:gap-[28px] mt-10">
             <span className="font-poppins font-extralight">Física</span>
             <span className="font-poppins font-semibold text-xl">S/. 599.99</span>
 
            </div>
 
-           <div className="flex gap-[269px] mt-10">
+           <div className="flex gap-[269px] max-sm:gap-[30px] mt-10">
             <span className="font-poppins font-extralight">Descuento</span>
             <span  className="font-poppins font-semibold text-xl">S/. 0</span>
               
            </div>
            <div className="w-full h-[3px] bg-white drop-shadow-[0_0_10px_rgba(255,255,255,2)] mt-10 "></div>
 
-           <div className="flex gap-[269px] mt-10">
+           <div className="flex gap-[269px] max-sm:gap-[29px] mt-10">
             <span className="font-poppins font-extralight drop-shadow-[0_0_10px_rgba(255,255,255,2)]"> Total</span>
             <span  className="font-poppins font-semibold text-xl">S/. 599.99</span>
               
