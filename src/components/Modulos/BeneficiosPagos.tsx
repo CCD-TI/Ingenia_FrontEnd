@@ -24,7 +24,7 @@ const Tabs = () => {
         
 
         <div className="text-5xl !text-white flex items-center gap-3 max-lg:flex-col">
-          <span className="font-poppins font-normal "> Planes que te pueden interesar con un</span>
+          <span className="font-poppins font-normal "> Ofertas con un</span>
           <span className="text-7xl font-bold  text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)]">
             50%
           </span>
