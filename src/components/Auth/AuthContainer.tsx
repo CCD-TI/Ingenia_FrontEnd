@@ -22,8 +22,7 @@ export default function AuthContainer() {
               <button 
                 onClick={() => setIsLogin(false)}
                 className="text-blue-600 hover:text-blue-800 text-sm"
-              >
-                ¿No estás registrado? Crea tu cuenta
+              >¿No estás registrado? Crea tu cuenta
               </button>
             </div>
           </>
