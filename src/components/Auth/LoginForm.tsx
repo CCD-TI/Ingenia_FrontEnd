@@ -1,17 +1,20 @@
 'use client';
 import { FormEvent, useState } from 'react';
 import forge from 'node-forge';
+import Swal from 'sweetalert2'
 
 export default function LoginForm() {
   const [dni, setDni] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setError(''); // Resetear el error al intentar nuevamente
 
     if (!/^\d{8}$/.test(dni)) {
-      alert('El DNI debe tener exactamente 8 dígitos.');
+      setError('El DNI debe tener exactamente 8 dígitos.');
       return;
     }
 
@@ -30,17 +33,28 @@ export default function LoginForm() {
 
       const data = await response.json();
 
+      if (response.status === 401) {
+        setError('Usuario o contraseña incorrectas');
+        return;
+      }
+
       if (!response.ok) {
-        alert(data.error || 'Error al iniciar sesión');
+        setError(data.error || 'Error al iniciar sesión');
         return;
       }
 
       console.log('Login exitoso:', data);
-      alert(`Bienvenido ${data.nombres} ${data.apellidos}`);
+      Swal.fire({
+          title: "INICIO DE SESIÓN EXITOSO",
+          icon: "success",
+          draggable: true
+        });
       localStorage.setItem('token', data.token);
+      
+      // Redirección o manejo post-login aquí
     } catch (error) {
       console.error('Error:', error);
-      alert('Error al conectar con el servidor.');
+      setError('Error al conectar con el servidor.');
     }
   };
 
@@ -53,7 +67,10 @@ export default function LoginForm() {
         <input
           type="text"
           value={dni}
-          onChange={(e) => setDni(e.target.value)}
+          onChange={(e) => {
+            setDni(e.target.value);
+            setError(''); // Limpiar error al editar
+          }}
           maxLength={8}
           pattern="\d{8}"
           inputMode="numeric"
@@ -68,11 +85,17 @@ export default function LoginForm() {
         <input
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setError(''); // Limpiar error al editar
+          }}
           className="w-full px-4 py-2 border border-gray-300 text-black rounded-md focus:ring-blue-500 focus:border-blue-500"
           placeholder="Ingresa tu contraseña"
           required
         />
+        {error && (
+          <p className="mt-1 text-sm text-red-600">{error}</p>
+        )}
       </div>
 
       <div className="flex items-center justify-between">
