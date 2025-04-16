@@ -115,7 +115,25 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
   const [loadingGrados, setLoadingGrados] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
-
+  const [childData, setChildData] = useState<ChildData>({
+    dni: '',
+    firstName: '',
+    lastName: '',
+    apPaterno: '',
+    apMaterno: '',
+    nivel: '',
+    grado: '',
+    genero: '',
+    direccion: '',
+    ubigeo: '',
+    departamento: '',
+    provincia: '',
+    distrito: '',
+    fechaNacimiento: '',
+    correo: '',
+    telefono: ''
+  });
+  
   // Función para validar DNI del estudiante
   const validateStudentDni = async (dniValue: string) => {
     if (!dniValue || dniValue.length !== 8 || !/^\d+$/.test(dniValue)) return;
@@ -188,7 +206,7 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
       
       const nivelesData = data.map((item: any) => ({
         id: item.id || item.IdNivel || item.ID_NIVEL,
-        nombre: item.nombre || item.Nombre || item.NOMBRE
+        nombre: item.nombre || item.Nivel || item.NOMBRE
       }));
       
       setNiveles(nivelesData);
@@ -199,6 +217,7 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
       setLoadingNiveles(false);
     }
   };
+
 
   // Cargar grados por nivel desde la API
   const loadGrados = async (nivelId: number) => {
@@ -275,23 +294,35 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
   const handleSubmit = async (skipChildren: boolean) => {
     setIsSubmitting(true);
     setSubmitError('');
-
+  
     try {
       // 1. Validar datos mínimos del padre
       if (!parentData.firstName || !parentData.lastName || !parentData.email || !parentData.telefono) {
         throw new Error('Complete todos los datos requeridos del padre');
       }
-
+  
       // 2. Validar hijos si no se está omitiendo
-      if (!skipChildren && children.length === 0) {
+      if (!skipChildren && children.length === 0 && !childData.dni) {
         const shouldContinue = confirm('¿Desea registrarse sin agregar estudiantes? Puede agregarlos luego.');
         if (!shouldContinue) {
           setIsSubmitting(false);
           return;
         }
       }
-
-      // 3. Preparar payload
+  
+      // 3. Preparar lista final de hijos
+      const hijosFinales = [...children];
+  
+      // Si hay datos en el formulario de hijo y aún no fue agregado, lo añadimos
+      if (
+        !skipChildren &&
+        childData.dni &&
+        !children.some(c => c.dni === childData.dni)
+      ) {
+        hijosFinales.push(childData);
+      }
+  
+      // 4. Preparar payload
       const payload = {
         // Datos del padre
         nombres_padre: parentData.firstName,
@@ -309,57 +340,58 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
         distrito: parentData.distrito,
         fecha_nacimiento: parentData.fechaNacimiento,
         Rol_id: 2,
-        
+  
         // Datos de hijos (puede ser array vacío)
-        hijos: skipChildren ? [] : children.map(child => ({
-          dni_alumno: child.dni,
-          nombres_alumno: child.firstName,
-          apellidos_alumno: child.lastName,
-          apellido_paterno_alumno: child.apPaterno,
-          apellido_materno_alumno: child.apMaterno,
-          Nivel_id: child.nivel ? parseInt(child.nivel) : null,
-          Grado_id: child.grado ? parseInt(child.grado) : null,
-          genero: child.genero,
-          direccion: child.direccion,
-          ubigeo: child.ubigeo,
-          departamento: child.departamento,
-          provincia: child.provincia,
-          distrito: child.distrito,
-          fecha_nacimiento: child.fechaNacimiento,
-          correo: child.correo,
-          telefono: child.telefono
-        }))
+        hijos: skipChildren
+          ? []
+          : hijosFinales.map(child => ({
+              dni_alumno: child.dni,
+              nombres_alumno: child.firstName,
+              apellidos_alumno: child.lastName,
+              apellido_paterno_alumno: child.apPaterno,
+              apellido_materno_alumno: child.apMaterno,
+              Nivel_id: child.nivel ? parseInt(child.nivel) : null,
+              Grado_id: child.grado ? parseInt(child.grado) : null,
+              genero: child.genero,
+              direccion: child.direccion,
+              ubigeo: child.ubigeo,
+              departamento: child.departamento,
+              provincia: child.provincia,
+              distrito: child.distrito,
+              fecha_nacimiento: child.fechaNacimiento,
+              correo: child.correo,
+              telefono: child.telefono
+            }))
       };
-
+  
       console.log('Enviando datos:', payload);
-
-      // 4. Enviar al backend
+  
+      // 5. Enviar al backend
       const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/usuarios/register`, {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
+        headers: {
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
-
+  
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Error en el registro');
       }
-
+  
       const result = await response.json();
       console.log('Registro exitoso:', result);
-      
-      // 5. Mostrar feedback según si hay hijos o no
-      if (skipChildren || children.length === 0) {
+  
+      // 6. Mostrar feedback
+      if (skipChildren || hijosFinales.length === 0) {
         alert('Registro como padre completado. Puede agregar estudiantes después.');
       } else {
-        alert(`Registro completado con ${children.length} estudiante(s) asociado(s)`);
+        alert(`Registro completado con ${hijosFinales.length} estudiante(s) asociado(s)`);
       }
-      
-      // Opcional: redireccionar
+  
+      // Redirección opcional
       // window.location.href = '/dashboard';
-
     } catch (error) {
       console.error('Error en el registro:', error);
       setSubmitError(error instanceof Error ? error.message : 'Ocurrió un error al registrar');
@@ -367,6 +399,7 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
       setIsSubmitting(false);
     }
   };
+  
 
   return (
     <div className="space-y-6">
@@ -439,133 +472,140 @@ export default function ParentForm({ dni, onBack, userData }: ParentFormProps) {
       </div>
       
       <div className="pt-6">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Estudiantes</h3>
-        
-        <div className="space-y-4 mb-4">
-          {children.map((child, index) => (
-            <div key={index} className="border border-gray-200 rounded-md p-4">
-              <div className="grid grid-cols-2 gap-4 mb-2">
-                <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1">DNI</label>
-                  <p className="text-sm text-black">{child.dni}</p>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1">Nombres</label>
-                  <p className="text-sm text-black">{child.firstName}</p>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-500 mb-1">Apellidos</label>
-                  <p className="text-sm text-black">{child.lastName}</p>
-                </div>
-                {child.nivel && (
-                  <div>
-                    <label className="block text-xs font-medium text-gray-500 mb-1">Nivel</label>
-                    <p className="text-sm text-black">
-                      {niveles.find(n => n.id.toString() === child.nivel)?.nombre || child.nivel}
-                    </p>
-                  </div>
-                )}
-                {child.grado && (
-                  <div>
-                    <label className="block text-xs font-medium text-gray-500 mb-1">Grado</label>
-                    <p className="text-sm text-black">
-                      {grados.find(g => g.id.toString() === child.grado)?.nombre || child.grado}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="border border-gray-200 rounded-md p-4 bg-gray-50">
-          <h4 className="text-sm font-medium text-gray-900 mb-3">Agregar Estudiante</h4>
-          
-          <div className="mb-3">
-            <label className="block text-xs font-medium text-gray-700 mb-1">DNI</label>
-            <input
-              type="text"
-              value={newChild.dni}
-              onChange={async (e) => {
-                const dniValue = e.target.value.replace(/\D/g, '').slice(0, 8);
-                setNewChild({...newChild, dni: dniValue});
-                if (dniValue.length === 8) {
-                  await validateStudentDni(dniValue);
-                }
-              }}
-              maxLength={8}
-              className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
-              placeholder="Ingrese DNI (8 dígitos)"
-              disabled={isValidatingDni}
-            />
-            {isValidatingDni && (
-              <p className="text-xs text-gray-500 mt-1">Validando DNI...</p>
-            )}
-          </div>
+  <h3 className="text-lg font-medium text-gray-900 mb-4">Estudiantes</h3>
 
-          <div className="grid grid-cols-2 gap-4 mb-3">
-            <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">Nombres</label>
-              <input
-                type="text"
-                value={newChild.firstName}
-                onChange={(e) => setNewChild({...newChild, firstName: e.target.value})}
-                className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
-                disabled={isValidatingDni}
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">Apellidos</label>
-              <input
-                type="text"
-                value={newChild.lastName}
-                onChange={(e) => setNewChild({...newChild, lastName: e.target.value})}
-                className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
-                disabled={isValidatingDni}
-              />
-            </div>
+  {/* Lista de estudiantes */}
+  <div className="space-y-4 mb-4">
+    {children.map((child, index) => (
+      <div key={index} className="border border-gray-200 rounded-md p-4">
+        <div className="grid grid-cols-2 gap-4 mb-2">
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">DNI</label>
+            <p className="text-sm text-black">{child.dni}</p>
           </div>
-
-          <div className="grid grid-cols-2 gap-4 mb-3">
-            <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">Nivel</label>
-              <select
-                value={newChild.nivel}
-                onChange={(e) => setNewChild({ ...newChild, nivel: e.target.value, grado: '' })}
-                className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
-                disabled={isValidatingDni || loadingNiveles}
-              >
-                <option value="">{loadingNiveles ? "Cargando niveles..." : "Seleccionar nivel"}</option>
-                {niveles.map(n => (
-                  <option key={n.id} value={n.id}>{n.nombre}</option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-gray-700 mb-1">Grado</label>
-              <select
-                value={newChild.grado}
-                onChange={(e) => setNewChild({ ...newChild, grado: e.target.value })}
-                disabled={!newChild.nivel || isValidatingDni || loadingGrados}
-                className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
-              >
-                <option value="">{loadingGrados ? "Cargando grados..." : "Seleccionar grado"}</option>
-                {grados.map(g => (
-                  <option key={g.id} value={g.id}>{g.nombre}</option>
-                ))}
-              </select>
-            </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Nombres</label>
+            <p className="text-sm text-black">{child.firstName}</p>
           </div>
-
-          <button
-            onClick={handleAddChild}
-            disabled={!newChild.firstName || !newChild.lastName || !newChild.dni || isValidatingDni}
-            className="text-sm text-blue-600 hover:text-blue-800 flex items-center disabled:text-gray-400 disabled:cursor-not-allowed"
-          >
-            <span className="text-xl mr-1">+</span> Agregar Estudiante
-          </button>
+          <div>
+            <label className="block text-xs font-medium text-gray-500 mb-1">Apellidos</label>
+            <p className="text-sm text-black">{child.lastName}</p>
+          </div>
+          {child.nivel && (
+            <div>
+              <label className="block text-xs font-medium text-gray-500 mb-1">Nivel</label>
+              <p className="text-sm text-black">
+                {niveles.find(n => n.id.toString() === child.nivel)?.nombre || child.nivel}
+              </p>
+            </div>
+          )}
+          {child.grado && (
+            <div>
+              <label className="block text-xs font-medium text-gray-500 mb-1">Grado</label>
+              <p className="text-sm text-black">
+                {grados.find(g => g.id.toString() === child.grado)?.nombre || child.grado}
+              </p>
+            </div>
+          )}
         </div>
       </div>
+    ))}
+  </div>
+
+  {/* Formulario para agregar estudiante */}
+  <div className="border border-gray-200 rounded-md p-4 bg-gray-50">
+    <h4 className="text-sm font-medium text-gray-900 mb-3">Agregar Estudiante</h4>
+
+    {/* DNI */}
+    <div className="mb-3">
+      <label className="block text-xs font-medium text-gray-700 mb-1">DNI</label>
+      <input
+        type="text"
+        value={newChild.dni}
+        onChange={async (e) => {
+          const dniValue = e.target.value.replace(/\D/g, '').slice(0, 8);
+          setNewChild({ ...newChild, dni: dniValue });
+          if (dniValue.length === 8) {
+            await validateStudentDni(dniValue);
+          }
+        }}
+        maxLength={8}
+        className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
+        placeholder="Ingrese DNI (8 dígitos)"
+        disabled={isValidatingDni}
+      />
+      {isValidatingDni && (
+        <p className="text-xs text-gray-500 mt-1">Validando DNI...</p>
+      )}
+    </div>
+
+    {/* Nombres y Apellidos */}
+    <div className="grid grid-cols-2 gap-4 mb-3">
+      <div>
+        <label className="block text-xs font-medium text-gray-700 mb-1">Nombres</label>
+        <input
+          type="text"
+          value={newChild.firstName}
+          onChange={(e) => setNewChild({ ...newChild, firstName: e.target.value })}
+          className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
+          disabled={isValidatingDni}
+        />
+      </div>
+      <div>
+        <label className="block text-xs font-medium text-gray-700 mb-1">Apellidos</label>
+        <input
+          type="text"
+          value={newChild.lastName}
+          onChange={(e) => setNewChild({ ...newChild, lastName: e.target.value })}
+          className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
+          disabled={isValidatingDni}
+        />
+      </div>
+    </div>
+
+    {/* Nivel y Grado */}
+    <div className="grid grid-cols-2 gap-4 mb-3">
+      <div>
+        <label className="block text-xs font-medium text-gray-700 mb-1">Nivel</label>
+        <select
+          value={newChild.nivel}
+          onChange={(e) => setNewChild({ ...newChild, nivel: e.target.value, grado: '' })}
+          className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
+          disabled={isValidatingDni || loadingNiveles}
+        >
+          <option value="">{loadingNiveles ? "Cargando niveles..." : "Seleccionar nivel"}</option>
+          {niveles.map(n => (
+            <option key={n.id} value={n.id}>{n.nombre}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label className="block text-xs font-medium text-gray-700 mb-1">Grado</label>
+        <select
+          value={newChild.grado}
+          onChange={(e) => setNewChild({ ...newChild, grado: e.target.value })}
+          disabled={!newChild.nivel || isValidatingDni || loadingGrados}
+          className="w-full px-3 py-1 border border-gray-300 rounded-md text-sm focus:ring-blue-500 focus:border-blue-500 text-black"
+        >
+          <option value="">{loadingGrados ? "Cargando grados..." : "Seleccionar grado"}</option>
+          {grados.map(g => (
+            <option key={g.id} value={g.id}>{g.nombre}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    {/* Botón agregar */}
+    <button
+      onClick={handleAddChild}
+      disabled={!newChild.firstName || !newChild.lastName || !newChild.dni || isValidatingDni}
+      className="text-sm text-blue-600 hover:text-blue-800 flex items-center disabled:text-gray-400 disabled:cursor-not-allowed"
+    >
+      <span className="text-xl mr-1">+</span> Agregar Estudiante
+    </button>
+  </div>
+</div>
+
       
       <div className="flex justify-between pt-6">
         <button

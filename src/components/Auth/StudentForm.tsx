@@ -84,8 +84,11 @@ export default function StudentForm({ dni, onBack, userData }: StudentFormProps)
     };
 
     obtenerNiveles();
+   
+
   }, []);
 
+  
   useEffect(() => {
     const obtenerGrados = async () => {
       if (!formData.nivel) {
@@ -173,6 +176,7 @@ export default function StudentForm({ dni, onBack, userData }: StudentFormProps)
       });
     }
   };
+  console.log("los niveles ",niveles)
 
   return (
     <div className="space-y-6 !text-black">
