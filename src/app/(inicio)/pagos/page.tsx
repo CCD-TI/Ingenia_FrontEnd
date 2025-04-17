@@ -1,23 +1,25 @@
- "use client";
- import { useRouter } from "next/navigation";
-
+"use client";
  import { useState } from 'react';
- import Confirmacion from "@/components/Modulos/Confirmacion";
-import Tarjeta from "@/app/(inicio)/pagos/Tarjeta";
-import BeneficiosPagos from "@/components/Modulos/BeneficiosPagos";
-import { FaCheckSquare } from "react-icons/fa";
-import Image from "next/image";
 
+import Tarjeta from "@/components/Modulos/Tarjeta";
+import BeneficiosPagos from "@/components/Modulos/BeneficiosPagos";
+import Image from "next/image";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import router from "next/router";
 
 export default function Pagos() {
-  const [mostrarTarjeta, setMostrarTarjeta] = useState(false);
+  const [mostrarConfirmacion, setMostrarConfirmacionn] = useState(false);
+
+
+
+
     return (
         <>
        
-           
-            <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-full py-20 max-sm:h-full bg-cover bg-center flex flex-col items-start  
+       <div>
+       {!mostrarConfirmacion ? (
+        <>
+          {/* Todo el contenido del formulario */}
+          <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-full py-20 max-sm:h-full bg-cover bg-center flex flex-col items-start  
             justify-center gap-1 '>
             <span className=" ml-16 flex gap-2 items-center text-white"><MdKeyboardArrowLeft className="w-5 h-5 text-white" />Regresar</span>
             <div className="  flex lg:gap-10 min-[1330px]:gap-24  items-start justify-center  mx-auto mt-4 max-sm:flex-col max-sm:gap-3
@@ -81,10 +83,8 @@ export default function Pagos() {
                       ">S/. 599.99</span>
                     </div>
 
-
                 </div>
-              
-
+          
 
                 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center text-white ">
                   <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4 sm:gap-2 items-center lg:h-[120px] md:h-[120px] 
@@ -142,9 +142,6 @@ export default function Pagos() {
 
                 </div>
 
-
-
-
                 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center text-white ">
                   <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4 sm:gap-2 items-center lg:h-[120px] md:h-[120px] 
                   h-[180px] max-sm:pl-5 " >
@@ -172,11 +169,6 @@ export default function Pagos() {
                     </div>
 
                 </div>
-
-
-
-
-
 
                 <div className="flex items-start flex-col lg:flex-row md:flex-row lg:items-center md:items-center text-white ">
                   <div className="flex flex-row lg:gap-4 max-sm:gap-3 lg:pl-10  mt-4 sm:gap-2 items-center lg:h-[120px] md:h-[120px] 
@@ -232,17 +224,11 @@ export default function Pagos() {
                       ">S/. 599.99</span>
                     </div>
 
-                </div>
-   
+                </div> 
             
             </div>
 
-                </div>
-                
-
-
-
-
+                </div>           
 
         <div className="w-[34rem] max-sm:w-full min-[1300px]:h-[39rem]  max-sm:h-[27rem]  sm:h-[27rem] border-2 border-cyan-600 pt-8 px-16 max-sm:px-10 rounded-[30px] sm:mx-auto
          bg-white/10 shadow-[0_30px_50px_42px_rgba(8,145,178,0.3)] text-white ">
@@ -267,22 +253,25 @@ export default function Pagos() {
            </div>
 
            <button 
-            onClick={() => router.push("/app/inicio/pagos/Tarjeta.tsx")}
+            onClick={() => setMostrarConfirmacionn(true)}
            className="bg-transparent border-2 border-white p-4 rounded-full w-full  min-[1300px]:mt-14 max-sm:mt-5  drop-shadow-[0_0_30px_rgba(255,255,255,8)] uppercase
            text-2xl font-poppins font-black hover:text-cyan-600 hover:bg-white sm:mt-400">Continuar</button>
-                   
-            
+                              
             </div>
-
-
-            </div>
-            
-            
+            </div>        
 
             </div>
-            <BeneficiosPagos />
-           
-            <Confirmacion></Confirmacion>
+            
+            <BeneficiosPagos></BeneficiosPagos>
+         
+        </>
+      ) : (
+        <div>
+         <Tarjeta ></Tarjeta>
+         
+        </div>
+      )}
+    </div>
         </>
     );
 }
