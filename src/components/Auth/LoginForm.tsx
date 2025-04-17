@@ -2,6 +2,8 @@
 import { FormEvent, useState } from 'react';
 import forge from 'node-forge';
 import Swal from 'sweetalert2'
+import {getUserData} from "@/components/Auth/auth";
+import Cookies from 'js-cookie';
 
 export default function LoginForm() {
   const [dni, setDni] = useState('');
@@ -9,54 +11,69 @@ export default function LoginForm() {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
 
+  const user = getUserData();
+
+  // console.log('User desde el token:', user?.Rol_id);
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError(''); // Resetear el error al intentar nuevamente
-
+  
     if (!/^\d{8}$/.test(dni)) {
       setError('El DNI debe tener exactamente 8 dígitos.');
       return;
     }
-
+  
     try {
       const publicKeyPem = process.env.NEXT_PUBLIC_RSA_PUBLIC_KEY!;
       const publicKey = forge.pki.publicKeyFromPem(publicKeyPem);
-
+  
       const payload = JSON.stringify({ username: dni, password });
       const encryptedData = window.btoa(publicKey.encrypt(payload, 'RSA-OAEP'));
-
+  
       const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/usuarios/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ d4ta: encryptedData }),
       });
-
+  
       const data = await response.json();
-
+  
       if (response.status === 401) {
         setError('Usuario o contraseña incorrectas');
         return;
       }
-
+  
       if (!response.ok) {
         setError(data.error || 'Error al iniciar sesión');
         return;
       }
-
+  
+      // Guardar el token en cookies en lugar de localStorage
+      Cookies.set('token', data.token, { expires: 7 }); // Expira en 7 días
       console.log('Login exitoso:', data);
+  
       Swal.fire({
-          title: "INICIO DE SESIÓN EXITOSO",
-          icon: "success",
-          draggable: true
-        });
-      localStorage.setItem('token', data.token);
+        title: "INICIO DE SESIÓN EXITOSO",
+        icon: "success",
+        draggable: true,
+      });
+  
+      // Mostrar el token en la consola (solo para debug)
+      console.log("Token almacenado en cookies:", Cookies.get('token'));
       
-      // Redirección o manejo post-login aquí
+      // Verificar el contenido de la cookie "token"
+      const storedToken = Cookies.get('token');
+      console.log("Contenido de la cookie 'token':", storedToken);  // Esto imprimirá el valor de la cookie en consola
+  
+      // Aquí puedes hacer la redirección o manejo post-login
+  
     } catch (error) {
       console.error('Error:', error);
       setError('Error al conectar con el servidor.');
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
