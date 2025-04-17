@@ -1,12 +1,22 @@
  "use client";
+ import { useRouter } from "next/navigation";
+
+ import { useState } from 'react';
+ import Confirmacion from "@/components/Modulos/Confirmacion";
+import Tarjeta from "@/app/(inicio)/pagos/Tarjeta";
 import BeneficiosPagos from "@/components/Modulos/BeneficiosPagos";
 import { FaCheckSquare } from "react-icons/fa";
 import Image from "next/image";
+
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import router from "next/router";
 
 export default function Pagos() {
+  const [mostrarTarjeta, setMostrarTarjeta] = useState(false);
     return (
         <>
+       
+           
             <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-full py-20 max-sm:h-full bg-cover bg-center flex flex-col items-start  
             justify-center gap-1 '>
             <span className=" ml-16 flex gap-2 items-center text-white"><MdKeyboardArrowLeft className="w-5 h-5 text-white" />Regresar</span>
@@ -256,7 +266,9 @@ export default function Pagos() {
               
            </div>
 
-           <button className="bg-transparent border-2 border-white p-4 rounded-full w-full  min-[1300px]:mt-14 max-sm:mt-5  drop-shadow-[0_0_30px_rgba(255,255,255,8)] uppercase
+           <button 
+            onClick={() => router.push("/app/inicio/pagos/Tarjeta.tsx")}
+           className="bg-transparent border-2 border-white p-4 rounded-full w-full  min-[1300px]:mt-14 max-sm:mt-5  drop-shadow-[0_0_30px_rgba(255,255,255,8)] uppercase
            text-2xl font-poppins font-black hover:text-cyan-600 hover:bg-white sm:mt-400">Continuar</button>
                    
             
@@ -269,6 +281,8 @@ export default function Pagos() {
 
             </div>
             <BeneficiosPagos />
+           
+            <Confirmacion></Confirmacion>
         </>
     );
 }
