@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Cookies from 'js-cookie';
+
 import Image from "next/image";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -22,6 +24,7 @@ import { environment } from "../environments/environment";
 import { FaStar } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import AuthContainer from "./Auth/AuthContainer";
+import { jwtDecode } from "jwt-decode";
 // import ModalFormJobCCD from "./ModalFormJobCCD";
 
 interface Especializacion {
@@ -31,6 +34,9 @@ interface Especializacion {
 }
 
 const Navbar = () => {
+  const token = Cookies.get('token'); // Obtiene la cookie 'token'
+  const decodedToken = jwtDecode(token!);
+console.log('Token desde las cookies:', decodedToken);
   const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL;
   //   const contador: string = environment.contador;
   const images = {

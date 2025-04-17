@@ -26,7 +26,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-   <ClientAuthWrapper allowedRoles={[4]}>
+   
+
+            <ClientAuthWrapper allowedRoles={[2]}>
         <Providers>
           <NextTopLoader showSpinner={false} />
 
@@ -43,7 +45,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
             </div>
           </div>
         </Providers>
-    </ClientAuthWrapper>
+            </ClientAuthWrapper>
+   
 
   );
 }
