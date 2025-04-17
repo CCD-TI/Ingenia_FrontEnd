@@ -1,4 +1,6 @@
  "use client";
+ import Confirmacion from "@/components/Modulos/Confirmacion";
+import Tarjeta from "@/components/Modulos/Tarjeta";
 import BeneficiosPagos from "@/components/Modulos/BeneficiosPagos";
 import { FaCheckSquare } from "react-icons/fa";
 import Image from "next/image";
@@ -269,6 +271,8 @@ export default function Pagos() {
 
             </div>
             <BeneficiosPagos />
+            <Tarjeta></Tarjeta>
+            <Confirmacion></Confirmacion>
         </>
     );
 }
