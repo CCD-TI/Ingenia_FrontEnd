@@ -18,7 +18,7 @@ export default function Pagos() {
        <div>
        {!mostrarConfirmacion ? (
         <>
-          {/* Todo el contenido del formulario */}
+         
           <div className='bg-[url("/img/testimonios.jpg")] relative w-full h-full py-20 max-sm:h-full bg-cover bg-center flex flex-col items-start  
             justify-center gap-1 '>
             <span className=" ml-16 flex gap-2 items-center text-white"><MdKeyboardArrowLeft className="w-5 h-5 text-white" />Regresar</span>

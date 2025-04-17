@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { BiSolidDoorOpen } from "react-icons/bi";
 import Cookies from 'js-cookie';
 
 import Image from "next/image";
@@ -34,9 +35,9 @@ interface Especializacion {
 }
 
 const Navbar = () => {
-  const token = Cookies.get('token'); // Obtiene la cookie 'token'
-  const decodedToken = jwtDecode(token!);
-console.log('Token desde las cookies:', decodedToken);
+//   const token = Cookies.get('token'); // Obtiene la cookie 'token'
+//   const decodedToken = jwtDecode(token!);
+// console.log('Token desde las cookies:', decodedToken);
   const storageUrl = process.env.NEXT_PUBLIC_STORAGE_URL;
   //   const contador: string = environment.contador;
   const images = {
@@ -503,7 +504,7 @@ console.log('Token desde las cookies:', decodedToken);
                 href="#ranking"
                 className="relative group md:text-xs xl:text-base text-white  transition-all duration-300 font-bold"
               >
-                <span className="text-white font-poppins text-[20px]">
+                <span className="text-white font-poppins text-[20px] min-[1020px]:hidden">
                   Premios
                 </span>
                 <span
@@ -542,9 +543,14 @@ console.log('Token desde las cookies:', decodedToken);
               target="_blank"
               className="relative text-lg border-[1px] border-white group py-3 px-7 bg-white/30 text-white font-bold  hover:border-none hover:bg-yellowIngenia
                        hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,2)]transition-all duration-600 rounded-2xl flex items-center justify-center
-                         whitespace-nowrap max-sm:hidden shadow-[0_0_8px_rgba(255,255,255,1)]"
-            >
-              Aula Virtual
+                         whitespace-nowrap max-sm:hidden shadow-[0_0_8px_rgba(255,255,255,1)]">
+                          <button className=" min-[1024px]:hidden text-2xl">
+             
+             
+                Aula Virtual
+
+            </button>
+            
             </Link>
 
             {/* Ícono de usuario */}
