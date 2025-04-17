@@ -5,7 +5,7 @@ export default function Tarjeta (){
         <>
         <div className="bg-[url('/img/vision.png')] relative bg-center bg-no-repeat bg-cover w-full h-full py-20">
         <div className="w-full h-40 bg-white/35">
-            <h1 className="text-6xl">SODOMIZAR A ENRIQUE</h1>
+            <h1 className="text-6xl">hello</h1>
         </div>
 
         <div className="flex gap-20 px-10 pt-20 justify-center">
